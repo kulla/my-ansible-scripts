@@ -1,0 +1,7 @@
+---
+- name: Install basic programming tools.
+  apt: name={{ item }} state=present
+  with_items:
+    - make
+    - git
+    - gitg
