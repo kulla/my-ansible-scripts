@@ -1,4 +1,4 @@
 - hosts: localhost
   roles:
     - graphic-editing
-    - basic-commandline-tools
+    - basic-commandline-tools-available
