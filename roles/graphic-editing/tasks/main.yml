@@ -1,0 +1,8 @@
+---
+- name: Install tools for editing graphics.
+  apt: name={{ item }} state=present
+  with_items:
+    - inkscape
+    - gimp
+    - scrot
+    - imagemagick
