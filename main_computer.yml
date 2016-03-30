@@ -2,8 +2,8 @@
   roles:
     - graphic-editing
     - basic-commandline-tools-available
-    - basic-programming-environment
-    - basic-scientific-environment
+    - programming-environment
+    - scientific-environment
   vars:
     user:
       name: kulla
