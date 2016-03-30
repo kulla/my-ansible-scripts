@@ -3,3 +3,9 @@
     - graphic-editing
     - basic-commandline-tools-available
     - basic-programming-environment
+  vars:
+    user:
+      name: kulla
+      realname: Stephan Kulla
+    git:
+      email: git.mail@kulla.me

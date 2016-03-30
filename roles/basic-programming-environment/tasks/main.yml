@@ -5,3 +5,8 @@
     - make
     - git
     - gitg
+
+- name: Configure git.
+  template: src=gitconfig dest=~/.gitconfig mode=0600 owner={{ user.name }}
+  become: yes
+  become_user: "{{ user.name }}"
