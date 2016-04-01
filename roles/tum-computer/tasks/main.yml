@@ -1,0 +1,28 @@
+---
+- name: Install mount.cifs for NAS filer.
+  apt: name=cifs-utils state=present
+
+- name: Create mount point for personal NAS filer.
+  file: path=/media/tum/personal state=directory mode=0700 owner={{ user.name }} group={{ user.group }}
+
+- name: Create mount point for personal NAS filer.
+  file: path=/media/tum/faculty state=directory mode=0700 owner={{ user.name }} group={{ user.group }}
+
+- name: Create credential file for mounting the NAS filer.
+  template: src=credential_file dest=/media/tum/.credentials mode=0600
+
+- name: Mount personal NAS filer.
+  mount:
+    state: present
+    fstype: cifs
+    name: /media/tum/personal
+    src: \\nas.ads.mwn.de\{{ tum_identifier }}
+    opts: credentials=/media/tum/.credentials,uid={{ user.name }},gid={{ user.group}},rw,noserverino
+
+- name: Mount NAS filer of faculty.
+  mount:
+    state: present
+    fstype: cifs
+    name: /media/tum/faculty
+    src: \\nas.ads.mwn.de\tued\s11
+    opts: credentials=/media/tum/.credentials,uid={{ user.name }},gid={{ user.group}},rw,noserverino

@@ -1,0 +1,13 @@
+- hosts: localhost
+  roles:
+    - tum-computer
+  vars:
+    user:
+      name: kulla
+      group: kulla
+  vars_prompt:
+    - name: tum_identifier
+      prompt: What is your TUM identifier?
+    - name: tum_password
+      prompt: What ist your TUM password?
+      private: yes
