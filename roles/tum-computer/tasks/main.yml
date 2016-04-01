@@ -3,17 +3,17 @@
   apt: name=cifs-utils state=present
 
 - name: Create credential file for mounting the NAS filer.
-  template: src=credential_file dest=/media/tum/.credentials mode=0600
+  template: src=credential_file dest={{ nas.mntdir }}/.credentials mode=0600
 
 - name: Create mount points for NAS filer.
-  file: path=/media/tum/{{ item.target }} state=directory mode=0700 owner={{ user.name }} group={{ user.group }}
+  file: path={{ nas.mntdir }}{{ item.target }} state=directory mode=0700 owner={{ user.name }} group={{ user.group }}
   with_items: "{{nas.targets}}"
 
 - name: Mount personal NAS filer.
   mount:
     state: present
     fstype: cifs
-    name: /media/tum/{{ item.target }}
+    name: "{{ nas.mntdir }}/{{ item.target }}"
     src: \\nas.ads.mwn.de\{{ item.src }}
-    opts: credentials=/media/tum/.credentials,uid={{ user.name }},gid={{ user.group}},rw,noserverino
+    opts: credentials={{ nas.mntdir }}/.credentials,uid={{ user.name }},gid={{ user.group}},rw,noserverino
   with_items: "{{nas.targets}}"

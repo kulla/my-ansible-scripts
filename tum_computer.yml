@@ -6,6 +6,7 @@
       name: kulla
       group: kulla
     nas:
+      mntdir: /media/tum 
       targets:
         - src: "{{ tum_identifier }}"
           target: personal
