@@ -1,0 +1,11 @@
+---
+- name: Install media player and codecs.
+  apt: name={{ item }} state=present
+  with_items:
+    - mplayer
+    - ubuntu-restricted-extras
+
+- name: Install libdvdcss.
+  command: /usr/share/doc/libdvdread4/install-css.sh
+  args:
+    creates: /usr/lib/libdvdcss.so.2

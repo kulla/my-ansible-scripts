@@ -4,6 +4,7 @@
     - basic-commandline-tools-available
     - programming-environment
     - scientific-environment
+    - media-player
   vars:
     user:
       name: kulla
