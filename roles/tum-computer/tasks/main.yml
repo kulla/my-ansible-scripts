@@ -2,17 +2,17 @@
 - name: Install mount.cifs for NAS filer.
   apt: name=cifs-utils state=present
 
-- name: Create credential file for mounting the NAS filer.
-  template: src=credential_file dest={{ nas.mntdir }}/.credentials mode=0600
-
 - name: Umount NAS filer (when they already exist).
   command: umount {{ nas.mntdir }}/{{ item.target }}
   with_items: "{{ nas.targets }}"
   ignore_errors: True
 
 - name: Create mount points for NAS filer.
-  file: path={{ nas.mntdir }}{{ item.target }} state=directory mode=0700 owner={{ user.name }} group={{ user.group }}
+  file: path={{ nas.mntdir }}/{{ item.target }} state=directory mode=0700 owner={{ user.name }} group={{ user.group }}
   with_items: "{{nas.targets}}"
+
+- name: Create credential file for mounting the NAS filer.
+  template: src=credential_file dest={{ nas.mntdir }}/.credentials mode=0600
 
 - name: Mount personal NAS filer.
   mount:
