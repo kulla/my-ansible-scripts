@@ -5,5 +5,4 @@
     - gnuplot
     - python-numpy
     - python-scipy
-    - texlive-latex-recommended
-    - texlive-latex-recommended-doc 
+    # - texlive-latex-recommended
