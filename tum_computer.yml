@@ -5,6 +5,12 @@
     user:
       name: kulla
       group: kulla
+    nas:
+      targets:
+        - src: "{{ tum_identifier }}"
+          target: personal
+        - src: tued\s11
+          target: faculty
   vars_prompt:
     - name: tum_identifier
       prompt: What is your TUM identifier?
