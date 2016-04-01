@@ -8,6 +8,7 @@
   vars:
     user:
       name: kulla
+      group: kulla
       realname: Stephan Kulla
     git:
       email: git.mail@kulla.me
