@@ -20,5 +20,5 @@
     fstype: cifs
     name: "{{ nas.mntdir }}/{{ item.target }}"
     src: \\nas.ads.mwn.de\{{ item.src }}
-    opts: credentials={{ nas.mntdir }}/.credentials,uid={{ user.name }},gid={{ user.group}},rw,noserverino
+    opts: credentials={{ nas.mntdir }}/.credentials,uid={{ user.name }},gid={{ user.group}},rw,noserverino,noauto,user
   with_items: "{{nas.targets}}"
