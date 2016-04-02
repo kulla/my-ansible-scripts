@@ -5,6 +5,7 @@
     - programming-environment
     - scientific-environment
     - media-player
+    - serlo-workstation
   vars:
     user:
       name: kulla
