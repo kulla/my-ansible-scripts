@@ -12,6 +12,8 @@
           target: personal
         - src: tued\s11
           target: faculty
+        - src: mwntemp
+          target: temp
   vars_prompt:
     - name: tum_identifier
       prompt: What is your TUM identifier?
