@@ -1,6 +1,6 @@
 - hosts: localhost
   roles:
-    - tum-computer
+    - tum-workstation
   vars:
     user:
       name: kulla
