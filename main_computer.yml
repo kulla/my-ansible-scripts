@@ -11,5 +11,6 @@
       name: kulla
       group: kulla
       realname: Stephan Kulla
+      homedir: /home/kulla
     git:
       email: git.mail@kulla.me

@@ -7,4 +7,9 @@
     - gitg
 
 - name: Configure git.
-  template: src=gitconfig dest=/home/{{ user.name }}/.gitconfig mode=0600 owner={{ user.name }} group={{ user.group }}
+  template:
+    src: gitconfig
+    dest: "{{ user.homedir }}/.gitconfig"
+    mode: 0600
+    owner: "{{ user.name }}"
+    group: "{{ user.group }}"

@@ -8,7 +8,12 @@
   ignore_errors: True
 
 - name: Create mount points for NAS filer.
-  file: path={{ nas.mntdir }}/{{ item.target }} state=directory mode=0700 owner={{ user.name }} group={{ user.group }}
+  file:
+    path: "{{ nas.mntdir }}/{{ item.target }}"
+    state: directory
+    mode: 0700
+    owner: "{{ user.name }}"
+    group: "{{ user.group }}"
   with_items: "{{nas.targets}}"
 
 - name: Create credential file for mounting the NAS filer.
