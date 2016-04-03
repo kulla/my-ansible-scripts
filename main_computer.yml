@@ -1,10 +1,8 @@
 - hosts: localhost
   roles:
-    - graphic-editing
-    - basic-commandline-tools-available
+    - os-basic
     - programming-environment
     - scientific-environment
-    - media-player
     - serlo-workstation
   vars:
     user:

@@ -1,0 +1,6 @@
+---
+- name: Deinstall Adobe Flash.
+  apt: package={{ item }} state=absent
+  with_items:
+    - adobe-flashplugin
+    - flashplugin-installer

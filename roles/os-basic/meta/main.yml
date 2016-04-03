@@ -1,0 +1,6 @@
+---
+dependencies:
+  - basic-commandline-tools-available
+  - graphic-editing
+  - media-player
+  - text-editor
