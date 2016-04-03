@@ -6,3 +6,9 @@
     - htop
     - curl
     - wget
+    - apt-file
+
+- name: Update cache for apt-file.
+  shell: apt-file update && touch /var/cache/apt/apt-file/.done
+  args:
+    creates: /var/cache/apt/apt-file/.done
