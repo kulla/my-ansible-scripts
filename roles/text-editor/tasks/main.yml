@@ -1,0 +1,19 @@
+---
+- name: Install vim.
+  apt: package=vim state=present
+
+- name: Configure vim.
+  copy:
+    src: vimrc
+    dest: "{{ user.homedir}}/.vimrc"
+    mode: 0600
+    owner: "{{ user.name }}"
+    group: "{{ user.group }}"
+
+- name: Create directory for .swp files.
+  file:
+    path: "{{ user.homedir}}/.vim/tmp"
+    state: directory
+    owner: "{{ user.name }}"
+    group: "{{ user.group }}"
+    mode: 0700
