@@ -3,7 +3,13 @@
   apt: name={{ item }} state=present
   with_items:
     - mplayer
-    - ubuntu-restricted-extras
+    - gstreamer1.0-fluendo-mp3
+    - gstreamer1.0-libav
+    - gstreamer1.0-plugins-bad
+    - gstreamer1.0-plugins-ugly
+    - libavcodec-extra
+    # - unrar
+    # - ttf-mscorefonts-installer
 
 - name: Install libdvdcss.
   command: /usr/share/doc/libdvdread4/install-css.sh
