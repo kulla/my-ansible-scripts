@@ -10,7 +10,7 @@
       targets:
         - src: "{{ tum_identifier }}"
           target: personal
-        - src: tued\s11
+        - src: tued/s11
           target: faculty
         - src: mwntemp
           target: temp
