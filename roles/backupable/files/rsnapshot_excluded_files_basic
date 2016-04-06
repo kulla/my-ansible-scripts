@@ -1,0 +1,16 @@
+# exclude log files
+*.log
+
+# exclude files from latex projects
+*.aux
+*.toc
+*.bbl
+*.tex~
+*.blg
+*.brf
+*.lof
+*.out
+
+# exclude compiled python files
+*.pyc
+__pycache__

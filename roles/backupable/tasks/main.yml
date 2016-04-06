@@ -17,3 +17,11 @@
 
 - name: Install main configure file of rsnapshot.
   template: src=rsnapshot.conf dest=/etc/rsnapshot.conf
+
+- name: Create directory for other rsnapshot configurations.
+  file: path=/etc/rsnapshot state=directory
+
+- name: Install other configuration files of rsnapshot.
+  copy: src={{ item }} dest=/etc/rsnapshot/{{ item }}
+  with_items:
+    - rsnapshot_excluded_files_basic
