@@ -25,3 +25,8 @@
   copy: src={{ item }} dest=/etc/rsnapshot/{{ item }}
   with_items:
     - rsnapshot_excluded_files_basic
+
+- name: Create special configuration files for rsnapshot.
+  file: path=/etc/rsnapshot/{{ item }} state=touch
+  with_items:
+    - rsnapshot_excluded_files_special
