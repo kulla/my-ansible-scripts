@@ -17,3 +17,9 @@
     owner: "{{ user.name }}"
     group: "{{ user.group }}"
     mode: 0700
+
+- name: Install gedit with plugins.
+  apt: package={{ item }} state=present
+  with_items:
+    - gedit
+    - gedit-plugins
