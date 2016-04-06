@@ -1,0 +1,16 @@
+---
+- name: Create mount point for backup disk.
+  file:
+    path: "{{ mntdir }}"
+    state: directory
+    owner: "{{ user.name }}"
+    group: "{{ user.group }}"
+
+- name: Install necessary tools for backups.
+  apt: package={{ item }} state=present
+  with_items:
+    - rsnapshot
+    - cryptsetup
+
+- name: Install the backup script.
+  template: src=backup dest=/usr/local/bin/backup mode=0755

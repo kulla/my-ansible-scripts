@@ -1,5 +1,6 @@
 ---
 dependencies:
+  - backupable
   - basic-commandline-tools-available
   - graphic-editing
   - media-player
