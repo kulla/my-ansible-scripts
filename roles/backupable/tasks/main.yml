@@ -14,3 +14,6 @@
 
 - name: Install the backup script.
   template: src=backup dest=/usr/local/bin/backup mode=0755
+
+- name: Install main configure file of rsnapshot.
+  template: src=rsnapshot.conf dest=/etc/rsnapshot.conf

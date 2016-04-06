@@ -1,2 +1,3 @@
 ---
 mntdir: /media/backupfestplatte
+backupdir: "{{ mntdir }}/rsnapshot/"
