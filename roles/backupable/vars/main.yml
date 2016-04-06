@@ -1,3 +1,4 @@
 ---
 mntdir: /media/backupfestplatte
 backupdir: "{{ mntdir }}/rsnapshot/"
+backupscript: "/usr/local/bin/backup"
