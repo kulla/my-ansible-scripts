@@ -18,10 +18,17 @@ ata-ST500LM011_HM501II_S24QJ9AC603190
 """
 
 ###
+# Returns with exist status zero, iff the backup disk is mounted.
+###
+function backup_disk_is_mounted() {
+	mountpoint -q "$MOUNT_DIR"
+}
+
+###
 # Mounting the backup disk.
 ###
 function mount_backup_disk() {
-	if [ -z "$(mount -l | grep "$MOUNT_DIR")" ]; then
+	if ! backup_disk_is_mounted; then
 		for DEVICE_ID in $DEVICE_IDS; do
 			DEVICE="/dev/disk/by-uuid/${DEVICE_ID}"
 
@@ -29,12 +36,12 @@ function mount_backup_disk() {
 				sudo cryptsetup luksOpen "$DEVICE" "$MAPPER" && \
 				sudo mount -t ext4 "/dev/mapper/${MAPPER}" "$MOUNT_DIR"
 
-				return $?
+				break
 			fi
 		done
-
-		return 1
 	fi
+
+	backup_disk_is_mounted
 }
 
 ###
@@ -44,9 +51,9 @@ function umount_backup_disk() {
 	if [ -n "$(mount -l | grep "$MOUNT_DIR")" ]; then
 		sudo umount "$MOUNT_DIR" && \
 		sudo cryptsetup close "$MAPPER"
-
-		return $?
 	fi
+
+	! backup_disk_is_mounted
 }
 
 ###
