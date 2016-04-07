@@ -16,17 +16,17 @@
   template: src=backup dest={{ backupscript }} mode=0755
 
 - name: Install main configure file of rsnapshot.
-  template: src=rsnapshot.conf dest=/etc/rsnapshot.conf
+  template: src=rsnapshot.conf dest={{ rsnapshot.main_conf_file }}
 
 - name: Create directory for other rsnapshot configurations.
-  file: path=/etc/rsnapshot state=directory
+  file: path={{ rsnapshot.conf_dir }} state=directory
 
 - name: Install other configuration files of rsnapshot.
-  copy: src={{ item }} dest=/etc/rsnapshot/{{ item }}
+  copy: src={{ item }} dest={{ rsnapshot.conf_dir }}/{{ item }}
   with_items:
     - rsnapshot_excluded_files_basic
 
 - name: Create special configuration files for rsnapshot.
-  file: path=/etc/rsnapshot/{{ item }} state=touch
+  file: path={{ rsnapshot.conf_dir }}/{{ item }} state=touch
   with_items:
     - rsnapshot_excluded_files_special

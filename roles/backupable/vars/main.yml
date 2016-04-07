@@ -2,3 +2,6 @@
 mntdir: /media/backupfestplatte
 backupdir: "{{ mntdir }}/rsnapshot/"
 backupscript: "/usr/local/bin/backup"
+rsnapshot:
+  main_conf_file: /etc/rsnapshot.conf
+  conf_dir: /etc/rsnapshot
