@@ -24,12 +24,12 @@
 - name: Install other configuration files of rsnapshot.
   copy: src={{ item }} dest={{ rsnapshot.conf_dir }}/{{ item }}
   with_items:
-    - rsnapshot_excluded_files_basic
-    - rsnapshot_included_files_basic
+    - excluded_files_basic
+    - included_files_basic
 
 - name: Create special configuration files for rsnapshot.
   file: path={{ rsnapshot.conf_dir }}/{{ item }} state=touch
   with_items:
-    - rsnapshot_excluded_files_special
-    - rsnapshot_included_files_special
+    - excluded_files_special
+    - included_files_special
     - backups.conf
