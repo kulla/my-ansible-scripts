@@ -32,3 +32,4 @@
   with_items:
     - rsnapshot_excluded_files_special
     - rsnapshot_included_files_special
+    - backups.conf
