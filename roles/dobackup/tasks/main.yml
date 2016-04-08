@@ -3,3 +3,10 @@
     dest: "{{ backup_conf }}"
     line: backup\t{{ item }}\t./
   with_items: "{{ paths }}"
+
+- name: Recover backuped files/directories when necessary.
+  command: backup recover "{{ item }}"
+  environment:
+    OWNER: "{{ owner | default(user.name)  }}"
+    GROUP: "{{ group | default(user.group) }}"
+  with_items: "{{ paths }}"
