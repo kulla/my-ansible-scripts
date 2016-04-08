@@ -71,10 +71,10 @@ if [ -z "$CMD" ]; then
 	CMD="$DEFAULT_CMD"
 fi
 
-if [ $CMD == "mount" ]; then
+if [ "$CMD" == "mount" ]; then
 	mount_backup_disk
-elif [ $CMD == "umount" ]; then
+elif [ "$CMD" == "umount" ]; then
 	umount_backup_disk
-elif [ $CMD == "help" ]; then
+elif [ "$CMD" == "help" ]; then
 	show_help
 fi
