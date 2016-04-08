@@ -61,6 +61,15 @@ function umount_backup_disk() {
 	! backup_disk_is_mounted
 }
 
+function should_be_recovered() {
+	if [ -e "$1" ]; then
+		if [ -d "$1" ]; then
+			if [ -z "$(find "$1" -maxdepth 0 -empty)" ]; then
+				# $1 is a directory and contains files
+				return 1
+			fi
+}
+
 ###
 # Show help message.
 ###
