@@ -5,3 +5,5 @@ backupscript: "/usr/local/bin/backup"
 rsnapshot:
   main_conf_file: /etc/rsnapshot.conf
   conf_dir: /etc/rsnapshot
+  backup_conf_file_name: backups.conf
+backup_conf: "{{ rsnapshot.conf_dir }}/{{ rsnapshot.backup_conf_file_name }}"

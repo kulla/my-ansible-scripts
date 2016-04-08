@@ -32,4 +32,4 @@
   with_items:
     - excluded_files_special
     - included_files_special
-    - backups.conf
+    - "{{ rsnapshot.backup_conf_file_name }}"
