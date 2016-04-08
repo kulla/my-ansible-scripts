@@ -46,7 +46,7 @@ function mount_backup_disk() {
 
 ###
 # Umounting the backup disk.
-#
+###
 function umount_backup_disk() {
 	if [ -n "$(mount -l | grep "$MOUNT_DIR")" ]; then
 		sudo umount "$MOUNT_DIR" && \
