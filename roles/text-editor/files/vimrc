@@ -90,4 +90,5 @@ autocmd Filetype yaml setlocal expandtab
 autocmd Filetype yaml setlocal tabstop=2
 autocmd Filetype yaml setlocal shiftwidth=2
 autocmd Filetype yaml setlocal foldmethod=expr
+autocmd Filetype yaml setlocal foldlevel=1000
 autocmd Filetype yaml setlocal foldexpr=match(getline(v:lnum),'[^[:space:]\-]')
