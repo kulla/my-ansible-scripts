@@ -1,0 +1,5 @@
+- name: Add paths to backup configuration.
+  lineinfile:
+    dest: "{{ backup_conf }}"
+    line: backup\t{{ item }}\t./
+  with_items: "{{ paths }}"
