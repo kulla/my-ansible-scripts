@@ -80,6 +80,8 @@ function recover_backuped_files() {
 				cp -r -u "${BACKUP_DIR}/{{ retains[0].name }}.0/${FILE}" \
 					"${FILE}" || error "cp failed for '$FILE'"
 
+				sync
+
 				if [ -n "$OWNER" ]; then
 					chown -R "$OWNER" "$FILE" || \
 						error "chown failed for '$FILE'"
