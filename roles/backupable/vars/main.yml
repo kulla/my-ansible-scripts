@@ -1,9 +1,13 @@
 ---
-mntdir: /media/backupfestplatte
-backupdir: "{{ mntdir }}/rsnapshot/"
-backupscript: "/usr/local/bin/backup"
-rsnapshot:
-  main_conf_file: /etc/rsnapshot.conf
-  conf_dir: /etc/rsnapshot
-  backup_conf_file_name: backups.conf
-backup_conf: "{{ rsnapshot.conf_dir }}/{{ rsnapshot.backup_conf_file_name }}"
+rsnapshot_conf_file: /etc/rsnapshot.conf
+rsnapshot_conf_dir: /etc/rsnapshot
+rsnapshot_backup_conf: backups.conf
+rsnapshot_exclude_conf: excluded_files_special
+rsnapshot_include_conf: included_files_special
+
+backup_mntdir: /media/backupfestplatte
+backup_dir: "{{ backup_mntdir }}/rsnapshot/"
+backup_script: /usr/local/bin/backup
+backup_conf: "{{ rsnapshot_conf_dir }}/{{ rsnapshot_backup_conf }}"
+backup_exclude_conf: "{{ rsnapshot_conf_dir }}/{{ rsnapshot_exclude_conf }}"
+backup_include_conf: "{{ rsnapshot_conf_dir }}/{{ rsnapshot_include_conf }}"

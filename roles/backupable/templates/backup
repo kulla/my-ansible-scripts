@@ -4,9 +4,9 @@
 
 CMD="$1"                        # command given via command line argument
 DEFAULT_CMD="run"               # default command
-MOUNT_DIR="{{ mntdir }}"        # mount point for backup disk
+MOUNT_DIR="{{ backup_mntdir }}" # mount point for backup disk
 MAPPER=$(basename "$MOUNT_DIR") # name for mapper device
-BACKUP_DIR="{{ backupdir }}"    # directory where the backups are stored
+BACKUP_DIR="{{ backup_dir }}"   # directory where the backups are stored
 
 # device ids for backup disks
 DEVICE_IDS="""

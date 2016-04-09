@@ -1,7 +1,7 @@
 ---
 - name: Create mount point for backup disk.
   file:
-    path: "{{ mntdir }}"
+    path: "{{ backup_mntdir }}"
     state: directory
     owner: "{{ user.name }}"
     group: "{{ user.group }}"
@@ -13,23 +13,23 @@
     - cryptsetup
 
 - name: Install the backup script.
-  template: src=backup dest={{ backupscript }} mode=0755
+  template: src=backup dest={{ backup_script }} mode=0755
 
 - name: Install main configure file of rsnapshot.
-  template: src=rsnapshot.conf dest={{ rsnapshot.main_conf_file }}
+  template: src=rsnapshot.conf dest={{ rsnapshot_conf_file }}
 
 - name: Create directory for other rsnapshot configurations.
-  file: path={{ rsnapshot.conf_dir }} state=directory
+  file: path={{ rsnapshot_conf_dir }} state=directory
 
 - name: Install other configuration files of rsnapshot.
-  copy: src={{ item }} dest={{ rsnapshot.conf_dir }}/{{ item }}
+  copy: src={{ item }} dest={{ rsnapshot_conf_dir }}/{{ item }}
   with_items:
     - excluded_files_basic
     - included_files_basic
 
 - name: Create special configuration files for rsnapshot.
-  file: path={{ rsnapshot.conf_dir }}/{{ item }} state=touch
+  file: path={{ item }} state=touch
   with_items:
-    - excluded_files_special
-    - included_files_special
-    - "{{ rsnapshot.backup_conf_file_name }}"
+    - "{{ backup_conf }}"
+    - "{{ backup_exclude_conf }}"
+    - "{{ backup_include_conf }}"
