@@ -5,6 +5,16 @@ rsnapshot_backup_conf: backups.conf
 rsnapshot_exclude_conf: excluded_files_special
 rsnapshot_include_conf: included_files_special
 
+retains:
+  - name: hourly
+    times: 6
+  - name: daily
+    times: 7
+  - name: weekly
+    times: 4
+  - name: monthly
+    times: 6
+
 backup_mntdir: /media/backupfestplatte
 backup_dir: "{{ backup_mntdir }}/rsnapshot/"
 backup_script: /usr/local/bin/backup
