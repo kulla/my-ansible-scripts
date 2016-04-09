@@ -77,8 +77,8 @@ function recover_backuped_files() {
 					rmdir "$FILE"
 				fi
 
-				cp -r -u "${BACKUP_DIR}/daily.0/${FILE}" "${FILE}" || \
-					error "cp failed for '$FILE'"
+				cp -r -u "${BACKUP_DIR}/{{ retains[0].name }}.0/${FILE}" \
+					"${FILE}" || error "cp failed for '$FILE'"
 
 				if [ -n "$OWNER" ]; then
 					chown -R "$OWNER" "$FILE" || \
