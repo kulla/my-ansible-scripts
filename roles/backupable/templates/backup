@@ -23,16 +23,10 @@ function error() {
 	exit 1
 }
 
-###
-# Returns with exist status zero, iff the backup disk is mounted.
-###
 function backup_disk_is_mounted() {
 	mountpoint -q "$MOUNT_DIR"
 }
 
-###
-# Mounting the backup disk.
-###
 function mount_backup_disk() {
 	if ! backup_disk_is_mounted; then
 		for DEVICE_ID in $DEVICE_IDS; do
@@ -50,9 +44,6 @@ function mount_backup_disk() {
 	backup_disk_is_mounted
 }
 
-###
-# Umounting the backup disk.
-###
 function umount_backup_disk() {
 	if [ -n "$(mount -l | grep "$MOUNT_DIR")" ]; then
 		sudo umount "$MOUNT_DIR" && \
@@ -76,9 +67,6 @@ function should_be_recovered() {
 	fi
 }
 
-###
-# Recover backuped files.
-###
 function recover_backuped_files() {
 	while (( "$#" )); do
 		FILE="${1%%/}"
@@ -110,9 +98,6 @@ function recover_backuped_files() {
 	done
 }
 
-###
-# Show help message.
-###
 function show_help() {
 	echo """backup [cmd] [files]
 
