@@ -5,3 +5,4 @@ dependencies:
   - graphic-editing
   - media-player
   - text-editor
+  - password-manager

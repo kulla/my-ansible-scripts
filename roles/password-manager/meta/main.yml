@@ -1,0 +1,7 @@
+---
+dependencies:
+  - role: dobackup
+    paths:
+      - "{{ user.homedir }}/keepassx/"
+    exclude:
+      - "keepassx/*.kdb.lock"
