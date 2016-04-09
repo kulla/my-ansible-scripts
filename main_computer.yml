@@ -4,6 +4,7 @@
     - programming-environment
     - scientific-environment
     - serlo-workstation
+    - feedreader
   vars:
     user:
       name: kulla

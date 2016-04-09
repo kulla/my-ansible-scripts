@@ -1,0 +1,9 @@
+---
+dependencies:
+  - role: dobackup
+    paths:
+      - "{{ user.homedir }}/.newsbeuter/"
+    exclude:
+      - history.cmdline
+      - history.search
+      - cache.db.lock
