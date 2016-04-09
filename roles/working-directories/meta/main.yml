@@ -1,0 +1,8 @@
+---
+dependencies:
+  - role: dobackup
+    paths:
+      - "{{ user.homedir }}/documents/"
+      - "{{ user.homedir }}/pictures/"
+      - "{{ user.homedir }}/workspace/"
+      - "{{ user.homedir }}/projects/"

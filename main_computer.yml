@@ -6,6 +6,7 @@
     - serlo-workstation
     - feedreader
     - mailclient
+    - working-directories
   vars:
     user:
       name: kulla
