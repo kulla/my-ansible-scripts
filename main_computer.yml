@@ -5,6 +5,7 @@
     - scientific-environment
     - serlo-workstation
     - feedreader
+    - mailclient
   vars:
     user:
       name: kulla
