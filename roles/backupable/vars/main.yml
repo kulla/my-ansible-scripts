@@ -8,12 +8,16 @@ rsnapshot_include_conf: included_files_special
 retains:
   - name: hourly
     times: 6
+    min_time_diff: 0
   - name: daily
     times: 7
+    min_time_diff: 60 * 60 * 12
   - name: weekly
     times: 4
+    min_time_diff: 60 * 60 * 24 * 6
   - name: monthly
     times: 6
+    min_time_diff: 60 * 60 * 24 * 28
 
 backup_mntdir: /media/backupfestplatte
 backup_dir: "{{ backup_mntdir }}/rsnapshot/"

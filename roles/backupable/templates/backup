@@ -98,12 +98,52 @@ function recover_backuped_files() {
 	done
 }
 
+function run_rsnapshot() {
+	RETAIN="$1"
+	MIN_TIME_DIFF="$2"
+	TARGET="${BACKUP_DIR}/${RETAIN}.0"
+
+	if [ -d "$TARGET" ]; then
+		TIME_DIFF=$(( $( date "+%s" ) - $( stat -c "%Z" "$TARGET" ) ))
+
+		if [ "$TIME_DIFF" -ge "$MIN_TIME_DIFF" ]; then
+			DO_RSNAPSHOT=1
+		else
+			DO_RSNAPSHOT=
+		fi
+	else
+		DO_RSNAPSHOT=1
+	fi
+
+	if [ -n "$DO_RSNAPSHOT" ] ; then
+		echo "INFO: run rsnapshot '$RETAIN'" 1>&2
+		sudo rsnapshot "$RETAIN" || error "error while running rsnapshot"
+	fi
+}
+
+function do_a_backup() {
+	if mount_backup_disk; then
+		if [ ! -d "$BACKUP_DIR" ]; then
+			mkdir -p "$BACKUP_DIR" || \
+				error "could not create directory '$BACKUP_DIR'"
+		fi
+
+{% for retain in retains %}
+		run_rsnapshot "{{ retain.name }}" $(( {{ retain.min_time_diff }} ))
+{% endfor %}
+
+	else
+		error "could not mount backup disk."
+	fi
+}
+
 function show_help() {
 	echo """backup [cmd] [files]
 
 help    - show this help
 mount   - mount backup disc
 recover - recover given files from backup if they do not exist yet
+run     - run the backup
 umount  - umount backup disc"""
 }
 
@@ -119,6 +159,8 @@ elif [ "$CMD" == "recover" ]; then
 	shift
 
 	recover_backuped_files $@
+elif [ "$CMD" == "run" ]; then
+	do_a_backup
 elif [ "$CMD" == "help" ]; then
 	show_help
 fi
