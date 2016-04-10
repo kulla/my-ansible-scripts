@@ -1,0 +1,11 @@
+---
+- name: Install tool taskwarrior.
+  apt: package=taskwarrior state=present
+
+- name: Configure taskwarrior.
+  template:
+    src: taskrc
+    dest: "{{ user.homedir}}/.taskrc"
+    mode: 0600
+    owner: "{{ user.name }}"
+    group: "{{ user.group }}"

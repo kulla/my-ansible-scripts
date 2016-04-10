@@ -6,6 +6,7 @@
     - serlo-workstation
     - working-directories
     - birthday-reminder
+    - taskmanager
   vars:
     user:
       name: kulla
