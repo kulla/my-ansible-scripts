@@ -1,28 +1,27 @@
 ---
-- name: Install bash.
+- name: Install default shell.
   apt: package=bash state=present
 
 - name: Create configure directories for bash.
   file:
-    path: "{{ item }}"
+    path: "{{ shell_conf_dir }}/{{ item.name }}"
     state: directory
     mode: 0700
     owner: "{{ user.name }}"
     group: "{{ user.group}}"
-  with_items:
-    - "{{ bash_conf_dir }}"
-    - "{{ bash_rc_dir }}"
-    - "{{ shell_rc_dir }}"
+  with_items: "{{ shell_rc_targets }}"
 
-- name: Install file for loading shell configurations.
+- name: Install files for loading shell configurations.
   template:
-    src: configure_shell.sh
-    dest: "{{ bash_rc_load_file }}"
+    src: configure.sh
+    dest: "{{ shell_conf_dir }}/configure_{{ item.name }}.sh"
     mode: 0700
     owner: "{{ user.name }}"
     group: "{{ user.group }}"
+  with_items: "{{ shell_rc_targets }}"
 
-- name: Add shell configuration loading file into .profile.
+- name: Add shell configuration loading into default shell configuration files.
   lineinfile:
-    line: source {{ bash_rc_load_file }}
-    dest: "{{ user.homedir }}/.profile"
+    line: source \"{{ shell_conf_dir }}/configure_{{ item.name }}.sh\"
+    dest: "{{ item.fromfile }}"
+  with_items: "{{ shell_rc_targets }}"

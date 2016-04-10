@@ -1,5 +1,5 @@
 ---
-bash_conf_dir: "{{ user.homedir }}/.config/shell"
-bash_rc_load_file: "{{ bash_conf_dir }}/configure_shell.sh"
-bash_rc_dir: "{{ bash_conf_dir }}/bash"
-shell_rc_dir: "{{ bash_conf_dir }}/shell"
+shell_conf_dir: "{{ user.homedir }}/.config/shell"
+shell_rc_targets:
+  - { name: profile, fromfile: "{{ user.homedir }}/.profile" }
+  - { name: bash, fromfile: "{{ user.homedir }}/.bashrc" }
