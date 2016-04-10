@@ -4,3 +4,9 @@
   with_items:
     - adobe-flashplugin
     - flashplugin-installer
+
+- name: Install basic tools.
+  apt: package={{ item }} state=present
+  with_items:
+    - ssh
+    - gnupg

@@ -1,6 +1,5 @@
 ---
 dependencies:
-  - backupable
   - basic-commandline-tools-available
   - graphic-editing
   - media-player
@@ -9,3 +8,7 @@ dependencies:
   - mailclient
   - feedreader
   - webbrowser
+  - role: dobackup
+    paths:
+      - "{{ user.homedir }}/.ssh"
+      - "{{ user.homedir }}/.gnupg"
