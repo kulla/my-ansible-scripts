@@ -77,10 +77,13 @@ function recover_backuped_files() {
 					rmdir "$FILE"
 				fi
 
-				cp -r -u "${BACKUP_DIR}/{{ retains[0].name }}.0/${FILE}" \
-					"${FILE}" || error "cp failed for '$FILE'"
+				SRC="${BACKUP_DIR}/{{ retains[0].name }}.0/${FILE}"
 
-				sync
+				if [ -e "$SRC" ]; then
+					cp -r -u "$SRC" "${FILE}" || error "cp failed for '$FILE'"
+
+					sync
+				fi
 
 				if [ -n "$OWNER" ]; then
 					chown -R "$OWNER" "$FILE" || \
