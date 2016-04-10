@@ -18,6 +18,14 @@
     group: "{{ user.group }}"
     mode: 0700
 
+- name: Make vim the default text editor.
+  copy:
+    src: make_vim_default_text_editor.sh
+    dest: "{{ shell_conf_dir }}/profile"
+    mode: 0700
+    owner: "{{ user.name }}"
+    group: "{{ user.group }}"
+
 - name: Install gedit with plugins.
   apt: package={{ item }} state=present
   with_items:
