@@ -10,3 +10,11 @@
   with_items:
     - ssh
     - gnupg
+
+- name: Configure the bash.
+  copy:
+    src: configure_bash.sh
+    dest: "{{ shell_conf_dir }}/bash"
+    mode: 0700
+    owner: "{{ user.name }}"
+    group: "{{ user.group }}"

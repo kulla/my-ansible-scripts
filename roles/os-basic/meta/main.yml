@@ -8,6 +8,7 @@ dependencies:
   - mailclient
   - feedreader
   - webbrowser
+  - bash
   - role: dobackup
     paths:
       - "{{ user.homedir }}/.ssh"
