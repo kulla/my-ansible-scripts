@@ -1,0 +1,3 @@
+---
+- name: Install bash.
+  apt: package=bash state=present
