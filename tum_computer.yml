@@ -5,6 +5,7 @@
     user:
       name: kulla
       group: kulla
+      homedir: /home/kulla
     nas:
       mntdir: /media/tum 
       targets:
