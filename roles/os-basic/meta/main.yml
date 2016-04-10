@@ -12,3 +12,4 @@ dependencies:
     paths:
       - "{{ user.homedir }}/.ssh"
       - "{{ user.homedir }}/.gnupg"
+  - { role: bash-alias, alias: o, cmd: xdg-open }
