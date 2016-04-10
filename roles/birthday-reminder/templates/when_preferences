@@ -1,0 +1,2 @@
+calendar = {{ user.homedir }}/.when/calendar
+editor = {{ text_editor }}

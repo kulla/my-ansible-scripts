@@ -5,6 +5,7 @@
     - scientific-environment
     - serlo-workstation
     - working-directories
+    - birthday-reminder
   vars:
     user:
       name: kulla
