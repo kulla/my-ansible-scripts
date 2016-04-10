@@ -73,13 +73,19 @@ function recover_backuped_files() {
 
 		if should_be_recovered "$FILE"; then
 			if mount_backup_disk ; then
-				if [ -d "$FILE" ]; then
-					rmdir "$FILE"
-				fi
-
 				SRC="${BACKUP_DIR}/{{ retains[0].name }}.0/${FILE}"
 
 				if [ -e "$SRC" ]; then
+					if [ -d "$FILE" ]; then
+						rmdir "$FILE"
+					fi
+
+					BASE="$( dirname "$FILE" )"
+
+					if [ ! -e "$BASE" ]; then
+						mkdir -p "$BASE" || error "cannto create '$BASE'"
+					fi
+
 					cp -r -u "$SRC" "${FILE}" || error "cp failed for '$FILE'"
 
 					sync
