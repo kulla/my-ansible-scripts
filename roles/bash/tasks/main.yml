@@ -1,3 +1,28 @@
 ---
 - name: Install bash.
   apt: package=bash state=present
+
+- name: Create configure directories for bash.
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: 0700
+    owner: "{{ user.name }}"
+    group: "{{ user.group}}"
+  with_items:
+    - "{{ bash_conf_dir }}"
+    - "{{ bash_rc_dir }}"
+    - "{{ shell_rc_dir }}"
+
+- name: Install file for loading shell configurations.
+  template:
+    src: configure_shell.sh
+    dest: "{{ bash_rc_load_file }}"
+    mode: 0700
+    owner: "{{ user.name }}"
+    group: "{{ user.group }}"
+
+- name: Add shell configuration loading file into .profile.
+  lineinfile:
+    line: source {{ bash_rc_load_file }}
+    dest: "{{ user.homedir }}/.profile"
