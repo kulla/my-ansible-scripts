@@ -1,0 +1,9 @@
+---
+- name: Add alias command to .bash_alias.
+  lineinfile:
+    line: alias {{ alias }}=\'{{ cmd }}\'
+    dest: "{{ user.homedir }}/.bash_aliases"
+    create: yes
+    owner: "{{ user.name }}"
+    group: "{{ user.group }}"
+    mode: 0600
