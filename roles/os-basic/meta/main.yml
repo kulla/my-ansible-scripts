@@ -6,4 +6,6 @@ dependencies:
   - media-player
   - text-editor
   - password-manager
+  - mailclient
+  - feedreader
   - webbrowser
