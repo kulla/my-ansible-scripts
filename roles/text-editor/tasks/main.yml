@@ -1,6 +1,6 @@
 ---
 - name: Install vim.
-  apt: package=vim state=present
+  apt: package={{ text_editor }} state=present
 
 - name: Configure vim.
   copy:
@@ -19,8 +19,8 @@
     mode: 0700
 
 - name: Make vim the default text editor.
-  copy:
-    src: make_vim_default_text_editor.sh
+  template:
+    src: set_default_text_editor.sh
     dest: "{{ shell_conf_dir }}/profile"
     mode: 0700
     owner: "{{ user.name }}"
