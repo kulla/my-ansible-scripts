@@ -50,7 +50,6 @@ set list                       " highlight tabs
 set listchars=tab:>.,trail:%   " ">..." for tabs and "%" for trailing spaces
 highlight SpecialKey ctermfg=7 " set highlight color for tabs to light gray
 
-
 " == My key bindings ==
 
 nmap <C-A> :w<CR>
