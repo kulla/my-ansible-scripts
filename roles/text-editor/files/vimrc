@@ -14,6 +14,10 @@ set autoindent
 " Case insensitive search
 set ic
 
+" disable backup
+set nobackup
+set nowritebackup
+
 " Change directory of .swp files
 set directory=~/.vim/tmp
 
