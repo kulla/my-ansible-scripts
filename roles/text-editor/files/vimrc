@@ -68,6 +68,7 @@ au BufRead,BufNewFile Sconscript setfiletype python
 autocmd Filetype python setlocal expandtab
 
 " === Tex ===
+au BufRead,BufNewFile *.tex setfiletype tex
 autocmd Filetype tex setlocal expandtab
 autocmd Filetype tex setlocal tabstop=2
 autocmd Filetype tex setlocal shiftwidth=2
