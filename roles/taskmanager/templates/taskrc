@@ -13,5 +13,9 @@
 # Files
 data.location={{ user.homedir }}/.task
 
-urgency.blocking.coefficient=1
-urgency.user.tag.idee.coefficient=-8
+urgency.blocking.coefficient=6
+urgency.user.tag.idee.coefficient=-5
+urgency.user.tag.erinnerung.coefficient=-4
+urgency.user.tag.termin.coefficient=-1
+
+color.tag.termin=color255 on color100
