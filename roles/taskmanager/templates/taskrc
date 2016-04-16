@@ -22,3 +22,6 @@ include /usr/share/task/holidays.de-DE.rc
 
 color.tag.termin=bold white on rgb010
 color.tag.erinnerung=cyan on gray2
+
+report.next.columns=id,estimate,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.remaining,until.remaining,description,urgency
+report.next.labels=ID,Est,Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until,Description,Urg
