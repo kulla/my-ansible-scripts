@@ -22,5 +22,8 @@ urgency.user.tag.erinnerung.coefficient=-2
 urgency.user.tag.termin.coefficient=2
 urgency.user.tag.bigtask.coefficient=2
 
+calendar.holidays=full
+include /usr/share/task/holidays.de-DE.rc
+
 color.tag.termin=bold white on rgb010
 color.tag.erinnerung=cyan on gray2
