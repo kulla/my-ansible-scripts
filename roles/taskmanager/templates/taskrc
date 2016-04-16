@@ -20,3 +20,4 @@ urgency.user.tag.termin.coefficient=2
 urgency.user.tag.bigtask.coefficient=2
 
 color.tag.termin=color255 on color100
+color.tag.erinnerung=color50
