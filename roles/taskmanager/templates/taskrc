@@ -1,5 +1,7 @@
 data.location={{ user.homedir }}/.task
 
+weekstart=Monday
+
 context.work=( +werktags or project:tum or project:twm )
 context.home=(( project:mfnf or project:life or project:twm ) and -werktags)
 
