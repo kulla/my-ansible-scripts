@@ -13,6 +13,9 @@
 # Files
 data.location={{ user.homedir }}/.task
 
+context.work=( +werktags or project:tum or project:twm )
+context.home=(( project:mfnf or project:life or project:twm ) and -werktags)
+
 urgency.blocking.coefficient=6
 urgency.user.tag.idee.coefficient=-2
 urgency.user.tag.erinnerung.coefficient=-2
