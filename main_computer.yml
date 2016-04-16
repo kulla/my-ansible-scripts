@@ -6,7 +6,7 @@
     - serlo-workstation
     - working-directories
     - birthday-reminder
-    - taskmanager
+    - { role: taskmanager, tags: [ taskmanager ] }
   vars:
     user:
       name: kulla
