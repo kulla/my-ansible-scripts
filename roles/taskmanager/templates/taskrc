@@ -3,8 +3,8 @@ data.location={{ user.homedir }}/.task
 weekstart=Monday
 due=3
 
-context.work=( +werktags or project:tum or project:twm )
-context.home=(( project:mfnf or project:life or project:twm ) and -werktags)
+context.work=( +work or project:tum or project:twm )
+context.home=(( project:mfnf or project:life or project:twm ) and -work)
 
 uda.estimate.type=duration
 uda.estimate.label=Estimate
