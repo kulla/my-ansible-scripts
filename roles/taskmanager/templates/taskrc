@@ -7,6 +7,8 @@ context.work=( +werktags or project:tum or project:twm )
 context.home=(( project:mfnf or project:life or project:twm ) and -werktags)
 
 urgency.blocking.coefficient=6
+urgency.due.coefficient=15
+urgency.uda.priority.L.coefficient=-1.8
 urgency.user.tag.idee.coefficient=-2
 urgency.user.tag.erinnerung.coefficient=-2
 urgency.user.tag.termin.coefficient=2
