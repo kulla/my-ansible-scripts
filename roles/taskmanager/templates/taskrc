@@ -23,7 +23,7 @@ include /usr/share/task/holidays.de-DE.rc
 color.tag.termin=bold white on rgb010
 color.tag.erinnerung=cyan on gray2
 
-report.week.columns=id,estimate,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.remaining,until.remaining,description,urgency
-report.week.labels=ID,Est,Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until,Description,Urg
+report.week.columns=id,description,due,due.remaining,estimate,depends,project,tags,recur
+report.week.labels= ID,Description,Due,Due,Est,Deps,Project,Tag,Recur
 report.week.sort=due
 report.week.filter=status:pending and due.before:now+1week
