@@ -4,7 +4,7 @@ weekstart=Monday
 due=3
 
 context.work=( +termin or +work or project:tum or project:twm )
-context.home=(( +termin or project:mfnf or project:life or project:twm ) and -work)
+context.home=(( +termin or project:mfnf or project:life or project:twm or +home) and -work)
 
 uda.estimate.type=duration
 uda.estimate.label=Estimate
