@@ -5,6 +5,9 @@ due=3
 
 context.work=( +termin or +work or project:tum or project:twm )
 context.home=(( +termin or project:mfnf or project:life or project:twm or +home) and -work)
+context.life=( project:life or project:twm )
+context.mfnf=( project:mfnf )
+context.general=( +general or +termin)
 
 uda.estimate.type=duration
 uda.estimate.label=Estimate
