@@ -25,5 +25,5 @@ color.tag.erinnerung=cyan on gray2
 
 report.week.columns=id,description,due,due.remaining,estimate,depends,project,tags,recur
 report.week.labels= ID,Description,Due,Due,Est,Deps,Project,Tag,Recur
-report.week.sort=due
+report.week.sort=due-
 report.week.filter=status:pending and due.before:now+1week
