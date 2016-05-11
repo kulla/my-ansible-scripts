@@ -88,6 +88,11 @@ au BufRead,BufNewFile *.md setfiletype markdown
 autocmd Filetype markdown setlocal expandtab
 autocmd Filetype markdown setlocal colorcolumn=
 
+" === Wikitext ===
+au BufRead,BufNewFile *.wikitext setfiletype wikitext
+autocmd Filetype wikitext setlocal expandtab
+autocmd Filetype wikitext setlocal colorcolumn=
+
 " === YAML ===
 au BufRead,BufNewFile *.yml setfiletype yaml
 autocmd Filetype yaml setlocal expandtab
