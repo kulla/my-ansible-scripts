@@ -1,7 +1,8 @@
 ---
 dependencies:
   - basic-commandline-tools-available
-  - graphic-editing
+  - { role: graphic-editing, tags: [graphic-editing] }
+  - { role: audio-editing, tags: [audio-editing] }
   - media-player
   - text-editor
   - password-manager
