@@ -6,4 +6,4 @@
     - tar
 
 - name: Install Dropbox.
-  script: install_dropbox.sh {{ ansible_architecture }} \"{{ dropbox.installdir }}\" creates=\"{{ dropbox.installdir }}/dropboxd\"
+  script: install_dropbox.sh {{ ansible_architecture }} {{ dropbox.installdir }} creates={{ dropbox.installdir }}/dropboxd
