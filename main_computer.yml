@@ -1,7 +1,7 @@
 - hosts: localhost
   roles:
-    - { role: os-basic, tags: [ os-basic ] }
     - { role: programming-environment, tags: [ programming-environment ] }
+    - { role: os-basic, tags: [ os-basic ] }
     - scientific-environment
     - serlo-workstation
     - working-directories

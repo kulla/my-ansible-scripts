@@ -1,10 +1,10 @@
 ---
 dependencies:
   - basic-commandline-tools-available
+  - text-editor
   - { role: graphic-editing, tags: [graphic-editing] }
   - { role: audio-editing, tags: [audio-editing] }
   - media-player
-  - text-editor
   - password-manager
   - mailclient
   - feedreader
