@@ -1,7 +1,7 @@
 - name: Add paths to backup configuration.
   lineinfile:
     dest: "{{ backup_conf }}"
-    line: "backupi\t{{ item }}\t./"
+    line: "backup\t{{ item }}\t./"
   with_items: "{{ paths }}"
 
 - name: Add exclude paths to backup configuration.
