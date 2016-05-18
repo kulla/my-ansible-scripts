@@ -86,7 +86,7 @@ function recover_backuped_files() {
 						mkdir -p "$BASE" || error "cannto create '$BASE'"
 					fi
 
-					cp -r -u "$SRC" "${FILE}" || error "cp failed for '$FILE'"
+					cp -a -u "$SRC" "${FILE}" || error "cp failed for '$FILE'"
 
 					sync
 				fi
