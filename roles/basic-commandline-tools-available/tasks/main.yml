@@ -13,6 +13,6 @@
     - gnupg
 
 - name: Update cache for apt-file.
-  shell: apt-file update && touch /var/cache/apt/apt-file/.done
+  command: apt-file update
   args:
-    creates: /var/cache/apt/apt-file/.done
+    creates: /var/cache/apt/apt-file/*
