@@ -10,8 +10,3 @@
     - libavcodec-extra
     # - unrar
     # - ttf-mscorefonts-installer
-
-- name: Install libdvdcss.
-  command: /usr/share/doc/libdvdread4/install-css.sh
-  args:
-    creates: /usr/lib/libdvdcss.so.2
