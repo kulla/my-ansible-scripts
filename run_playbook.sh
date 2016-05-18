@@ -1,3 +1,3 @@
 #!/bin/sh
 
-ansible-playbook --ask-become-pass -i computers $@
+sudo ansible-playbook -i computers $@
