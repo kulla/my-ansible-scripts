@@ -22,6 +22,6 @@
 
 - name: Add shell configuration loading into default shell configuration files.
   lineinfile:
-    line: source \"{{ shell_conf_dir }}/configure_{{ item.name }}.sh\"
+    line: "source '{{ shell_conf_dir }}/configure_{{ item.name }}.sh'"
     dest: "{{ item.fromfile }}"
   with_items: "{{ shell_rc_targets }}"
