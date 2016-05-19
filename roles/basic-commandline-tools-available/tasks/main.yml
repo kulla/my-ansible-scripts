@@ -1,5 +1,5 @@
 ---
-- name: Install basic command line tools.
+- name: Install basic command line tools
   apt: name={{ item }} state=present
   with_items:
     - tree
@@ -12,7 +12,7 @@
     - ssh
     - gnupg
 
-- name: Update cache for apt-file.
+- name: Update cache for apt-file
   command: apt-file update
   args:
     creates: /var/cache/apt/apt-file/*

@@ -1,8 +1,8 @@
 ---
-- name: Install the tool when.
+- name: Install the tool when
   apt: package=when state=present
 
-- name: Configure tool when.
+- name: Configure tool when
   template:
     src: when_preferences
     dest: "{{ user.homedir }}/.when/preferences"
@@ -10,7 +10,7 @@
     owner: "{{ user.name }}"
     group: "{{ user.group }}"
 
-- name: Show next birthdays on starting of a terminal.
+- name: Show next birthdays on starting of a terminal
   copy:
     src: show_birthdays.sh
     dest: "{{ shell_conf_dir }}/bash"

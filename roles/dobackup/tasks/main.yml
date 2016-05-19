@@ -1,18 +1,18 @@
-- name: Add paths to backup configuration.
+- name: Add paths to backup configuration
   lineinfile:
     dest: "{{ backup_conf }}"
     line: "backup\t{{ item }}\t./"
   with_items: "{{ paths }}"
 
-- name: Add exclude paths to backup configuration.
+- name: Add exclude paths to backup configuration
   lineinfile: line={{ item }} dest={{ backup_exclude_conf }}
   with_items: "{{ exclude | default([]) }}"
 
-- name: Add include paths to backup configuration.
+- name: Add include paths to backup configuration
   lineinfile: line={{ item }} dest={{ backup_include_conf }}
   with_items: "{{ include | default([]) }}"
 
-- name: Recover backuped files/directories when necessary.
+- name: Recover backuped files/directories when necessary
   command: backup recover "{{ item }}"
   environment:
     OWNER: "{{ owner | default(user.name)  }}"

@@ -1,12 +1,12 @@
 ---
-- name: Install basic programming tools.
+- name: Install basic programming tools
   apt: name={{ item }} state=present
   with_items:
     - make
     - git
     - gitg
 
-- name: Configure git.
+- name: Configure git
   template:
     src: gitconfig
     dest: "{{ user.homedir }}/.gitconfig"

@@ -1,8 +1,8 @@
 ---
-- name: Install vim.
+- name: Install vim
   apt: package={{ text_editor }} state=present
 
-- name: Configure vim.
+- name: Configure vim
   copy:
     src: vimrc
     dest: "{{ user.homedir}}/.vimrc"
@@ -10,7 +10,7 @@
     owner: "{{ user.name }}"
     group: "{{ user.group }}"
 
-- name: Create directory for .swp files.
+- name: Create directory for .swp files
   file:
     path: "{{ user.homedir}}/.vim/tmp"
     state: directory
@@ -18,7 +18,7 @@
     group: "{{ user.group }}"
     mode: 0700
 
-- name: Make vim the default text editor.
+- name: Make vim the default text editor
   template:
     src: set_default_text_editor.sh
     dest: "{{ shell_conf_dir }}/profile"
@@ -26,7 +26,7 @@
     owner: "{{ user.name }}"
     group: "{{ user.group }}"
 
-- name: Install gedit with plugins.
+- name: Install gedit with plugins
   apt: package={{ item }} state=present
   with_items:
     - gedit

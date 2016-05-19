@@ -1,8 +1,8 @@
 ---
-- name: Install tool taskwarrior.
+- name: Install tool taskwarrior
   apt: package=taskwarrior state=present
 
-- name: Configure taskwarrior.
+- name: Configure taskwarrior
   template:
     src: taskrc
     dest: "{{ user.homedir}}/.taskrc"

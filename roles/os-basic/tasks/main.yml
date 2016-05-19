@@ -1,11 +1,11 @@
 ---
-- name: Deinstall Adobe Flash.
+- name: Deinstall Adobe Flash
   apt: package={{ item }} state=absent
   with_items:
     - adobe-flashplugin
     - flashplugin-installer
 
-- name: Configure the bash.
+- name: Configure the bash
   copy:
     src: configure_bash.sh
     dest: "{{ shell_conf_dir }}/bash"

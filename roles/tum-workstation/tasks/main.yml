@@ -1,11 +1,11 @@
 ---
-- name: Install necessary tools for tum-workstation.
+- name: Install necessary tools for tum-workstation
   apt: name={{ item }} state=present
   with_items:
     - cifs-utils
     - xournal
 
-- name: Download client for LRZ Sync and Share.
+- name: Download client for LRZ Sync and Share
   get_url:
     url: https://syncandshare.lrz.de/client_deployment/LRZ_Sync_Share_Latest_amd64.deb
     dest: /opt/lrz_sync_and_share_latest_amd64.deb
@@ -13,12 +13,12 @@
 - name: Install LRZ Sync and Share.
   apt: deb=/opt/lrz_sync_and_share_latest_amd64.deb state=present
 
-- name: Umount NAS filer (when they already exist).
+- name: Umount NAS filer (when they already exist)
   command: umount {{ nas.mntdir }}/{{ item.target }}
   with_items: "{{ nas.targets }}"
   ignore_errors: True
 
-- name: Create mount points for NAS filer.
+- name: Create mount points for NAS filer
   file:
     path: "{{ nas.mntdir }}/{{ item.target }}"
     state: directory
@@ -27,10 +27,10 @@
     group: "{{ user.group }}"
   with_items: "{{nas.targets}}"
 
-- name: Create credential file for mounting the NAS filer.
+- name: Create credential file for mounting the NAS filer
   template: src=credential_file dest={{ nas.mntdir }}/.credentials mode=0600
 
-- name: Mount personal NAS filer.
+- name: Mount personal NAS filer
   mount:
     state: present
     fstype: cifs

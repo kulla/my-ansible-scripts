@@ -1,8 +1,8 @@
 ---
-- name: Install default shell.
+- name: Install default shell
   apt: package=bash state=present
 
-- name: Create configure directories for bash.
+- name: Create configure directories for bash
   file:
     path: "{{ shell_conf_dir }}/{{ item.name }}"
     state: directory
@@ -11,7 +11,7 @@
     group: "{{ user.group}}"
   with_items: "{{ shell_rc_targets }}"
 
-- name: Install files for loading shell configurations.
+- name: Install files for loading shell configurations
   template:
     src: configure.sh
     dest: "{{ shell_conf_dir }}/configure_{{ item.name }}.sh"
@@ -20,7 +20,7 @@
     group: "{{ user.group }}"
   with_items: "{{ shell_rc_targets }}"
 
-- name: Add shell configuration loading into default shell configuration files.
+- name: Add shell configuration loading into default shell configuration files
   lineinfile:
     line: "source '{{ shell_conf_dir }}/configure_{{ item.name }}.sh'"
     dest: "{{ item.fromfile }}"
