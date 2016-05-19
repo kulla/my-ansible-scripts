@@ -1,3 +1,10 @@
 ---
 - name: Install a webbrowser
   apt: package=firefox state=present
+
+- name: Install plugins for firefox
+  apt: package={{ item }} state=present
+  with_items:
+    - xul-ext-ublock-origin
+    - xul-ext-y-u-no-validate
+    - xul-ext-colorfultabs
