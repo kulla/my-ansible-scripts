@@ -1,6 +1,7 @@
 ---
 dependencies:
   - basic-commandline-tools-available
+  - { role: backupable, tags: [backupable] }
   - { role: text-editor, tags: [text-editor] }
   - { role: graphic-editing, tags: [graphic-editing] }
   - { role: audio-editing, tags: [audio-editing] }
