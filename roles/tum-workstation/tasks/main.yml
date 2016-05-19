@@ -5,6 +5,14 @@
     - cifs-utils
     - xournal
 
+- name: Download client for LRZ Sync and Share.
+  get_url:
+    url: https://syncandshare.lrz.de/client_deployment/LRZ_Sync_Share_Latest_amd64.deb
+    dest: /opt/lrz_sync_and_share_latest_amd64.deb
+
+- name: Install LRZ Sync and Share.
+  apt: deb=/opt/lrz_sync_and_share_latest_amd64.deb state=present
+
 - name: Umount NAS filer (when they already exist).
   command: umount {{ nas.mntdir }}/{{ item.target }}
   with_items: "{{ nas.targets }}"

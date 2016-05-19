@@ -1,0 +1,6 @@
+---
+- name: Add PPA of simplescreenrecorder
+  apt_repository: repo=ppa:maarten-baert/simplescreenrecorder
+
+- name: Install simplescreenrecorder
+  apt: package=simplescreenrecorder state=present
