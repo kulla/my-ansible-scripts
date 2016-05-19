@@ -1,6 +1,9 @@
 ---
-- name: Install mount.cifs for NAS filer.
-  apt: name=cifs-utils state=present
+- name: Install necessary tools for tum-workstation.
+  apt: name={{ item }} state=present
+  with_items:
+    - cifs-utils
+    - xournal
 
 - name: Umount NAS filer (when they already exist).
   command: umount {{ nas.mntdir }}/{{ item.target }}
