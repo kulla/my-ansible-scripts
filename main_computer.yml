@@ -2,6 +2,16 @@
   roles:
     - { role: programming-environment, tags: [ programming-environment ] }
     - { role: os-basic, tags: [ os-basic ] }
+    - { role: backupable, tags: [backupable] }
+    - { role: text-editor, tags: [text-editor] }
+    - { role: graphic-editing, tags: [graphic-editing] }
+    - { role: audio-editing, tags: [audio-editing] }
+    - { role: media-player, tags: [media-player] }
+    - { role: password-manager, tags: [password-manager] }
+    - { role: mailclient, tags: [mailclient] }
+    - { role: feedreader, tags: [feedreader] }
+    - { role: webbrowser, tags: [webbrowser] }
+    - { role: shell, tags: [shell]}
     - { role: scientific-environment, tags: [scientific-environment] }
     - { role: serlo-workstation, tags: [serlo-workstation] }
     - { role: working-directories, tags: [working-directories] }

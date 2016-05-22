@@ -1,16 +1,6 @@
 ---
 dependencies:
   - basic-commandline-tools-available
-  - { role: backupable, tags: [backupable] }
-  - { role: text-editor, tags: [text-editor] }
-  - { role: graphic-editing, tags: [graphic-editing] }
-  - { role: audio-editing, tags: [audio-editing] }
-  - { role: media-player, tags: [media-player] }
-  - { role: password-manager, tags: [password-manager] }
-  - { role: mailclient, tags: [mailclient] }
-  - { role: feedreader, tags: [feedreader] }
-  - { role: webbrowser, tags: [webbrowser] }
-  - { role: shell, tags: [shell]}
   - role: dobackup
     paths:
       - "{{ user.homedir }}/.ssh"
