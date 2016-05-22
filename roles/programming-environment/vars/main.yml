@@ -1,0 +1,1 @@
+ipython_conf_dir: "{{ user.homedir }}/.ipython/profile_default"
