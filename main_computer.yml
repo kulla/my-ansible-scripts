@@ -2,10 +2,10 @@
   roles:
     - { role: programming-environment, tags: [ programming-environment ] }
     - { role: os-basic, tags: [ os-basic ] }
-    - scientific-environment
-    - serlo-workstation
-    - working-directories
-    - birthday-reminder
+    - { role: scientific-environment, tags: [scientific-environment] }
+    - { role: serlo-workstation, tags: [serlo-workstation] }
+    - { role: working-directories, tags: [working-directories] }
+    - { role: birthday-reminder, tags: [birthday-reminder] }
     - { role: taskmanager, tags: [ taskmanager ] }
   vars:
     user:
