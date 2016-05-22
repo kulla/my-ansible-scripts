@@ -1,4 +1,6 @@
 ---
+- include: basic_commandline_tools_available.yml
+
 - name: Deinstall Adobe Flash
   apt: package={{ item }} state=absent
   with_items:

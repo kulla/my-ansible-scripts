@@ -1,6 +1,5 @@
 ---
 dependencies:
-  - basic-commandline-tools-available
   - role: dobackup
     paths:
       - "{{ user.homedir }}/.ssh"
