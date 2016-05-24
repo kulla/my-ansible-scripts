@@ -4,5 +4,6 @@ dependencies:
     paths:
       - "{{ user.homedir }}/.ssh"
       - "{{ user.homedir }}/.gnupg"
+      - "/etc/NetworkManager"
   - { role: bash-alias, alias: o, cmd: xdg-open }
   - { role: bash-alias, alias: h, cmd: history }
