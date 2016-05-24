@@ -1,3 +1,6 @@
 ---
-- name: Install feedreader
-  apt: package=sylpheed state=present
+- name: Install mail clients
+  apt: package={{ item }} state=present
+  with_items:
+    - sylpheed
+    - thunderbird

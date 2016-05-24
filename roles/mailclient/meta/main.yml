@@ -2,6 +2,7 @@
 dependencies:
   - role: dobackup
     paths:
+      - "{{ user.homedir }}/.thunderbird"
       - "{{ sylpheed_conf_dir }}"
       - "{{ user.homedir }}/Mail"
     exclude:
