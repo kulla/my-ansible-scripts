@@ -1,0 +1,3 @@
+---
+- name: Install tools for video editing
+  apt: package=ffmpeg state=present
