@@ -29,3 +29,8 @@ report.week.columns=id,description,due,due.remaining,estimate,depends,project,ta
 report.week.labels= ID,Description,Due,Due,Est,Deps,Project,Tag,Recur
 report.week.sort=due-
 report.week.filter=status:pending and due.before:now+1week
+
+report.termine.columns=id,due,due.remaining,description,estimate,depends,project,tags,recur
+report.termine.labels= ID,Due,Due,Description,Est,Deps,Project,Tag,Recur
+report.termine.sort=due-
+report.termine.filter=status:pending and +termin
