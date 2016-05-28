@@ -1,0 +1,2 @@
+* stterm for the terminal
+* surf as webbrowser
