@@ -1,0 +1,6 @@
+---
+- name: Install xmonad
+  apt: package={{ item }} state=present
+  with_items:
+    - xmonad
+    - suckless-tools
