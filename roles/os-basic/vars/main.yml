@@ -1,0 +1,1 @@
+xmonad_conf_dir: "{{ user.homedir }}/.xmonad"
