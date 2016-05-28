@@ -5,6 +5,7 @@
     - make
     - git
     - gitg
+    - gource
 
 - name: Configure git
   template:
