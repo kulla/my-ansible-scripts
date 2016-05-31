@@ -6,3 +6,4 @@
     - python-numpy
     - python-scipy
     - texlive-latex-recommended
+    - texlive-lang-german
