@@ -11,6 +11,7 @@
     - nmap
     - ssh
     - gnupg
+    - gparted
 
 - name: Update cache for apt-file
   command: apt-file update
