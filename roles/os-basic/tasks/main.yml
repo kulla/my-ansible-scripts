@@ -1,5 +1,5 @@
 ---
-- include: basic_commandline_tools_available.yml
+- include: basic_tools.yml
 - include: xmonad.yml
 
 - name: Deinstall Adobe Flash
