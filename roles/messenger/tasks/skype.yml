@@ -1,0 +1,8 @@
+---
+- name: Add Ubuntu partner repo
+  apt_repository:
+    repo: deb http://archive.canonical.com/ubuntu {{ ansible_lsb.codename }} partner
+    state: present
+
+- name: Install skype
+  package: name=skype state=present

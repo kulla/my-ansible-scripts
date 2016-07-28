@@ -18,6 +18,7 @@
     - { role: working-directories, tags: [working-directories] }
     - { role: birthday-reminder, tags: [birthday-reminder] }
     - { role: taskmanager, tags: [ taskmanager ] }
+    - { role: messenger, tags: [ messenger ] }
   vars:
     user:
       name: kulla
