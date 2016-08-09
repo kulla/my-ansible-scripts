@@ -2,6 +2,8 @@
 - include: basic_tools.yml
 - include: xmonad.yml
 - include: disable_caps_lock.yml
+- include: add_language_support.yml lang={{ item }}
+  with_items: [ de, it, en ]
 
 - name: Deinstall Adobe Flash
   apt: package={{ item }} state=absent
@@ -16,6 +18,3 @@
     mode: 0700
     owner: "{{ user.name }}"
     group: "{{ user.group }}"
-
-- include: add_language_support.yml lang={{ item }}
-  with_items: [ de, it, en ]
