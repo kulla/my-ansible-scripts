@@ -1,6 +1,7 @@
 ---
 - include: basic_tools.yml
 - include: xmonad.yml
+- include: disable_caps_lock.yml
 
 - name: Deinstall Adobe Flash
   apt: package={{ item }} state=absent
