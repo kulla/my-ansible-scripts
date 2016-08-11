@@ -5,5 +5,7 @@
     - gnuplot
     - python-numpy
     - python-scipy
+    - python3-matplotlib
+    - python-matplotlib
     - texlive-latex-recommended
     - texlive-lang-german
