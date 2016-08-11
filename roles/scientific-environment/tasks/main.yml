@@ -4,8 +4,10 @@
   with_items:
     - gnuplot
     - python-numpy
+    - python3-numpy
     - python-scipy
-    - python3-matplotlib
+    - python3-scipy
     - python-matplotlib
+    - python3-matplotlib
     - texlive-latex-recommended
     - texlive-lang-german
