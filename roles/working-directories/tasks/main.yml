@@ -10,3 +10,11 @@
     - Templates
     - Music
     - Documents
+
+- name: Configure working directories
+  copy:
+    src: user-dirs.dirs
+    dest: "{{ user.homedir }}/.config/user-dirs.dirs"
+    owner: "{{ user.name }}"
+    group: "{{ user.group }}"
+    mode: 0600
