@@ -1,0 +1,12 @@
+---
+- name: Delete unneeded directores
+  file: state=absent path={{ user.homedir }}/{{ item }}
+  with_items:
+    - Desktop
+    - Downloads
+    - Videos
+    - Pictures
+    - Public
+    - Templates
+    - Music
+    - Documents
