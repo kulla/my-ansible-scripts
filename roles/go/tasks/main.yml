@@ -1,0 +1,19 @@
+---
+- name: Install go
+  apt: package=golang state=present
+
+- name: Create gopath
+  file:
+    dest: "{{ gopath }}"
+    state: directory
+    owner: "{{ user.name }}"
+    group: "{{ user.name }}"
+    mode: 0700
+
+- name: Set gopath
+  template:
+    src: set_gopath.sh
+    dest: "{{ shell_conf_dir }}/profile"
+    mode: 0700
+    owner: "{{ user.name }}"
+    group: "{{ user.group }}"
