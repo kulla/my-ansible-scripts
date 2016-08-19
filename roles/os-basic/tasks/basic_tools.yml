@@ -13,6 +13,7 @@
     - gnupg
     - encfs
     - gparted
+    - apache2-utils
 
 - name: Update cache for apt-file
   command: apt-file update
