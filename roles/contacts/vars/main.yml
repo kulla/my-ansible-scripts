@@ -1,0 +1,3 @@
+---
+contactsdir: "{{ user.homedir }}/.contacts"
+contactsrc: "{{ user.homedir }}/.contactsrc"

@@ -1,0 +1,14 @@
+---
+- name: Install contactsrc file
+  template:
+    src: contactsrc
+    dest: "{{ contactsrc }}"
+    owner: "{{ user.name }}"
+    group: "{{ user.group }}"
+    mode: 0600
+
+- name: Install contacts script
+  template:
+    src: contacts
+    dest: /usr/local/bin
+    mode: 0755

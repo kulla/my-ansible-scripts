@@ -19,6 +19,7 @@
     - { role: birthday-reminder, tags: [birthday-reminder] }
     - { role: taskmanager, tags: [ taskmanager ] }
     - { role: messenger, tags: [ messenger ] }
+    - { role: contacts, tags: [ contacts ] }
   vars:
     user:
       name: kulla
