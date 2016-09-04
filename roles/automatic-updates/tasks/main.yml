@@ -1,0 +1,9 @@
+---
+- name: Install anacron
+  package: name=anacron state=present
+
+- name: Install script for updating system
+  copy:
+    src: update-system
+    dest: /etc/cron.daily/
+    mode: 0755
