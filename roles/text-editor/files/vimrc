@@ -78,6 +78,12 @@ autocmd Filetype tex setlocal shiftwidth=2
 autocmd Filetype tex setlocal spell spelllang=en
 autocmd Filetype tex setlocal colorcolumn=
 
+" === Lua ===
+au BufRead,BufNewFile *.lua setfiletype lua
+autocmd Filetype lua setlocal expandtab
+autocmd Filetype lua setlocal tabstop=2
+autocmd Filetype lua setlocal shiftwidth=2
+
 " === Haskell ===
 au BufRead,BufNewFile *.cabal setlocal expandtab
 autocmd Filetype haskell setlocal expandtab
