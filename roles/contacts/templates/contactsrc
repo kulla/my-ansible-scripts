@@ -8,9 +8,11 @@ uda.from.type=string
 uda.from.label=From
 uda.address.type=string
 uda.address.label=From
+uda.wbuser.type=string
+uda.wbuser.label=Wikibooks
 
-report.list.columns=id,description.desc,from,email,phone,address
-report.list.labels=ID,Person,From,Email,Phone,Address
+report.list.columns=id,description.desc,from,email,phone,address,wbuser
+report.list.labels=ID,Person,From,Email,Phone,Address,Wikibooks
 report.list.sort=description+
 
 default.command=list
