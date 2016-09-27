@@ -75,7 +75,6 @@ au BufRead,BufNewFile *.tex setfiletype tex
 autocmd Filetype tex setlocal expandtab
 autocmd Filetype tex setlocal tabstop=2
 autocmd Filetype tex setlocal shiftwidth=2
-autocmd Filetype tex setlocal spell spelllang=en
 autocmd Filetype tex setlocal colorcolumn=
 
 " === Lua ===
