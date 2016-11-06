@@ -20,6 +20,7 @@
     - { role: taskmanager, tags: [ taskmanager ] }
     - { role: messenger, tags: [ messenger ] }
     - { role: contacts, tags: [ contacts ] }
+    - { role: pidgin, tags: [ pidgin ] }
     - { role: automatic-updates, tags: [ automatic-updates ] }
   vars:
     user:
