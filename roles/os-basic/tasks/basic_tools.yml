@@ -14,6 +14,7 @@
     - encfs
     - gparted
     - apache2-utils
+    - mbr
 
 - name: Update cache for apt-file
   command: apt-file update
