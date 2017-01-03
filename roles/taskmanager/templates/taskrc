@@ -3,11 +3,11 @@ data.location={{ user.homedir }}/.task
 weekstart=Monday
 due=3
 
-context.work=( +termin or +work or project:tum or project:twm )
-context.home=(( +termin or project:mfnf or project:life or project:twm or +home) and -work)
-context.life=( project:life or project:twm )
-context.friends=( project:friends )
-context.mfnf=( project:mfnf )
+context.work=( +termin or +work or project:tum or project:twm or project:)
+context.home=(( +termin or project:mfnf or project:life or project:twm or +home or project:) and -work)
+context.life=( project:life or project:twm or project: )
+context.friends=( project:friends or project: )
+context.mfnf=( project:mfnf or project: )
 
 uda.estimate.type=duration
 uda.estimate.label=Estimate
