@@ -27,7 +27,13 @@
     group: "{{ user.group }}"
 
 - name: Install vim plugins
-  apt: package=vim-editorconfig state=present
+  apt: package={{ item }} state=present
+  with_items:
+    - vim-syntastic
+    - vim-editorconfig
+    - pep8
+    - pylint
+    - pyflakes
 
 - name: Enable vim plugins
   command: vim-addons install editorconfig
