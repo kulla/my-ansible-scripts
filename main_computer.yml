@@ -22,6 +22,7 @@
     - { role: contacts, tags: [ contacts ] }
     - { role: pidgin, tags: [ pidgin ] }
     - { role: automatic-updates, tags: [ automatic-updates ] }
+    - { role: "programming/python/pyenv", tags: [ pyenv ] }
   vars:
     user:
       name: kulla

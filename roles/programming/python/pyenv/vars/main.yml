@@ -1,0 +1,2 @@
+---
+pyenv_installation_directory: "{{ user.homedir }}/.pyenv"

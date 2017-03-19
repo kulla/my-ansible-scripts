@@ -1,0 +1,13 @@
+---
+- name: Install Pyenv from git repo
+  git:
+    repo: https://github.com/pyenv/pyenv.git
+    dest: "{{ pyenv_installation_directory }}"
+
+- name: Define evironment variables for Pyenv
+  template:
+    src: configure_pyenv.sh
+    dest: "{{ shell_conf_dir }}/profile"
+    mode: 0700
+    owner: "{{ user.name }}"
+    group: "{{ user.group }}"
