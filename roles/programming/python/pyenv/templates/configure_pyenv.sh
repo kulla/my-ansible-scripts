@@ -1,2 +1,2 @@
-export PYENV_ROOT='{{ pyenv_installation_directory }}'
+export PYENV_ROOT='{{ pyenv_install_dir }}'
 export PATH="$PYENV_ROOT/bin:$PATH"

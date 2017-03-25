@@ -1,2 +1,3 @@
 ---
-pyenv_installation_directory: "{{ user.homedir }}/.pyenv"
+pyenv_install_dir: "{{ user.homedir }}/.pyenv"
+virtualenv_install_dir: "{{ pyenv_install_dir }}/plugins/pyenv-virtualenv"
