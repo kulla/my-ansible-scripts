@@ -21,8 +21,16 @@
 
 - name: Define evironment variables for Pyenv
   template:
-    src: configure_pyenv.sh
+    src: configure_pyenv_profile.sh
     dest: "{{ shell_conf_dir }}/profile"
+    mode: 0700
+    owner: "{{ user.name }}"
+    group: "{{ user.group }}"
+
+- name: Configure Pyenv for usage in Bash
+  copy:
+    src: configure_pyenv_bash.sh
+    dest: "{{ shell_conf_dir }}/bash"
     mode: 0700
     owner: "{{ user.name }}"
     group: "{{ user.group }}"
