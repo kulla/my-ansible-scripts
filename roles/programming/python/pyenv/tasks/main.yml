@@ -23,6 +23,9 @@
     repo: https://github.com/pyenv/pyenv.git
     dest: "{{ pyenv_install_dir }}"
 
+- name: Install virtualenv
+  package: name=virtualenv state=present
+
 - name: Install pyenv-virtualenv plugin
   git:
     repo: https://github.com/pyenv/pyenv-virtualenv.git
