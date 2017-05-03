@@ -9,7 +9,7 @@ display_dpi=96.00
 # the initial zoom level, in percent
 initial_zoom=100.00
 # maximize the window at startup (true/false)
-window_maximize=false
+window_maximize=true
 # start in full screen mode (true/false)
 window_fullscreen=false
 # the window width in pixels (when not maximized)
@@ -45,11 +45,11 @@ buttons_switch_mappings=false
 # automatically load filename.pdf.xoj instead of filename.pdf (true/false)
 autoload_pdf_xoj=false
 # enable periodic autosaves (true/false)
-autosave_enabled=false
+autosave_enabled=true
 # delay for periodic autosaves (in seconds)
 autosave_delay=5
 # default path for open/save (leave blank for current directory)
-default_path=/tmp/b
+default_path=
 # use pressure sensitivity to control pen stroke width (true/false)
 pressure_sensitivity=false
 # minimum width multiplier
@@ -86,7 +86,7 @@ height=792.00
 # the default paper color
 color=white
 # the default paper style (plain, lined, ruled, or graph)
-style=lined
+style=plain
 # apply paper style changes to all pages (true/false)
 apply_all=false
 # preferred unit (cm, in, px, pt)
