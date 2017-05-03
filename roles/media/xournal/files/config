@@ -45,7 +45,7 @@ buttons_switch_mappings=false
 # automatically load filename.pdf.xoj instead of filename.pdf (true/false)
 autoload_pdf_xoj=false
 # enable periodic autosaves (true/false)
-autosave_enabled=true
+autosave_enabled=false
 # delay for periodic autosaves (in seconds)
 autosave_delay=5
 # default path for open/save (leave blank for current directory)
