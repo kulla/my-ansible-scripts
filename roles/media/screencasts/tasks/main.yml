@@ -1,0 +1,11 @@
+---
+- name: Install input and output profiles for SimpleScreenRecorder
+  copy:
+    src: "{{ item }}"
+    dest: "{{ user.homedir }}/.ssr/{{ item }}"
+    owner: "{{ user.name }}"
+    group: "{{ user.group }}"
+  with_items:
+    - input-profiles/xournal1080p.conf
+    - input-profiles/xournal720p.conf
+    - output-profiles/MFNF-MP4.conf
