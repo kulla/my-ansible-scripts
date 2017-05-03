@@ -23,6 +23,7 @@
     - { role: pidgin, tags: [ pidgin ] }
     - { role: automatic-updates, tags: [ automatic-updates ] }
     - { role: "programming/python/pyenv", tags: [ pyenv ] }
+    - { role: "media/xournal", tags: [ xournal ] }
   vars:
     user:
       name: kulla
