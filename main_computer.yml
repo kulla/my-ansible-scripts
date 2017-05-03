@@ -8,6 +8,7 @@
     - { role: "media/audio-editing", tags: [audio-editing] }
     - { role: "media/video-player", tags: [video-player] }
     - { role: "media/video-editing", tags: [video-editing] }
+    - { role: "media/simplescreenrecorder", tags: [simplescreenrecorder] }
     - { role: password-manager, tags: [password-manager] }
     - { role: mailclient, tags: [mailclient] }
     - { role: feedreader, tags: [feedreader] }
