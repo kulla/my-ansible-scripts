@@ -9,3 +9,6 @@
     - input-profiles/xournal1080p.conf
     - input-profiles/xournal720p.conf
     - output-profiles/MFNF-MP4.conf
+
+- name: Install script cs
+  copy: src=cs mode=0755 dest=/usr/local/bin/cs
