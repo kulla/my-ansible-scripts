@@ -18,3 +18,8 @@
     mode: 0700
     owner: "{{ user.name }}"
     group: "{{ user.group }}"
+
+- name: Configure update-manager
+  copy:
+    src: release-upgrades
+    dest: /etc/update-manager/release-upgrades
