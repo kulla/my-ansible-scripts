@@ -1,0 +1,2 @@
+---
+taskserver_certificates_dir: "{{ user.homedir }}/.config/taskserver"
