@@ -1,16 +1,24 @@
 #!/bin/bash
 
+SCREEN="LVDS-1"
+
 function run_xrandr() {
-	xrandr --output "LVDS-1" --fb $1 --panning $1 --scale-from $1
+	xrandr --output "$SCREEN" --fb "$1" --panning "$1" --scale-from "$1"
+	exit $?
 }
 
-if [[ $1 == "1080p" ]]; then
-	run_xrandr "1920x1157"
-elif [[ $1 == "720p" ]]; then
-	run_xrandr "1280x797"
-elif [[ $1 == "" ]]; then
-	run_xrandr "1366x768"
-else
-	echo "Wrong Argument!" 1 >& 2
-	exit 1
+if [[ -z "$1" ]]; then
+	xrandr --output "$SCREEN" --auto --panning "0x0" --transform none
+	exit $?
 fi
+
+case "$1" in
+	1080p) run_xrandr "1920x1080" ;;
+	1080x) run_xrandr "1920x1211" ;;
+	720p)  run_xrandr "1280x720"  ;;
+	720x)  run_xrandr "1280x851"  ;;
+	*)
+		echo "Wrong Argument!" 1 >& 2
+		exit 1
+		;;
+esac
