@@ -96,7 +96,7 @@ print_ruling=true
 # when creating a new page, duplicate a PDF or image background instead of using default paper (true/false)
 new_page_duplicates_bg=false
 # just-in-time update of page backgrounds (true/false)
-progressive_bg=true
+progressive_bg=false
 # bitmap resolution of PS/PDF backgrounds rendered using ghostscript (dpi)
 gs_bitmap_dpi=144
 # bitmap resolution of PDF backgrounds when printing with libgnomeprint (dpi)
@@ -106,7 +106,7 @@ pdftoppm_printing_dpi=150
 # selected tool at startup (pen, eraser, highlighter, selectregion, selectrect, vertspace, hand, image)
 startup_tool=pen
 # Use the pencil from cursor theme instead of a color dot (true/false)
-pen_cursor=false
+pen_cursor=true
 # default pen color
 pen_color=black
 # default pen thickness (fine = 1, medium = 2, thick = 3)
