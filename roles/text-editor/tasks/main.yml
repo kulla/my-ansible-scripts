@@ -1,6 +1,6 @@
 ---
 - name: Install vim
-  apt: package=vim state=present
+  apt: package=vim-gtk state=present
 
 - name: Configure vim
   copy:
