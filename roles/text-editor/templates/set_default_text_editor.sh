@@ -1,1 +1,1 @@
-export EDITOR="{{ text_editor }}"
+export EDITOR="vim"
