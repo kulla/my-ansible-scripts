@@ -1,6 +1,9 @@
 ---
 - name: Install tool taskwarrior
-  apt: package=taskwarrior state=present
+  apt: package={{ item }} state=present
+  with_items:
+    - taskwarrior
+    - tasksh
 
 - name: Include taskwarrior configuration
   include_vars: taskrc.yml
