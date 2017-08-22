@@ -35,3 +35,9 @@
     - ca.cert.pem
     - my.cert.pem
     - key.pem
+
+- name: Install cron job for syncing taskwarrior
+  copy:
+    src: sync-taskwarrior
+    dest: /etc/cron.hourly/
+    mode: 0755
