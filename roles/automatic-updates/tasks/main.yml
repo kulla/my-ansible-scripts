@@ -1,6 +1,10 @@
 ---
-- name: Install anacron
-  package: name=anacron state=present
+- name: Install tools for update script
+  package: name={{ item }} state=present
+  with_items:
+    - anacron
+    - network-manager
+    - grep
 
 - name: Install script for updating system
   copy:

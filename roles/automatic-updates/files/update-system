@@ -1,3 +1,6 @@
 #/bin/sh
 
-apt update && apt -y full-upgrade && apt -y autoremove
+if ! nmcli d show wlp1s0 | grep "XT1068 8368" > /dev/null ; then
+	# We do not get internet via a hotspot of our smartphone
+	apt update && apt -y upgrade && apt -y full-upgrade && apt -y autoremove
+fi
