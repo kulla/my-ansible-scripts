@@ -4,3 +4,7 @@
 [user]
 	name = {{ user.realname }}
 	email = {{ git.email }}
+
+[alias]
+	hist = log --oneline --graph --decorate
+	tree = !git hist --all
