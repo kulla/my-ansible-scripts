@@ -19,7 +19,7 @@
     mode: 0700
 
 - name: Make vim the default text editor
-  template:
+  copy:
     src: set_default_text_editor.sh
     dest: "{{ shell_conf_dir }}/profile"
     mode: 0700
