@@ -37,7 +37,7 @@
     - key.pem
 
 - name: Install cron job for syncing taskwarrior
-  copy:
+  template:
     src: sync-taskwarrior
     dest: /etc/cron.hourly/
     mode: 0755
