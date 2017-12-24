@@ -1,4 +1,3 @@
 ---
 dependencies:
-  - role: "media/simplescreenrecorder"
   - role: "media/xournal"

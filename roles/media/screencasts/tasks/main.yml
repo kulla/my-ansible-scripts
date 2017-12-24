@@ -1,6 +1,9 @@
 ---
 - tags: [ screencasts ]
   block:
+    - name: Install SimpleScreenRecorder
+      package: name=simplescreenrecorder state=present
+
     - name: Install input and output profiles for SimpleScreenRecorder
       copy:
         src: "{{ item }}"
