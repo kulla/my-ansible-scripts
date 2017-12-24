@@ -1,3 +1,5 @@
 ---
-- name: Install simplescreenrecorder
-  apt: package=simplescreenrecorder state=present
+- tags: [ simplescreenrecorder ]
+  block:
+    - name: Install simplescreenrecorder
+      apt: package=simplescreenrecorder state=present

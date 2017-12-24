@@ -1,10 +1,12 @@
 ---
-- name: Install xournal
-  apt: name=xournal state=present
+- tags: [ xournal ]
+  block:
+    - name: Install xournal
+      apt: name=xournal state=present
 
-- name: Configure xournal
-  copy:
-    src: config
-    dest: "{{ user.homedir }}/.xournal/config"
-    owner: "{{ user.name }}"
-    group: "{{ user.group }}"
+    - name: Configure xournal
+      copy:
+        src: config
+        dest: "{{ user.homedir }}/.xournal/config"
+        owner: "{{ user.name }}"
+        group: "{{ user.group }}"
