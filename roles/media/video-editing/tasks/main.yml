@@ -2,7 +2,7 @@
 - tags: [ video-editing ]
   block:
     - name: Install tools for video editing
-      apt: package={{ item }} state=present
+      package: package={{ item }} state=present
       with_items:
         - ffmpeg
         - blender

@@ -2,6 +2,6 @@
 - tags: [ audio-editing ]
   block:
     - name: Install tools for editing audio files
-      apt: name={{ item }} state=present
+      package: name={{ item }} state=present
       with_items:
         - audacity

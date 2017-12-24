@@ -2,7 +2,7 @@
 - tags: [ xournal ]
   block:
     - name: Install xournal
-      apt: name=xournal state=present
+      package: name=xournal state=present
 
     - name: Configure xournal
       copy:
