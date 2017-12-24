@@ -1,15 +1,10 @@
 - hosts: localhost
   roles:
+    - media
     - { role: programming-environment, tags: [ programming-environment ] }
     - { role: os-basic, tags: [ os-basic ] }
     - { role: backupable, tags: [backupable] }
     - { role: text-editor, tags: [text-editor] }
-    - { role: "media/graphic-editing", tags: [graphic-editing] }
-    - { role: "media/audio-editing", tags: [audio-editing] }
-    - { role: "media/video-player", tags: [video-player] }
-    - { role: "media/video-editing", tags: [video-editing] }
-    - { role: "media/simplescreenrecorder", tags: [simplescreenrecorder] }
-    - { role: "media/screencasts", tags: [screencasts] }
     - { role: password-manager, tags: [password-manager] }
     - { role: mailclient, tags: [mailclient] }
     - { role: feedreader, tags: [feedreader] }
@@ -25,7 +20,6 @@
     - { role: pidgin, tags: [ pidgin ] }
     - { role: automatic-updates, tags: [ automatic-updates ] }
     - { role: "programming/python/pyenv", tags: [ pyenv ] }
-    - { role: "media/xournal", tags: [ xournal ] }
   vars:
     user:
       name: kulla
