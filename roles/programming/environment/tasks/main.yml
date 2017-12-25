@@ -1,0 +1,20 @@
+---
+- tags: [ programming ]
+  block:
+    - name: Install basic programming tools
+      apt: name={{ item }} state=present
+      with_items:
+        - make
+        - git
+        - git-cola
+        - gource
+
+    - name: Configure git
+      template:
+        src: gitconfig
+        dest: "{{ user.homedir }}/.gitconfig"
+        mode: 0600
+        owner: "{{ user.name }}"
+        group: "{{ user.group }}"
+
+    - include: python.yml

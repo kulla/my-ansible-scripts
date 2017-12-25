@@ -2,7 +2,6 @@
   roles:
     - media
     - programming
-    - { role: programming-environment, tags: [ programming-environment ] }
     - { role: os-basic, tags: [ os-basic ] }
     - { role: backupable, tags: [backupable] }
     - { role: text-editor, tags: [text-editor] }
