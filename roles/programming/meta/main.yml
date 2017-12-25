@@ -3,3 +3,4 @@ dependencies:
   - "programming/pyenv"
   - "programming/environment"
   - "programming/python"
+  - "programming/nodejs"
