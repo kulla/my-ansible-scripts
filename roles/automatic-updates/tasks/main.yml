@@ -1,13 +1,8 @@
 ---
-- name: Install tools for update script
-  package: name={{ item }} state=present
-  with_items:
-    - anacron
-    - network-manager
-    - grep
-
-- name: Install script for updating system
-  copy:
-    src: update-system
-    dest: /etc/cron.daily/
-    mode: 0755
+- tags: [ updates ]
+  block:
+    - name: Install script for updating system
+      copy:
+        src: update-system
+        dest: /etc/cron.daily/
+        mode: 0755
