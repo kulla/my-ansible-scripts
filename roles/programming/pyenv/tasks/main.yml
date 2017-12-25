@@ -50,3 +50,9 @@
         mode: 0700
         owner: "{{ user.name }}"
         group: "{{ user.group }}"
+
+    - name: Install update script for pyenv
+      template:
+        src: update_pyenv
+        dest: "{{ update_weekly }}"
+        mode: 0755

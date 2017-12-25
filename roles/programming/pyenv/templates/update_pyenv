@@ -1,0 +1,2 @@
+cd '{{ pyenv_install_dir }}' && git pull
+cd '{{ virtualenv_install_dir }}' && git pull
