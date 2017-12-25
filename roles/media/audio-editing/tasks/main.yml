@@ -1,7 +1,0 @@
----
-- tags: [ audio-editing ]
-  block:
-    - name: Install tools for editing audio files
-      package: name={{ item }} state=present
-      with_items:
-        - audacity

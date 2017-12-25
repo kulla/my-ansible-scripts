@@ -1,8 +1,6 @@
 ---
 dependencies:
-  - "media/audio-editing"
-  - "media/graphic-editing"
+  - "media/editing"
   - "media/screencasts"
-  - "media/video-editing"
   - "media/video-player"
   - "media/xournal"

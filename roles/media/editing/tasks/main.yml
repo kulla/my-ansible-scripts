@@ -1,10 +1,12 @@
 ---
-- tags: [ graphic-editing ]
+- tags: [ editing ]
   block:
-    - name: Install tools for editing graphics
+    - name: Install tools for editing media files
       package: name={{ item }} state=present
       with_items:
+        - audacity
         - inkscape
         - gimp
         - scrot
         - imagemagick
+        - ffmpeg
