@@ -1,2 +1,0 @@
----
-gopath: "{{ user.homedir }}/go"
