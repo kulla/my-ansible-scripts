@@ -1,0 +1,13 @@
+---
+update_base: "/etc/updates/{{ user.name }}"
+update_hourly: "{{ update_base}}/hourly"
+update_daily: "{{ update_base}}/daily"
+update_weekly: "{{ update_base}}/weekly"
+update_monthly: "{{ update_base}}/monthly"
+update_anacrontab: "{{ update_base }}/anacrontab"
+update_anacronspool: "/var/spool/anacron.{{ user.name }}"
+update_paths:
+  - "{{ update_hourly }}"
+  - "{{ update_daily }}"
+  - "{{ update_weekly }}"
+  - "{{ update_monthly }}"

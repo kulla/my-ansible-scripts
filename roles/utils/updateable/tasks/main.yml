@@ -1,0 +1,29 @@
+---
+- tags: [ updateable ]
+  block:
+    - name: Create configuration directory for updates
+      file:
+        path: "{{ item }}"
+        state: directory
+        mode: 0755
+      with_items: "{{ update_paths }}"
+
+    - name: Install crontab for updates
+      template:
+        src: my-updates
+        dest: /etc/cron.d/
+        mode: 0644
+
+    - name: Install anacrontab for updates
+      template:
+        src: anacrontab
+        dest: "{{ update_anacrontab }}"
+        mode: 0644
+
+    - name: Create spool directory for anacron
+      file:
+        path: "{{ update_anacronspool }}"
+        state: directory
+        mode: 0755
+        owner: "{{ user.name }}"
+        group: "{{ user.group }}"
