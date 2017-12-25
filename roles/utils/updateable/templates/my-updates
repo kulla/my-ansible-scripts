@@ -3,5 +3,5 @@ SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 # m h dom mon dow user	command
-37 * * * * {{ user.name }}    cd / && run-parts --report {{ update_hourly }}
+37 * * * * {{ user.name }}    shall_do_update && cd / && run-parts --report {{ update_hourly }}
 45 * * * * {{ user.name }}    /usr/sbin/anacron -t {{ update_anacrontab }} -S {{ update_anacronspool }}

@@ -8,6 +8,12 @@
         mode: 0755
       with_items: "{{ update_paths }}"
 
+    - name: Install script shall_do_update
+      copy:
+        src: shall_do_update
+        dest: /usr/local/bin
+        mode: 0755
+
     - name: Install crontab for updates
       template:
         src: my-updates

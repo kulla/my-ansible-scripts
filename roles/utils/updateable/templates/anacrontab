@@ -8,6 +8,6 @@ HOME={{ user.homedir }}
 LOGNAME={{ user.name}}
 
 # These replace cron's entries
-1	3	{{ user.name }}.cron.daily	run-parts --report {{ update_daily }}
-7	8	{{ user.name }}.cron.weekly	run-parts --report {{ update_weekly }}
-@monthly	8	{{ user.name }}.cron.monthly	run-parts --report {{ update_monthly }}
+1	3	{{ user.name }}.cron.daily	shall_do_update && run-parts --report {{ update_daily }}
+7	8	{{ user.name }}.cron.weekly	shall_do_update && run-parts --report {{ update_weekly }}
+@monthly	8	{{ user.name }}.cron.monthly	shall_do_update && run-parts --report {{ update_monthly }}
