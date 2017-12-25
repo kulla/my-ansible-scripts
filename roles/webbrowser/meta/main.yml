@@ -1,5 +1,5 @@
 ---
 dependencies:
-  - role: dobackup
+  - role: utils/dobackup
     paths:
       - "{{ user.homedir }}/.mozilla/"

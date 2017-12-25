@@ -1,6 +1,6 @@
 ---
 dependencies:
-  - role: dobackup
+  - role: utils/dobackup
     paths:
       - "{{ user.homedir }}/.ssh"
       - "{{ user.homedir }}/.gnupg"

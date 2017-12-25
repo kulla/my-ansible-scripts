@@ -1,6 +1,6 @@
 ---
 dependencies:
-  - role: dobackup
+  - role: utils/dobackup
     paths:
       - "{{ user.homedir }}/documents/"
       - "{{ user.homedir }}/pictures/"
