@@ -2,5 +2,5 @@
 dependencies:
   - "media/editing"
   - "media/screencasts"
-  - "media/video-player"
+  - "media/player"
   - "media/xournal"
