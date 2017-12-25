@@ -1,6 +1,7 @@
 - hosts: localhost
   roles:
     - media
+    - os
     - programming
     - { role: os-basic, tags: [ os-basic ] }
     - { role: text-editor, tags: [text-editor] }
@@ -17,7 +18,6 @@
     - { role: messenger, tags: [ messenger ] }
     - { role: contacts, tags: [ contacts ] }
     - { role: pidgin, tags: [ pidgin ] }
-    - { role: automatic-updates, tags: [ automatic-updates ] }
   vars:
     user:
       name: kulla
