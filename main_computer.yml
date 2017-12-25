@@ -3,7 +3,6 @@
     - media
     - programming
     - { role: os-basic, tags: [ os-basic ] }
-    - { role: backupable, tags: [backupable] }
     - { role: text-editor, tags: [text-editor] }
     - { role: password-manager, tags: [password-manager] }
     - { role: mailclient, tags: [mailclient] }
