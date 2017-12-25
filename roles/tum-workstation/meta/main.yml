@@ -1,7 +1,0 @@
----
-dependencies:
-  - role: simplescreenrecorder
-    tags: [ simplescreenrecorder ]
-  - role: utils/dobackup
-    paths:
-      - "{{ user.homedir }}/tum/"
