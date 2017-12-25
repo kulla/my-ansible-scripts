@@ -16,5 +16,3 @@
         mode: 0600
         owner: "{{ user.name }}"
         group: "{{ user.group }}"
-
-    - include: python.yml

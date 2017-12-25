@@ -2,3 +2,4 @@
 dependencies:
   - "programming/pyenv"
   - "programming/environment"
+  - "programming/python"
