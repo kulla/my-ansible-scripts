@@ -1,6 +1,13 @@
 ---
 - tags: [ updateable ]
   block:
+    - name: Install tools for updates
+      package: name={{ item }} state=present
+      with_items:
+        - anacron
+        - grep
+        - network-manager
+
     - name: Create configuration directory for updates
       file:
         path: "{{ item }}"
