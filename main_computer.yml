@@ -1,6 +1,7 @@
 - hosts: localhost
   roles:
     - media
+    - programming
     - { role: programming-environment, tags: [ programming-environment ] }
     - { role: os-basic, tags: [ os-basic ] }
     - { role: backupable, tags: [backupable] }
@@ -19,7 +20,6 @@
     - { role: contacts, tags: [ contacts ] }
     - { role: pidgin, tags: [ pidgin ] }
     - { role: automatic-updates, tags: [ automatic-updates ] }
-    - { role: "programming/python/pyenv", tags: [ pyenv ] }
   vars:
     user:
       name: kulla

@@ -1,0 +1,52 @@
+---
+- tags: [ pyenv ]
+  block:
+    # See https://github.com/pyenv/pyenv/wiki/Common-build-problems for
+    # complete list of dependencies.
+    - name: Install dependencies for building python with pyenv
+      package: name={{ item }} state=present
+      with_items:
+        - make
+        - build-essential
+        - libssl-dev
+        - zlib1g-dev
+        - libbz2-dev
+        - libreadline-dev
+        - libsqlite3-dev
+        - wget
+        - curl
+        - llvm
+        - libncurses5-dev
+        - libncursesw5-dev
+        - xz-utils
+
+    - name: Install Pyenv from git repo
+      git:
+        repo: https://github.com/pyenv/pyenv.git
+        dest: "{{ pyenv_install_dir }}"
+
+    - name: Install virtualenv
+      package: name=virtualenv state=present
+
+    - name: Install pyenv-virtualenv plugin
+      git:
+        repo: https://github.com/pyenv/pyenv-virtualenv.git
+        dest: "{{ virtualenv_install_dir }}"
+
+    - name: Change owner and group of pyenv and virtualenv directory
+      file:
+        path: "{{ item }}"
+        owner: "{{ user.name }}"
+        group: "{{ user.group }}"
+        recurse: yes
+      with_items:
+        - "{{ pyenv_install_dir }}"
+        - "{{ virtualenv_install_dir }}"
+
+    - name: Configure pyenv
+      template:
+        src: configure_pyenv.sh
+        dest: "{{ shell_conf_dir }}/bash"
+        mode: 0700
+        owner: "{{ user.name }}"
+        group: "{{ user.group }}"
