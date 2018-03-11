@@ -15,6 +15,7 @@
     - gparted
     - apache2-utils
     - mbr
+    - rename
 
 - name: Update cache for apt-file
   command: apt-file update
