@@ -124,3 +124,9 @@ autocmd Filetype yaml setlocal shiftwidth=2
 autocmd Filetype yaml setlocal foldmethod=expr
 autocmd Filetype yaml setlocal foldlevel=1000
 autocmd Filetype yaml setlocal foldexpr=match(getline(v:lnum),'[^[:space:]\-]')
+
+" === TJP ===
+au BufRead,BufNewFile *.tjp setfiletype tjp
+autocmd Filetype tjp setlocal expandtab
+autocmd Filetype tjp setlocal tabstop=2
+autocmd Filetype tjp setlocal shiftwidth=2
