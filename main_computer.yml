@@ -3,6 +3,7 @@
     - media
     - os
     - programming
+    - messenger
     - { role: os-basic, tags: [ os-basic ] }
     - { role: text-editor, tags: [text-editor] }
     - { role: password-manager, tags: [password-manager] }
@@ -15,9 +16,7 @@
     - { role: working-directories, tags: [working-directories] }
     - { role: birthday-reminder, tags: [birthday-reminder] }
     - { role: taskmanager, tags: [ taskmanager ] }
-    - { role: messenger, tags: [ messenger ] }
     - { role: contacts, tags: [ contacts ] }
-    - { role: pidgin, tags: [ pidgin ] }
   vars:
     user:
       name: kulla
