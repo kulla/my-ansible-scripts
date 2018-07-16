@@ -1,0 +1,5 @@
+---
+- tags: [ discord ]
+  block:
+    - name: Install discord
+      command: snap install discord
