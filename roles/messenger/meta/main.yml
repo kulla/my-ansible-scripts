@@ -1,6 +1,6 @@
 ---
 dependencies:
-  - "messenger/skype"
-  - "messenger/pidgin"
-  - "messenger/discord"
-  - "messenger/slack"
+  - messenger/skype
+  - messenger/pidgin
+  - messenger/discord
+  - messenger/slack
