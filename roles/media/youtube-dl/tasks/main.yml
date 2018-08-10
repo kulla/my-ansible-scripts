@@ -11,3 +11,9 @@
                mode=0755
                force=yes
       when: not youtubedl_bin.stat.exists
+
+    - name: Install script for updating youtube-dl
+      copy:
+        src: youtube-dl-update
+        dest: /etc/cron.weekly
+        mode: 0544
