@@ -1,6 +1,5 @@
 ---
 dependencies:
-  - utils/updateable
   - role: utils/dobackup
     paths:
       - "{{ user.homedir }}/.task"

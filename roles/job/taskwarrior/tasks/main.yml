@@ -38,8 +38,9 @@
         - my.cert.pem
         - key.pem
 
-    - name: Install cron job for syncing taskwarrior
-      copy:
-        src: sync-taskwarrior
-        dest: "{{ update_hourly }}"
-        mode: 0755
+    - name: Cron job for syncing taskwarrior
+      cron:
+        name: sync taskwarrior
+        job: task sync
+        user: "{{ user.name }}"
+        special_time: hourly
