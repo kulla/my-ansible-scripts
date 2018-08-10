@@ -1,3 +1,4 @@
 ---
 dependencies:
   - job/taskwarrior
+  - job/science
