@@ -1,4 +1,4 @@
 ---
 dependencies:
-  - shell
+  - os/shell
   - utils/updateable

@@ -6,7 +6,6 @@
     - messenger
     - web
     - { role: os-basic, tags: [ os-basic ] }
-    - { role: shell, tags: [shell]}
     - { role: scientific-environment, tags: [scientific-environment] }
     - { role: serlo-workstation, tags: [serlo-workstation] }
     - { role: birthday-reminder, tags: [birthday-reminder] }
