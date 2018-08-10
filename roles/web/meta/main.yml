@@ -2,3 +2,4 @@
 dependencies:
   - web/firefox
   - web/newsbeuter
+  - web/thunderbird
