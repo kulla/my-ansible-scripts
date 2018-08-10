@@ -1,9 +1,0 @@
----
-- name: Install tools necessary for Dropbox install script
-  apt: package={{ item }} state=present
-  with_items:
-    - wget
-    - tar
-
-- name: Install Dropbox
-  script: install_dropbox.sh {{ ansible_architecture }} {{ dropbox.installdir }} creates={{ dropbox.installdir }}/dropboxd
