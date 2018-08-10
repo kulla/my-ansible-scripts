@@ -1,3 +1,4 @@
 ---
 dependencies:
   - web/firefox
+  - web/newsbeuter

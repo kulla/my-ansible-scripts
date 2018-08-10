@@ -1,0 +1,12 @@
+---
+- tags: [newsbeuter]
+  block:
+    - name: Install newsbeuter
+      apt: package=newsbeuter state=present
+
+    - name: Weekly cache clean of newsbeuter
+      cron:
+        name: clean cache of newsbeuter
+        job: newsbeuter -X
+        user: "{{ user.name }}"
+        special_time: weekly
