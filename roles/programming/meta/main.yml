@@ -4,3 +4,4 @@ dependencies:
   - "programming/environment"
   - "programming/python"
   - "programming/nodejs"
+  - "programming/vim"

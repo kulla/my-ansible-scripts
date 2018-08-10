@@ -5,7 +5,6 @@
     - programming
     - messenger
     - { role: os-basic, tags: [ os-basic ] }
-    - { role: text-editor, tags: [text-editor] }
     - { role: password-manager, tags: [password-manager] }
     - { role: mailclient, tags: [mailclient] }
     - { role: feedreader, tags: [feedreader] }
