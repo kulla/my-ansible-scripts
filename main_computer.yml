@@ -5,11 +5,11 @@
     - programming
     - messenger
     - web
+    - job
     - { role: os-basic, tags: [ os-basic ] }
     - { role: scientific-environment, tags: [scientific-environment] }
     - { role: serlo-workstation, tags: [serlo-workstation] }
     - { role: birthday-reminder, tags: [birthday-reminder] }
-    - { role: taskmanager, tags: [ taskmanager ] }
     - { role: contacts, tags: [ contacts ] }
   vars:
     user:
