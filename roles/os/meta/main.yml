@@ -1,3 +1,4 @@
 ---
 dependencies:
   - os/updates
+  - os/working-directories

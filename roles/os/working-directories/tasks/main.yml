@@ -1,0 +1,22 @@
+---
+- tags: [ working-directories ]
+  block:
+    - name: Delete unneeded directores
+      file: state=absent path={{ user.homedir }}/{{ item }}
+      with_items:
+        - Desktop
+        - Downloads
+        - Videos
+        - Pictures
+        - Public
+        - Templates
+        - Music
+        - Documents
+
+    - name: Configure working directories
+      copy:
+        src: user-dirs.dirs
+        dest: "{{ user.homedir }}/.config/user-dirs.dirs"
+        owner: "{{ user.name }}"
+        group: "{{ user.group }}"
+        mode: 0600

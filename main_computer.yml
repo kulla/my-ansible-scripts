@@ -12,7 +12,6 @@
     - { role: shell, tags: [shell]}
     - { role: scientific-environment, tags: [scientific-environment] }
     - { role: serlo-workstation, tags: [serlo-workstation] }
-    - { role: working-directories, tags: [working-directories] }
     - { role: birthday-reminder, tags: [birthday-reminder] }
     - { role: taskmanager, tags: [ taskmanager ] }
     - { role: contacts, tags: [ contacts ] }
