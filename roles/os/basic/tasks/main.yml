@@ -19,10 +19,11 @@
         - mbr
         - rename
 
-    - name: Update cache for apt-file
-      command: apt-file update
-      args:
-        creates: /var/cache/apt/apt-file/*
+    - name: Monthly update of cache for apt-file
+      cron:
+        name: update apt-file
+        job: apt-file update
+        special_time: monthly
 
     - include: add_language_support.yml lang={{ item }}
       with_items: [ de, it, en ]
