@@ -1,3 +1,0 @@
----
-- name: Install keepassx
-  apt: package=keepassx state=present
