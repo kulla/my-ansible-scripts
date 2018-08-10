@@ -1,3 +1,0 @@
----
-- name: Install a webbrowser
-  apt: package=firefox state=present

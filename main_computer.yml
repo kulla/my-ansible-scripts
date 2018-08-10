@@ -4,11 +4,11 @@
     - os
     - programming
     - messenger
+    - web
     - { role: os-basic, tags: [ os-basic ] }
     - { role: password-manager, tags: [password-manager] }
     - { role: mailclient, tags: [mailclient] }
     - { role: feedreader, tags: [feedreader] }
-    - { role: webbrowser, tags: [webbrowser] }
     - { role: shell, tags: [shell]}
     - { role: scientific-environment, tags: [scientific-environment] }
     - { role: serlo-workstation, tags: [serlo-workstation] }
