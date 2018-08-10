@@ -1,3 +1,0 @@
----
-- name: Install sylpheed
-  apt: package=sylpheed state=present
