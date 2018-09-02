@@ -1,0 +1,10 @@
+---
+- tags: [lua]
+  block:
+    - name: Install lua
+      package: name={{item}} state=present
+      with_items:
+        - lua5.3
+        - luarocks
+        - lua5.2
+        - lua5.2-doc

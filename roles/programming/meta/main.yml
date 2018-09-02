@@ -5,3 +5,4 @@ dependencies:
   - programming/python
   - programming/nodejs
   - programming/vim
+  - programming/lua
