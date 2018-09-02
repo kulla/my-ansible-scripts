@@ -1,10 +1,85 @@
 ---
 - tags: [lua]
   block:
-    - name: Install lua
-      package: name={{item}} state=present
-      with_items:
-        - lua5.3
-        - luarocks
-        - lua5.2
-        - lua5.2-doc
+    - name: Check whether lua is installed
+      stat: path=/usr/local/bin/lua
+      register: lua_stat
+
+    - when: lua_stat.stat.exists == False
+      block:
+        - name: Download lua
+          get_url:
+            url: http://www.lua.org/ftp/lua-5.3.5.tar.gz
+            dest: /tmp/lua.tar.gz
+            checksum: sha1:112eb10ff04d1b4c9898e121d6bdf54a81482447
+
+        - name: Unarchive lua tarball
+          unarchive:
+            remote_src: yes
+            src: /tmp/lua.tar.gz
+            dest: /tmp/
+
+        - name: Build lua
+          command: make linux
+          args:
+            chdir: /tmp/lua-5.3.5
+            creates: /tmp/lua-5.3.5/src/lua
+
+        - name: Check building of lua
+          command: make test
+          args:
+            chdir: /tmp/lua-5.3.5
+
+        - name: Install lua
+          command: make install
+          args:
+            chdir: /tmp/lua-5.3.5
+
+    - name: Check whether luarocks is installed
+      stat: path=/usr/local/bin/luarocks
+      register: luarocks_stat
+
+    - when: luarocks_stat.stat.exists == False
+      block:
+        - name: Download luarocks
+          get_url:
+            url: https://luarocks.org/releases/luarocks-3.0.0.tar.gz
+            dest: /tmp/luarocks.tar.gz
+
+        - name: Download PGP signature of luarocks
+          get_url:
+            url: https://luarocks.github.io/luarocks/releases/luarocks-3.0.0.tar.gz.asc
+            dest: /tmp/luarocks.tar.gz.asc
+
+        - name: Download public key of luarocks programmer
+          get_url:
+            url: https://pgp.mit.edu/pks/lookup?op=get&search=0x3FD8F43C2BB3C478
+            dest: /tmp/luarocks.asc
+
+        - name: Deamor public key of luarocks programmer
+          shell: gpg --dearmor < /tmp/luarocks.asc > /tmp/luarocks.gpg
+          args:
+            creates: /tmp/luarocks.gpg
+
+        - name: Check downloaded luarocks tarball
+          command: >
+            gpg --no-default-keyring --keyring /tmp/luarocks.gpg
+                --verify /tmp/luarocks.tar.gz.asc /tmp/luarocks.tar.gz
+
+        - name: Unarchive luarocks tarball
+          unarchive:
+            remote_src: yes
+            src: /tmp/luarocks.tar.gz
+            dest: /tmp/
+
+        - name: Configure luarocks
+          command: ./configure --lua-version=5.3
+          args:
+            chdir: /tmp/luarocks-3.0.0
+            creates: /tmp/luarocks-3.0.0/config.unix
+
+        - name: Install luarocks
+          command: make bootstrap
+          args:
+            chdir: /tmp/luarocks-3.0.0
+            creates: /usr/local/bin/luarocks
