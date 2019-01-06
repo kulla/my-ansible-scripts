@@ -6,3 +6,4 @@ dependencies:
   - os/working-directories
   - os/keepassx
   - os/xmonad
+  - os/archive-command
