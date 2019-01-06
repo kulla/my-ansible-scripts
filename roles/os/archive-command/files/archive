@@ -27,7 +27,7 @@ function archive_file() {
 	fi
 
 	if [ -z "$FILE_DATE" ]; then
-		FILE_DATE="@$(stat --format='%Z' "$FILE_REALPATH")"
+		FILE_DATE="@$(stat --format='%Y' "$FILE_REALPATH")"
 	fi
 
 	YEAR=$(date --date="$FILE_DATE" '+%Y') || \
