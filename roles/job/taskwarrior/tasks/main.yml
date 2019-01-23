@@ -44,3 +44,11 @@
         job: task sync
         user: "{{ user.name }}"
         special_time: hourly
+
+    - name: Show next tasks on terminal startup
+      copy:
+        src: show_tasks.sh
+        dest: "{{ shell_conf_dir }}/bash"
+        mode: 0700
+        owner: "{{ user.name }}"
+        group: "{{ user.group }}"

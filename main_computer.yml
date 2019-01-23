@@ -6,7 +6,6 @@
     - messenger
     - web
     - job
-    - { role: birthday-reminder, tags: [birthday-reminder] }
     - { role: contacts, tags: [ contacts ] }
   vars:
     user:

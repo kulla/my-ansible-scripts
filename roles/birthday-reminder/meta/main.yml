@@ -1,6 +1,0 @@
----
-dependencies:
-  - os/shell
-  - role: utils/dobackup
-    paths:
-      - "{{ user.homedir }}/.when/calendar"
