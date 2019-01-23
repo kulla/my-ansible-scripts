@@ -6,7 +6,6 @@
     - messenger
     - web
     - job
-    - { role: contacts, tags: [ contacts ] }
   vars:
     user:
       name: kulla
