@@ -1,0 +1,27 @@
+data.location={{ user.homedir }}/.task
+
+weekstart=Monday
+due=3
+
+calendar.holidays=full
+include /usr/share/task/holidays.de-DE.rc
+
+color.tag.termin=bold white on rgb010
+color.tag.erinnerung=cyan on gray2
+
+context.work= ( +termin or project:twm or project: )
+context.life= ( +termin or project:life or project: )
+context.uni=  ( +termin or project:tum or project: )
+context.serlo=( +termin or project:serlo or project:mfnf or project: )
+
+report.week.columns=id,description.desc,due,due.remaining,depends,project,tags,recur
+report.week.labels= ID,Description,Due,Due,Deps,Project,Tags,Recur
+report.week.sort=due-
+report.week.filter=status:pending and due.before:now+2week
+
+report.termine.columns=id,due,due.remaining,description.desc,depends,project,tags,recur
+report.termine.labels= ID,Due,Due,Description,Deps,Project,Tags,Recur
+report.termine.sort=due-
+report.termine.filter=status:pending and +termin
+
+{{ taskwarrior_taskd }}

@@ -12,8 +12,8 @@
       no_log: true
 
     - name: Configure taskwarrior
-      copy:
-        content: "{{ taskrc }}"
+      template:
+        src: taskrc
         dest: "{{ user.homedir}}/.taskrc"
         mode: 0600
         owner: "{{ user.name }}"
