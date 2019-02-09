@@ -4,6 +4,18 @@
     - name: Install SimpleScreenRecorder
       package: name=simplescreenrecorder state=present
 
+    - name: Create config directory for SimpleScreenRecorder
+      file:
+        path: "{{ item }}"
+        state: directory
+        mode: 0700
+        owner: "{{ user.name }}"
+        group: "{{ user.group }}"
+      with_items:
+        - "{{ user.homedir }}/.ssr"
+        - "{{ user.homedir }}/.ssr/input-profiles"
+        - "{{ user.homedir }}/.ssr/output-profiles"
+
     - name: Install input and output profiles for SimpleScreenRecorder
       copy:
         src: "{{ item }}"
