@@ -1,5 +1,0 @@
----
-- tags: [ skype ]
-  block:
-    - name: Install skype
-      command: snap install skype
