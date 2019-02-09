@@ -53,7 +53,7 @@
 
         - name: Download public key of luarocks programmer
           get_url:
-            url: https://pgp.mit.edu/pks/lookup?op=get&search=0x3FD8F43C2BB3C478
+            url: http://keys.gnupg.net/pks/lookup?op=get&search=0x3FD8F43C2BB3C478
             dest: /tmp/luarocks.asc
 
         - name: Deamor public key of luarocks programmer
