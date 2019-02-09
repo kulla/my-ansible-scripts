@@ -4,6 +4,14 @@
     - name: Install xournal
       package: name=xournal state=present
 
+    - name: Create directory for xournal configuration
+      file:
+        path: "{{ user.homedir }}/.xournal"
+        state: directory
+        mode: 0700
+        owner: "{{ user.name }}"
+        group: "{{ user.group }}"
+
     - name: Configure xournal
       copy:
         src: config
