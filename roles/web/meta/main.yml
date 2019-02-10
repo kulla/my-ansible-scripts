@@ -1,5 +1,6 @@
 ---
 dependencies:
   - web/firefox
+  - web/sylpheed
   - web/newsbeuter
   - web/thunderbird
