@@ -34,6 +34,9 @@
         - adobe-flashplugin
         - flashplugin-installer
 
+    - name: Deinstall Qlipper
+      package: name=qlipper state=absent
+
     - name: Configure the bash
       copy:
         src: configure_bash.sh
