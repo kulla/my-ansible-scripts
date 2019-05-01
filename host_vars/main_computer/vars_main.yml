@@ -1,0 +1,16 @@
+user:
+  name: kulla
+  group: kulla
+  realname: Stephan Kulla
+  homedir: /home/kulla
+git:
+  email: git.mail@kulla.me
+
+taskwarrior_user_id: "{{ user.name }}"
+taskwarrior_cronjob_sync: true
+taskwarrior_server_certificate: taskwarrior_server.cert.pem
+taskwarrior_client_certificate: taskwarrior_client.cert.pem
+taskwarrior_client_key: taskwarrior_client.key.pem
+taskwarrior_configuration: |
+  {{ taskwarrior_taskd_configuration }}
+  {{ lookup('file', 'taskwarrior_configuration.rc') }}
