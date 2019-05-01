@@ -14,10 +14,10 @@ report.backlog.labels= ID,Rank,Due,Description,Project,Due
 report.backlog.sort=rank-,due+,project+
 report.backlog.filter=status:pending and limit:page
 
-report.doing.columns=id,rank,due.remaining,description.desc,project,due
-report.doing.labels= ID,Rank,Due,Description,Project,Due
-report.doing.sort=rank-,due+,project+
-report.doing.filter=status:pending and (+next or due.before:now+3days)
+report.next.columns=id,rank,due.remaining,description.desc,project,due
+report.next.labels= ID,Rank,Due,Description,Project,Due
+report.next.sort=rank-,due+,project+
+report.next.filter=status:pending and (+next or due.before:now+3days)
 
 report.week.columns=id,description.desc,due,due.remaining,depends,project,tags,recur
 report.week.labels= ID,Description,Due,Due,Deps,Project,Tags,Recur
