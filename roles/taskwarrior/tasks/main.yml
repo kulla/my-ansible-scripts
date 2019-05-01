@@ -6,8 +6,7 @@
       no_log: true
 
     - name: Install taskwarrior
-      import_role:
-        name: kulla.taskwarrior
+      import_role: name=kulla.taskwarrior
       vars:
         taskwarrior_user_id: "{{ user.name }}"
         taskwarrior_cronjob_sync: true
