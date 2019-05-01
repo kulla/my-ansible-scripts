@@ -6,6 +6,7 @@
     - messenger
     - web
     - job
+    - taskwarrior
   vars:
     user:
       name: kulla
