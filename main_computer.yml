@@ -6,7 +6,6 @@
     - messenger
     - web
     - job
-    - taskwarrior
   vars:
     user:
       name: kulla
@@ -15,3 +14,31 @@
       homedir: /home/kulla
     git:
       email: git.mail@kulla.me
+  tasks:
+  - tags: [taskwarrior]
+    block:
+      - name: Install taskwarrior
+        import_role: name=kulla.taskwarrior
+        vars:
+          taskwarrior_user_id: "{{ user.name }}"
+          taskwarrior_cronjob_sync: true
+          taskwarrior_server_certificate: taskwarrior_server.cert.pem
+          taskwarrior_client_certificate: taskwarrior_client.cert.pem
+          taskwarrior_client_key: taskwarrior_client.key.pem
+          taskwarrior_configuration: |
+            {{ taskwarrior_taskd_configuration }}
+            {{ lookup('file', 'taskwarrior_configuration.rc') }}
+
+      - name: Backup taskwarrior's data location
+        import_role: name=utils/dobackup
+        vars:
+          paths:
+            - "{{ user.homedir }}/.task"
+
+      - name: Show next tasks on terminal startup
+        copy:
+          src: show_tasks.sh
+          dest: "{{ shell_conf_dir }}/bash"
+          mode: 0700
+          owner: "{{ user.name }}"
+          group: "{{ user.group }}"
