@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: main_computer
   roles:
     - media
     - os

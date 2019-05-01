@@ -1,10 +1,6 @@
 ---
 - tags: [taskwarrior]
   block:
-    - name: Include taskwarrior configuration
-      include_vars: taskrc.yml
-      no_log: true
-
     - name: Install taskwarrior
       import_role: name=kulla.taskwarrior
       vars:
@@ -45,7 +41,7 @@
           report.termine.sort=due-
           report.termine.filter=status:pending and +termin
 
-          {{ taskwarrior_taskd }}
+          {{ taskwarrior_taskd_configuration }}
 
     - name: Backup taskwarrior's data location
       import_role: name=utils/dobackup
