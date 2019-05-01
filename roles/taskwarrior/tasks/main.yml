@@ -10,38 +10,8 @@
         taskwarrior_client_certificate: taskwarrior_client.cert.pem
         taskwarrior_client_key: taskwarrior_client.key.pem
         taskwarrior_configuration: |
-          color.tag.termin=bold white on rgb010
-          color.tag.erinnerung=cyan on gray2
-          color.project.birthday=white on rgb012
-
-          context.life= ( +termin or project:life or project: )
-          context.uni=  ( +termin or project:tum or project: )
-          context.serlo=( +termin or project:serlo or project:mfnf or project: )
-
-          uda.rank.type=numeric
-          uda.rank.label=Priority
-
-          report.backlog.columns=id,rank,due.remaining,description.desc,project,due
-          report.backlog.labels= ID,Rank,Due,Description,Project,Due
-          report.backlog.sort=rank-,due+,project+
-          report.backlog.filter=status:pending and limit:page
-
-          report.doing.columns=id,rank,due.remaining,description.desc,project,due
-          report.doing.labels= ID,Rank,Due,Description,Project,Due
-          report.doing.sort=rank-,due+,project+
-          report.doing.filter=status:pending and (+next or due.before:now+3days)
-
-          report.week.columns=id,description.desc,due,due.remaining,depends,project,tags,recur
-          report.week.labels= ID,Description,Due,Due,Deps,Project,Tags,Recur
-          report.week.sort=due-
-          report.week.filter=status:pending and due.before:now+2week
-
-          report.termine.columns=id,due,due.remaining,description.desc,depends,project,tags,recur
-          report.termine.labels= ID,Due,Due,Description,Deps,Project,Tags,Recur
-          report.termine.sort=due-
-          report.termine.filter=status:pending and +termin
-
           {{ taskwarrior_taskd_configuration }}
+          {{ lookup('file', 'taskwarrior_configuration.rc') }}
 
     - name: Backup taskwarrior's data location
       import_role: name=utils/dobackup
