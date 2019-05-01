@@ -1,5 +1,0 @@
----
-dependencies:
-  - role: utils/dobackup
-    paths:
-      - "{{ user.homedir }}/.task"
