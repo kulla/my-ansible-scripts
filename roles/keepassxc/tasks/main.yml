@@ -1,0 +1,13 @@
+---
+- tags: [keepassxc]
+  block:
+    - name: Install keepassxc
+      package: name=keepassxc state=present
+
+    - name: Backup Keepassxc's databases
+      import_role: name=dobackup
+      vars:
+            paths:
+              - "{{ user.homedir }}/keepassx/"
+            exclude:
+              - "keepassx/*.kdb.lock"
