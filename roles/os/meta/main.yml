@@ -4,6 +4,6 @@ dependencies:
   - os/shell
   - os/updates
   - os/working-directories
-  - os/keepassx
+  - keepassx
   - os/xmonad
   - os/archive-command
