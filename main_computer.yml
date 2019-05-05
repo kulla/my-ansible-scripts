@@ -9,18 +9,31 @@
     - kulla.taskwarrior
     - vdirsyncer
   tasks:
-  - tags: [taskwarrior]
-    block:
-      - name: Backup taskwarrior's data location
-        import_role: name=utils/dobackup
-        vars:
-          paths:
-            - "{{ user.homedir }}/.task"
+    - tags: [taskwarrior]
+      block:
+        - name: Backup taskwarrior's data location
+          import_role: name=utils/dobackup
+          vars:
+            paths:
+              - "{{ user.homedir }}/.task"
 
-      - name: Show next tasks on terminal startup
-        copy:
-          src: show_tasks.sh
-          dest: "{{ shell_conf_dir }}/bash"
-          mode: 0700
-          owner: "{{ user.name }}"
-          group: "{{ user.group }}"
+        - name: Show next tasks on terminal startup
+          copy:
+            src: show_tasks.sh
+            dest: "{{ shell_conf_dir }}/bash"
+            mode: 0700
+            owner: "{{ user.name }}"
+            group: "{{ user.group }}"
+
+    - tags: [keepassxc]
+      block:
+        - name: Install keepassxc
+          package: name=keepassxc state=present
+
+        - name: Backup Keepassxc's databases
+          import_role: name=utils/dobackup
+          vars:
+                paths:
+                  - "{{ user.homedir }}/keepassx/"
+                exclude:
+                  - "keepassx/*.kdb.lock"
