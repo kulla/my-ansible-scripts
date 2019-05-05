@@ -1,0 +1,12 @@
+---
+- tags: [vdirsyncer]
+  block:
+    - name: Install vdirsyncer
+      package: name=vdirsyncer state=present
+
+    - name: Create config directory for vdirsyncer
+      file:
+        path: "{{ vdirsyncer_config_dir }}"
+        state: directory
+        mode: 0700
+        owner: "{{ user.name }}"
