@@ -10,3 +10,10 @@
         state: directory
         mode: 0700
         owner: "{{ user.name }}"
+
+    - name: Configure vdirsyncer
+      template:
+        src: vdirsyncer_config
+        dest: "{{ vdirsyncer_config_dir }}/config"
+        mode: 0400
+        owner: "{{ user.name }}"
