@@ -37,3 +37,12 @@
                   - "{{ user.homedir }}/keepassx/"
                 exclude:
                   - "keepassx/*.kdb.lock"
+
+    - tags: [awesome]
+      block:
+        - name: Install awesome
+          package:
+            name:
+              - awesome
+              - awesome-extra
+            state: present
