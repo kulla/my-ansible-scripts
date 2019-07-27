@@ -3,6 +3,9 @@
 path = "{{ user.homedir }}/.local/share/calendars/*"
 type = discover
 
+[default]
+default_calendar = default
+
 [locale]
 local_timezone= Europe/Berlin
 default_timezone= Europe/Berlin
