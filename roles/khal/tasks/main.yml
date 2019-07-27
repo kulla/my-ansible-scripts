@@ -1,0 +1,19 @@
+---
+- tags: [khal]
+  block:
+    - name: Install khal
+      package: name=khal state=present
+
+    - name: Create config directory for khal
+      file:
+        path: "{{ khal_config_dir }}"
+        state: directory
+        mode: 0700
+        owner: "{{ user.name }}"
+
+    - name: Configure khal
+      template:
+        src: khal_config
+        dest: "{{ khal_config_dir }}/config"
+        mode: 0400
+        owner: "{{ user.name }}"

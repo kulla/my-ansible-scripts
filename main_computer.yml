@@ -8,6 +8,7 @@
     - job
     - kulla.taskwarrior
     - vdirsyncer
+    - khal
   tasks:
     - tags: [taskwarrior]
       block:
