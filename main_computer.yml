@@ -9,6 +9,7 @@
     - kulla.taskwarrior
     - vdirsyncer
     - khal
+    - asdf
   tasks:
     - tags: [taskwarrior]
       block:
