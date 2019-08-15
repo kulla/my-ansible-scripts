@@ -1,6 +1,4 @@
 - hosts: main_computer
-  vars:
-    asdf_install_dir: "{{ user.homedir }}/.local/share/asdf"
   roles:
     - media
     - os
@@ -49,22 +47,3 @@
               - awesome
               - awesome-extra
             state: present
-
-    - tags: [asdf]
-      block:
-        - name: Create directory for asdf
-          file:
-            path: "{{ asdf_install_dir }}"
-            state: directory
-            recurse: yes
-            owner: "{{ user.name }}"
-            group: "{{ user.group }}"
-            mode: 0o775
-
-        - name: Install asdf version manager
-          git:
-            repo: https://github.com/asdf-vm/asdf.git
-            version: v0.7.4
-            dest: "{{ asdf_install_dir }}"
-            update: no
-            clone: yes
