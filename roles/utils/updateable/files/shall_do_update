@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if nmcli d show | grep "XT1068 8368" > /dev/null; then
+if nmcli d show | grep "XT8765" > /dev/null; then
 	# We are in a mobile hotspot
 	exit 1
 fi
