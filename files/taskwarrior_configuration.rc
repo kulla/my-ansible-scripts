@@ -18,7 +18,7 @@ report.backlog.filter=status:pending and limit:page
 report.next.columns=id,rank,due.remaining,description.desc,project,due
 report.next.labels= ID,Rank,Due,Description,Project,Due
 report.next.sort=rank-,due+,project+
-report.next.filter=status:pending and (+next or due.before:now+3days)
+report.next.filter=status:pending and (+next or due.before:now+1days)
 
 report.list.columns=id,rank,due.remaining,description.desc,project,due
 report.list.labels= ID,Rank,Due,Description,Project,Due
