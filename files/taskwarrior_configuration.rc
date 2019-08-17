@@ -3,10 +3,6 @@ color.tag.erinnerung=cyan on gray2
 color.project.birthday=white on rgb012
 color.due=magenta
 
-context.life= ( +termin or project:life or project: )
-context.uni=  ( +termin or project:tum or project: )
-context.serlo=( +termin or project:serlo or project:mfnf or project: )
-
 uda.rank.type=numeric
 uda.rank.label=Priority
 
