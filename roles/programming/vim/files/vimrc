@@ -97,6 +97,9 @@ autocmd Filetype lua setlocal expandtab
 autocmd Filetype lua setlocal tabstop=2
 autocmd Filetype lua setlocal shiftwidth=2
 
+" === TypeScript ===
+au BufRead,BufNewFile *.ts setfiletype typescript
+
 " === Haskell ===
 au BufRead,BufNewFile *.cabal setlocal expandtab
 autocmd Filetype haskell setlocal expandtab
