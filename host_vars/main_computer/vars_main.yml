@@ -8,7 +8,7 @@ git:
 
 taskwarrior_user_id: "{{ user.name }}"
 taskwarrior_cronjob_sync: true
-taskwarrior_server_certificate: taskwarrior_server.cert.pem
+taskwarrior_ca_certificate: taskwarrior_server.cert.pem
 taskwarrior_client_certificate: taskwarrior_client.cert.pem
 taskwarrior_client_key: taskwarrior_client.key.pem
 taskwarrior_configuration: |
