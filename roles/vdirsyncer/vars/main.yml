@@ -1,2 +1,3 @@
 vdirsyncer_config_dir: "{{ user.homedir }}/.config/vdirsyncer"
 vdirsyncer_local_calendars: "{{ user.homedir }}/.local/share/calendars"
+vdirsyncer_local_contacts: "{{ user.homedir }}/.local/share/contacts"
