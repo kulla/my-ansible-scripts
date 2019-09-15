@@ -9,6 +9,7 @@
     - kulla.taskwarrior
     - vdirsyncer
     - khal
+    - khard
     - asdf
   tasks:
     - tags: [taskwarrior]

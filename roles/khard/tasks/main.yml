@@ -1,0 +1,19 @@
+---
+- tags: [khard]
+  block:
+    - name: Install khard
+      package: name=khard state=present
+
+    - name: Create config directory for khard
+      file:
+        path: "{{ khard_config_dir }}"
+        state: directory
+        mode: 0700
+        owner: "{{ user.name }}"
+
+    - name: Configure khard
+      template:
+        src: khard_config
+        dest: "{{ khard_config_dir }}/khard.conf"
+        mode: 0400
+        owner: "{{ user.name }}"

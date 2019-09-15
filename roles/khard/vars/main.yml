@@ -1,0 +1,1 @@
+khard_config_dir: "{{ user.homedir }}/.config/khard"
