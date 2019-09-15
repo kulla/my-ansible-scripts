@@ -9,10 +9,11 @@
         group: "{{ user.group }}"
 
     - name: Install necessary tools for backups
-      apt: package={{ item }} state=present
-      with_items:
-        - rsnapshot
-        - cryptsetup
+      package:
+        name:
+          - rsnapshot
+          - cryptsetup
+        state: present
 
     - name: Install the backup script
       template: src=backup dest={{ backup_script }} mode=0755

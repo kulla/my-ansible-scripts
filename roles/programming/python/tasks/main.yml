@@ -2,14 +2,15 @@
 - tags: [ python ]
   block:
     - name: Install packages for python
-      apt: package={{ item }} state=present
-      with_items:
-        - python
-        - python3
-        - ipython
-        - ipython3
-        - python-pip
-        - python3-pip
+      package:
+        state: present
+        name:
+          - python
+          - python3
+          - ipython
+          - ipython3
+          - python-pip
+          - python3-pip
 
     - name: Create IPython's config directory
       file:

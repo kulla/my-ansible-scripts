@@ -2,7 +2,7 @@
 - tags: [ vim ]
   block:
     - name: Install vim
-      apt: package=vim-gtk state=present
+      package: name=vim-gtk state=present
 
     - name: Configure vim
       copy:
@@ -29,13 +29,14 @@
         group: "{{ user.group }}"
 
     - name: Install vim plugins
-      apt: package={{ item }} state=present
-      with_items:
-        - vim-syntastic
-        - vim-editorconfig
-        - pep8
-        - pylint
-        - pyflakes
+      package:
+        name:
+          - vim-syntastic
+          - vim-editorconfig
+          - pep8
+          - pylint
+          - pyflakes
+        state: present
 
     - name: Enable vim plugins
       command: vim-addons install editorconfig

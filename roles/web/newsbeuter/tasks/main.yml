@@ -2,7 +2,7 @@
 - tags: [newsbeuter]
   block:
     - name: Install newsbeuter
-      apt: package=newsbeuter state=present
+      package: name=newsbeuter state=present
 
     - name: Weekly cache clean of newsbeuter
       cron:

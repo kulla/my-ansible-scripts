@@ -2,12 +2,13 @@
 - tags: [ programming ]
   block:
     - name: Install basic programming tools
-      apt: name={{ item }} state=present
-      with_items:
-        - make
-        - git
-        - git-cola
-        - gource
+      package:
+        state: present
+        name:
+          - make
+          - git
+          - git-cola
+          - gource
 
     - name: Configure git
       template:

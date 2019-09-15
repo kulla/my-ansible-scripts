@@ -2,7 +2,7 @@
 - tags: [shell]
   block:
     - name: Install default shell
-      apt: package=bash state=present
+      package: name=bash state=present
 
     - name: Create configure directories for bash
       file:

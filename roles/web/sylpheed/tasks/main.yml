@@ -2,4 +2,4 @@
 - tags: [sylpheed]
   block:
     - name: Install sylpheed
-      apt: package=sylpheed state=present
+      package: name=sylpheed state=present

@@ -4,5 +4,4 @@
   register: check_language_support
 
 - name: Install packages for language {{ lang }}
-  apt: package={{ item }} state=present
-  with_items: "{{ check_language_support.stdout_lines }}"
+  package: name={{ check_language_support.stdout_lines }} state=present

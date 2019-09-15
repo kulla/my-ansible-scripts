@@ -2,22 +2,23 @@
 - tags: [basic]
   block:
     - name: Install basic command line tools
-      apt: name={{ item }} state=present
-      with_items:
-        - tree
-        - htop
-        - curl
-        - wget
-        - apt-file
-        - inotify-tools
-        - nmap
-        - ssh
-        - gnupg
-        - encfs
-        - gparted
-        - apache2-utils
-        - mbr
-        - rename
+      package:
+        name:
+          - tree
+          - htop
+          - curl
+          - wget
+          - apt-file
+          - inotify-tools
+          - nmap
+          - ssh
+          - gnupg
+          - encfs
+          - gparted
+          - apache2-utils
+          - mbr
+          - rename
+        state: present
 
     - name: Monthly update of cache for apt-file
       cron:
@@ -29,10 +30,11 @@
       with_items: [ de, it, en ]
 
     - name: Deinstall Adobe Flash
-      apt: package={{ item }} state=absent
-      with_items:
-        - adobe-flashplugin
-        - flashplugin-installer
+      package:
+        name:
+          - adobe-flashplugin
+          - flashplugin-installer
+        state: absent
 
     - name: Deinstall Qlipper
       package: name=qlipper state=absent

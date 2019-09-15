@@ -2,4 +2,4 @@
 - tags: [thunderbird]
   block:
     - name: Install thunderbird
-      apt: package=thunderbird state=present
+      package: name=thunderbird state=present
