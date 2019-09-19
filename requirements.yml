@@ -1,2 +1,5 @@
 - src: kulla.taskwarrior
   version: 1.0.1
+
+- src: kulla.neovim
+  version: 0.1.2
