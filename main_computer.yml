@@ -12,6 +12,7 @@
     - khal
     - khard
     - asdf
+    - docker
   tasks:
     - tags: [taskwarrior]
       block:

@@ -1,0 +1,44 @@
+---
+- tags: [docker]
+  block:
+    - name: Install required software for Docker
+      package:
+        state: present
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - gnupg-agent
+          - software-properties-common
+
+    - name: Add apt key for Docker
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+        validate_certs: true
+
+    - name: Add docker apt repository
+      apt_repository:
+        repo: >-
+          deb [arch=amd64] https://download.docker.com/linux/ubuntu
+          {{ ansible_distribution_release }} stable
+        state: present
+        update_cache: yes
+        validate_certs: yes
+
+    - name: Install Docker
+      package:
+        state: present
+        name:
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+
+    - name: Install Docker Compose
+      get_url:
+        url: "https://github.com/docker/compose/releases/download/1.24.1/\
+              docker-compose-{{ ansible_system }}-{{ ansible_architecture }}"
+        dest: /usr/local/bin/docker-compose
+        mode: 0o555
+        owner: root
+        group: root
