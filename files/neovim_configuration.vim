@@ -1,20 +1,41 @@
+filetype indent plugin on
+syntax on
+
 set number
-set list
+set ignorecase
+set smartcase
+set nobackup
+
+set hlsearch
 set colorcolumn=81
+if (has("termguicolors"))
+  set termguicolors
+endif
 
-au BufRead,BufNewFile *.tsx setfiletype typescript
-au BufRead,BufNewFile *.ts setfiletype typescript
-autocmd Filetype typescript setlocal expandtab
-autocmd Filetype typescript setlocal tabstop=2
-autocmd Filetype typescript setlocal shiftwidth=2
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set list
+set listchars=tab:>.,trail:%
 
-au BufRead,BufNewFile *.yml setfiletype yaml
-au BufRead,BufNewFile *.yml setfiletype yaml
-autocmd Filetype yaml setlocal expandtab
-autocmd Filetype yaml setlocal tabstop=2
-autocmd Filetype yaml setlocal shiftwidth=2
+set wrap linebreak nolist
+" Show long lines also partially (https://vi.stackexchange.com/q/102)
+set display+=lastline
 
-au BufRead,BufNewFile *.twig setfiletype twig
-autocmd Filetype twig setlocal expandtab
-autocmd Filetype twig setlocal tabstop=2
-autocmd Filetype twig setlocal shiftwidth=2
+" Remap keys so that vim navigates smoothly in wrapped files
+noremap  <buffer> <silent> <Up>   gk
+noremap  <buffer> <silent> <Down> gj
+noremap  <buffer> <silent> <Home> g<Home>
+noremap  <buffer> <silent> <End>  g<End>
+inoremap <buffer> <silent> <Up>   <C-o>gk
+inoremap <buffer> <silent> <Down> <C-o>gj
+inoremap <buffer> <silent> <Home> <C-o>g<Home>
+inoremap <buffer> <silent> <End>  <C-o>g<End>
+
+au BufRead,BufNewFile *.tsx set filetype=typescript.tsx
+au BufRead,BufNewFile *.ts set filetype=typescript
+au BufRead,BufNewFile *.twig set filetype=twig
+
+autocmd Filetype typescript,yaml,twig setlocal expandtab
+autocmd Filetype typescript,yaml,twig setlocal tabstop=2
+autocmd Filetype typescript,yaml,twig setlocal shiftwidth=2
