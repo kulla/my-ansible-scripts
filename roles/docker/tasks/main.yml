@@ -34,6 +34,17 @@
           - docker-ce-cli
           - containerd.io
 
+    - name: Create docker user group
+      group:
+        name: docker
+        state: present
+
+    - name: Add user to docker group
+      user:
+        name: "{{ user.name }}"
+        groups: [docker]
+        append: yes
+
     - name: Install Docker Compose
       get_url:
         url: "https://github.com/docker/compose/releases/download/1.24.1/\
