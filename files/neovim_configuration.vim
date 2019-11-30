@@ -13,3 +13,8 @@ au BufRead,BufNewFile *.yml setfiletype yaml
 autocmd Filetype yaml setlocal expandtab
 autocmd Filetype yaml setlocal tabstop=2
 autocmd Filetype yaml setlocal shiftwidth=2
+
+au BufRead,BufNewFile *.twig setfiletype twig
+autocmd Filetype twig setlocal expandtab
+autocmd Filetype twig setlocal tabstop=2
+autocmd Filetype twig setlocal shiftwidth=2
