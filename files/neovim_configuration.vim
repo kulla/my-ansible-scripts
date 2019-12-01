@@ -18,7 +18,7 @@ set shiftwidth=4
 set list
 set listchars=tab:>.,trail:%
 
-set wrap linebreak nolist
+set wrap linebreak
 " Show long lines also partially (https://vi.stackexchange.com/q/102)
 set display+=lastline
 
