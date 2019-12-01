@@ -38,6 +38,8 @@ au BufRead,BufNewFile *.tsx set filetype=typescript.tsx
 au BufRead,BufNewFile *.ts set filetype=typescript
 au BufRead,BufNewFile *.twig set filetype=twig
 
-autocmd Filetype typescript,yaml,twig setlocal expandtab
-autocmd Filetype typescript,yaml,twig setlocal tabstop=2
-autocmd Filetype typescript,yaml,twig setlocal shiftwidth=2
+autocmd Filetype typescript,yaml,twig,markdown setlocal expandtab
+autocmd Filetype typescript,yaml,twig,markdown setlocal tabstop=2
+autocmd Filetype typescript,yaml,twig,markdown setlocal shiftwidth=2
+
+autocmd Filetype markdown,latex setlocal colorcolumn=
