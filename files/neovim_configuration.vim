@@ -1,6 +1,8 @@
 filetype indent plugin on
 syntax on
 
+let g:deoplete#enable_at_startup = 1
+
 set number
 set ignorecase
 set smartcase

@@ -8,6 +8,13 @@ git:
 
 neovim_user_id: "{{ user.name }}"
 neovim_configuration: "{{ lookup('file', 'neovim_configuration.vim') }}"
+neovim_plugins:
+  - HerringtonDarkholme/yats.vim
+  - name: mhartington/nvim-typescript
+    options:
+      do: ./install.sh
+  - Shougo/deoplete.nvim
+  - Shougo/denite.nvim
 
 taskwarrior_user_id: "{{ user.name }}"
 taskwarrior_cronjob_sync: true
