@@ -4,21 +4,17 @@ syntax on
 let g:deoplete#enable_at_startup = 1
 
 set number
-set ignorecase
-set smartcase
+set hlsearch ignorecase smartcase
 set nobackup
 
-set hlsearch
 set colorcolumn=81
 if (has("termguicolors"))
   set termguicolors
 endif
 
 set autoindent
-set tabstop=4
-set shiftwidth=4
-set list
-set listchars=tab:>.,trail:%
+set tabstop=4 shiftwidth=4
+set list listchars=tab:>.,trail:%
 
 set wrap linebreak
 " Show long lines also partially (https://vi.stackexchange.com/q/102)
@@ -39,7 +35,6 @@ au BufRead,BufNewFile *.ts set filetype=typescript
 au BufRead,BufNewFile *.twig set filetype=twig
 
 autocmd Filetype typescript,yaml,twig,markdown setlocal expandtab
-autocmd Filetype typescript,yaml,twig,markdown setlocal tabstop=2
-autocmd Filetype typescript,yaml,twig,markdown setlocal shiftwidth=2
+autocmd Filetype typescript,yaml,twig,markdown setlocal tabstop=2 shiftwidth=2
 
 autocmd Filetype markdown,latex setlocal colorcolumn=
