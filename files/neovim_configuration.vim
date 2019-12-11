@@ -35,6 +35,7 @@ au BufRead,BufNewFile *.ts set filetype=typescript
 au BufRead,BufNewFile *.twig set filetype=twig
 
 autocmd Filetype typescript,yaml,twig,markdown,javascript,json,php setlocal expandtab
-autocmd Filetype typescript,yaml,twig,markdown,javascript,json,php setlocal tabstop=2 shiftwidth=2
+autocmd Filetype typescript,yaml,twig,markdown,javascript,json setlocal tabstop=2 shiftwidth=2
+autocmd Filetype php setlocal tabstop=4 shiftwidth=4
 
 autocmd Filetype markdown,latex setlocal colorcolumn=
