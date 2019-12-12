@@ -38,4 +38,5 @@ autocmd Filetype typescript,yaml,twig,markdown,javascript,json,php setlocal expa
 autocmd Filetype typescript,yaml,twig,markdown,javascript,json setlocal tabstop=2 shiftwidth=2
 autocmd Filetype php setlocal tabstop=4 shiftwidth=4
 
+autocmd Filetype php setlocal colorcolumn=100
 autocmd Filetype markdown,latex setlocal colorcolumn=
