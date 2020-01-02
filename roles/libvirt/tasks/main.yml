@@ -1,0 +1,22 @@
+---
+- tags: [libvirt]
+  block:
+    - name: Install libvirt
+      package:
+        state: present
+        name:
+          - qemu-kvm
+          - libvirt-clients
+          - libvirt-daemon-system
+
+    - name: Create libvirt groups
+      group:
+        name: "{{ item }}"
+        state: present
+      with_items: "{{ libvirt_groups }}"
+
+    - name: Add user to libvirt groups
+      user:
+        name: "{{ user.name }}"
+        groups: "{{ libvirt_groups }}"
+        append: yes

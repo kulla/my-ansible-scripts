@@ -13,6 +13,7 @@
     - khard
     - asdf
     - docker
+    - libvirt
   tasks:
     - tags: [taskwarrior]
       block:
