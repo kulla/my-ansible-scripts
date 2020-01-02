@@ -53,3 +53,11 @@
         mode: 0o555
         owner: root
         group: root
+
+    - name: Install docker-machine-driver-kvm2
+      get_url:
+        url: "https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-kvm2"
+        dest: /usr/local/bin/docker-machine-driver-kvm2
+        mode: 0o555
+        owner: root
+        group: root
