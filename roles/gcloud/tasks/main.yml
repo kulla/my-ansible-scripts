@@ -1,0 +1,28 @@
+---
+- tags: [gcloud]
+  block:
+    - name: Download apt key for Google Cloud SDK
+      get_url:
+        url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+        dest: /usr/share/keyrings/cloud.google.gpg
+
+    - name: Add apt key for Google Cloud SDK
+      apt_key:
+        file: /usr/share/keyrings/cloud.google.gpg
+        state: present
+        validate_certs: true
+
+    - name: Add apt repository for Google Cloud SDK
+      apt_repository:
+        repo: >-
+          deb [signed-by=/usr/share/keyrings/cloud.google.gpg]
+          http://packages.cloud.google.com/apt cloud-sdk main
+        state: present
+        update_cache: yes
+        validate_certs: yes
+
+    - name: Install Google Cloud SDK
+      package:
+        state: present
+        name:
+          - google-cloud-sdk
