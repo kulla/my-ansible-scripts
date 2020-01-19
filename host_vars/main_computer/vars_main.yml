@@ -10,6 +10,7 @@ neovim_user_id: "{{ user.name }}"
 neovim_configuration: "{{ lookup('file', 'neovim_configuration.vim') }}"
 neovim_plugins:
   - vim-airline/vim-airline
+  - dikiaap/minimalist
   - HerringtonDarkholme/yats.vim
   - name: mhartington/nvim-typescript
     options:

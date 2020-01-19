@@ -12,6 +12,11 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
+colorscheme minimalist
+let g:airline_theme='minimalist'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
 set autoindent
 set tabstop=4 shiftwidth=4
 set list listchars=tab:>.,trail:%
