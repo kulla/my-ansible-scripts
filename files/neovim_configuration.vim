@@ -20,6 +20,15 @@ set wrap linebreak
 " Show long lines also partially (https://vi.stackexchange.com/q/102)
 set display+=lastline
 
+" Close deoplete method preview window after completion
+" ( https://github.com/Shougo/deoplete.nvim/issues/115 )
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+
+" color of deoplete popup menu
+highlight Pmenu ctermbg=8 guibg=#606060
+highlight PmenuSel ctermbg=1 guifg=#dddd00 guibg=#1f82cd
+highlight PmenuSbar ctermbg=0 guibg=#d6d6d6
+
 " Remap keys so that vim navigates smoothly in wrapped files
 noremap  <buffer> <silent> <Up>   gk
 noremap  <buffer> <silent> <Down> gj
