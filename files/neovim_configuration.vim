@@ -1,21 +1,29 @@
 filetype indent plugin on
 syntax on
 
-let g:deoplete#enable_at_startup = 1
-
 set number
+set signcolumn=yes
 set hlsearch ignorecase smartcase
+set hidden " Needed for plugin coc
 set nobackup
+set nowritebackup
 
 set colorcolumn=81
 if (has("termguicolors"))
   set termguicolors
 endif
 
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier']
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+set updatetime=300
+
 colorscheme minimalist
 let g:airline_theme='minimalist'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+set cmdheight=2
 
 set autoindent
 set tabstop=4 shiftwidth=4
@@ -24,15 +32,6 @@ set list listchars=tab:>.,trail:%
 set wrap linebreak
 " Show long lines also partially (https://vi.stackexchange.com/q/102)
 set display+=lastline
-
-" Close deoplete method preview window after completion
-" ( https://github.com/Shougo/deoplete.nvim/issues/115 )
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-
-" color of deoplete popup menu
-highlight Pmenu ctermbg=8 guibg=#606060
-highlight PmenuSel ctermbg=1 guifg=#dddd00 guibg=#1f82cd
-highlight PmenuSbar ctermbg=0 guibg=#d6d6d6
 
 " Remap keys so that vim navigates smoothly in wrapped files
 noremap  <buffer> <silent> <Up>   gk

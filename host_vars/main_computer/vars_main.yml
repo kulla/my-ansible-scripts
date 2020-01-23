@@ -11,12 +11,11 @@ neovim_configuration: "{{ lookup('file', 'neovim_configuration.vim') }}"
 neovim_plugins:
   - vim-airline/vim-airline
   - dikiaap/minimalist
-  - HerringtonDarkholme/yats.vim
-  - name: mhartington/nvim-typescript
+  - name: neoclide/coc.nvim
     options:
-      do: ./install.sh
-  - Shougo/deoplete.nvim
-  - Shougo/denite.nvim
+      branch: release
+  - ianks/vim-tsx
+  - leafgarland/typescript-vim
 
 taskwarrior_user_id: "{{ user.name }}"
 taskwarrior_cronjob_sync: true
