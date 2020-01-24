@@ -46,6 +46,18 @@
                   - "{{ user.homedir }}/keepassx/"
                 exclude:
                   - "keepassx/*.kdb.lock"
+    
+    - tags: [sylpheed]
+      block:
+        - name: Install sylpheed
+          package: name=sylpheed state=present
+
+        - name: Backup sylpheed files
+          import_role: name=utils/dobackup
+          vars:
+                paths:
+                  - "{{ user.homedir }}/.sylpheed-2.0"
+                  - "{{ user.homedir }}/Mail"
 
     - tags: [taskwarrior]
       block:

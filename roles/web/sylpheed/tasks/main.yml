@@ -1,5 +1,0 @@
----
-- tags: [sylpheed]
-  block:
-    - name: Install sylpheed
-      package: name=sylpheed state=present

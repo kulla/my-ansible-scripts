@@ -1,9 +1,0 @@
----
-dependencies:
-  - role: utils/dobackup
-    paths:
-      - "{{ sylpheed_conf_dir }}"
-      - "{{ user.homedir }}/Mail"
-    exclude:
-      - "{{ sylpheed_conf_dir }}/mimetmp"
-      - "{{ sylpheed_conf_dir }}/tmp"
