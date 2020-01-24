@@ -16,6 +16,39 @@
     - libvirt
     - gcloud
   tasks:
+    - tags: [awesome]
+      block:
+        - name: Install awesome
+          package:
+            name:
+              - awesome
+              - awesome-extra
+            state: present
+
+    - tags: [firefox]
+      block:
+        - name: Install firefox
+          package: name=firefox state=present
+        
+        - name: Backup firefox's data location
+          import_role: name=utils/dobackup
+          vars:
+            paths:
+              - "{{ user.homedir }}/.mozilla/"
+
+    - tags: [keepassxc]
+      block:
+        - name: Install keepassxc
+          package: name=keepassxc state=present
+
+        - name: Backup keepassxc's databases
+          import_role: name=utils/dobackup
+          vars:
+                paths:
+                  - "{{ user.homedir }}/keepassx/"
+                exclude:
+                  - "keepassx/*.kdb.lock"
+              
     - tags: [taskwarrior]
       block:
         - name: Backup taskwarrior's data location
@@ -31,36 +64,3 @@
             mode: 0700
             owner: "{{ user.name }}"
             group: "{{ user.group }}"
-
-    - tags: [keepassxc]
-      block:
-        - name: Install keepassxc
-          package: name=keepassxc state=present
-
-        - name: Backup keepassxc's databases
-          import_role: name=utils/dobackup
-          vars:
-                paths:
-                  - "{{ user.homedir }}/keepassx/"
-                exclude:
-                  - "keepassx/*.kdb.lock"
-
-    - tags: [awesome]
-      block:
-        - name: Install awesome
-          package:
-            name:
-              - awesome
-              - awesome-extra
-            state: present
-              
-    - tags: [firefox]
-      block:
-        - name: Install firefox
-          package: name=firefox state=present
-        
-        - name: Backup firefox's data location
-          import_role: name=utils/dobackup
-          vars:
-            paths:
-              - "{{ user.homedir }}/.mozilla/"
