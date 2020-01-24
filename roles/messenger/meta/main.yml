@@ -1,4 +1,3 @@
 ---
 dependencies:
-  - messenger/discord
   - messenger/slack
