@@ -6,12 +6,6 @@
         state: present
         name:
           - gnuplot
-          - python-numpy
-          - python3-numpy
-          - python-scipy
-          - python3-scipy
-          - python-matplotlib
-          - python3-matplotlib
           - texlive-latex-recommended
           - texlive-lang-german
           - texlive-publishers
