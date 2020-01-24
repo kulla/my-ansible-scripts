@@ -1,5 +1,0 @@
----
-- tags: [ firefox ]
-  block:
-    - name: Install a webbrowser
-      package: name=firefox state=present

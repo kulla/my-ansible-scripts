@@ -1,5 +1,4 @@
 ---
 dependencies:
-  - web/firefox
   - web/sylpheed
   - web/thunderbird

@@ -37,7 +37,7 @@
         - name: Install keepassxc
           package: name=keepassxc state=present
 
-        - name: Backup Keepassxc's databases
+        - name: Backup keepassxc's databases
           import_role: name=utils/dobackup
           vars:
                 paths:
@@ -53,3 +53,14 @@
               - awesome
               - awesome-extra
             state: present
+              
+    - tags: [firefox]
+      block:
+        - name: Install firefox
+          package: name=firefox state=present
+        
+        - name: Backup firefox's data location
+          import_role: name=utils/dobackup
+          vars:
+            paths:
+              - "{{ user.homedir }}/.mozilla/"
