@@ -48,7 +48,7 @@
                   - "{{ user.homedir }}/keepassx/"
                 exclude:
                   - "keepassx/*.kdb.lock"
-              
+
     - tags: [taskwarrior]
       block:
         - name: Backup taskwarrior's data location
@@ -64,3 +64,17 @@
             mode: 0700
             owner: "{{ user.name }}"
             group: "{{ user.group }}"
+              
+    - tags: [work]
+      block:
+        - name: Install work tools
+          package:
+            state: present
+            name:
+              - gnuplot
+              - texlive-latex-recommended
+              - texlive-lang-german
+              - texlive-publishers
+              - texlive-bibtex-extra
+              - biber
+              - pstoedit
