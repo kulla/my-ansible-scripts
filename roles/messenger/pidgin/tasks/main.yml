@@ -1,5 +1,0 @@
----
-- tags: [ pidgin ]
-  block:
-    - name: Install pidgin
-      package: name=pidgin state=present
