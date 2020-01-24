@@ -1,1 +1,2 @@
 asdf_install_dir: "{{ user.homedir }}/.local/share/asdf"
+asdf_version: v0.7.6
