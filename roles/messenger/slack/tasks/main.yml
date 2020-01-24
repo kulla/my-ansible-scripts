@@ -1,5 +1,0 @@
----
-- tags: [ slack ]
-  block:
-    - name: Install slack
-      command: snap install slack --classic
