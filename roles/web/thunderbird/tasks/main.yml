@@ -1,5 +1,0 @@
----
-- tags: [thunderbird]
-  block:
-    - name: Install thunderbird
-      package: name=thunderbird state=present
