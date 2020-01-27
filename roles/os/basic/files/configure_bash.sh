@@ -2,4 +2,5 @@ HISTSIZE=1000
 HISTFILESIZE=0
 HISTIGNORE=history*
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;30m\]\W\[\033[01;32m\]$(__git_ps1 " (%s)")\[\033[01;30m\]\$\[\033[00m\] '
+# See https://gist.github.com/justintv/168835#gistcomment-1717504
+PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\] @ \[\033[0;36m\]\h \w\[\033[0;32m\]$(__git_ps1)\n\[\033[0;32m\]└─\[\033[0m\033[0;32m\] \$\[\033[0m\033[0;32m\] ▶\[\033[0m\] '
