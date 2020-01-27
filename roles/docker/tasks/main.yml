@@ -59,3 +59,9 @@
         mode: 0o555
         owner: root
         group: root
+
+    - name: Configure docker daemon
+      copy:
+        dest: /etc/docker/daemon.json
+        src: daemon.json
+        mode: 0o600
