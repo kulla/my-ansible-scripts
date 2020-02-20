@@ -15,9 +15,11 @@ endif
 
 let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier']
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-vmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+vmap <leader>f  <Plug>(coc-format)
+nmap <leader>f  <Plug>(coc-format)
 nmap <leader>r <Plug>(coc-rename)
+nmap <leader>d <Plug>(coc-diagnostic-info)
+nmap <leader>i <Plug>(coc-implementation)
 set updatetime=300
 
 colorscheme minimalist
