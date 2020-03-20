@@ -1,5 +1,6 @@
 [core]
 	editor = vim
+	excludesfile = {{ git_global_ignore_file }}
 
 [user]
 	name = {{ user.realname }}
