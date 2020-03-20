@@ -14,7 +14,8 @@
         repo: https://github.com/asdf-vm/asdf.git
         version: "{{ asdf_version }}"
         dest: "{{ asdf_install_dir }}"
-        update: no
+        force: yes
+        update: yes
         clone: yes
 
     - name: Configure asdf
