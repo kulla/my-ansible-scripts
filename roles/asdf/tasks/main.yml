@@ -24,3 +24,9 @@
         mode: 0o700
         owner: "{{ user.name }}"
         group: "{{ user.group }}"
+
+    - name: Configure global .gitignore for asdf
+      blockinfile:
+        path: "{{ git_global_ignore_file }}"
+        block: .tool-versions
+        marker: "# {mark} configuration for asdf virtual manager"
