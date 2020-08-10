@@ -18,6 +18,7 @@
           - apache2-utils
           - mbr
           - rename
+          - ecryptfs-utils
         state: present
 
     - name: Monthly update of cache for apt-file
