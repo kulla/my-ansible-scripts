@@ -12,6 +12,7 @@
     - docker
     - libvirt
     - gcloud
+    - phpstorm
   tasks:
     - tags: [awesome]
       block:
