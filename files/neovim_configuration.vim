@@ -20,6 +20,9 @@ nmap <leader>f  <Plug>(coc-format)
 nmap <leader>r <Plug>(coc-rename)
 nmap <leader>d <Plug>(coc-diagnostic-info)
 nmap <leader>i <Plug>(coc-implementation)
+nmap <leader>t <Plug>(coc-type-definition)
+nmap <leader>c <Plug>(coc-fix-current)
+nmap <leader>b <Plug>(coc-definition)
 set updatetime=300
 
 colorscheme minimalist
