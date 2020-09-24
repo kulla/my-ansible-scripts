@@ -99,3 +99,10 @@
               - texlive-bibtex-extra
               - biber
               - pstoedit
+
+    - tags: [work, cloudflare]
+      block:
+        - name: Install cloudflared
+          apt:
+            deb: https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.deb
+            state: present
