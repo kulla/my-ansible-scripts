@@ -1,3 +1,6 @@
 [addressbooks]
 [[default]]
 path = ~/.local/share/contacts/default
+
+[general]
+default_action = list
