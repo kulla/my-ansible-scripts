@@ -2,5 +2,8 @@
 [[default]]
 path = ~/.local/share/contacts/default
 
+[[archive]]
+path = ~/archive/contacts
+
 [general]
 default_action = list

@@ -17,16 +17,6 @@ report.next.labels=ID,Rank,Due,Description,Project,Due
 report.next.sort=rank-,due+,project+
 report.next.filter=status:pending and (+next or due.before:now+1days)
 
-report.plan.columns=id,rank,due.remaining,description.desc,project,due
-report.plan.labels=ID,Rank,Due,Description,Project,Due
-report.plan.sort=rank-,due+,project+
-report.plan.filter=status:pending and (+next or due.before:now+1week)
-
 report.list.columns=id,rank,due.remaining,description.desc,project,due
 report.list.labels=ID,Rank,Due,Description,Project,Due
 report.list.sort=rank-,due+,project+
-
-report.current.columns=id,rank,description.desc
-report.current.labels=ID,Rank,Description
-report.current.sort=rank-
-report.current.filter=status:pending and project:current
