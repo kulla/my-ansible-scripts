@@ -1,6 +1,5 @@
 due=1
 
-color.tag.termin=bold white on rgb010
 color.tag.erinnerung=cyan on gray2
 color.project.birthday=white on rgb012
 color.due=magenta
