@@ -117,3 +117,16 @@
           apt:
             deb: https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.deb
             state: present
+
+    - tags: [ youtube-dl ]
+      block:
+        - name: Install youtube-dl
+          get_url: url=http://yt-dl.org/latest/youtube-dl
+                   dest=/user/local/bin/youtube-dl
+                   mode=0755
+
+        - name: Weekly update of youtube-dl
+          cron:
+            name: update youtube-dl
+            job: youtube-dl --update
+            special_time: weekly
