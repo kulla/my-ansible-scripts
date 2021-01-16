@@ -47,6 +47,17 @@
                 exclude:
                   - "keepassx/*.kdb.lock"
 
+    - tags: [neovim]
+      block:
+        - name: Set default editor to neovim
+          blockinfile:
+            block: |
+              export EDITOR=nvim
+              export VISUAL=nvim
+            marker_begin: Set default editor BEGIN
+            marker_end: Set default editor END
+            path: "{{ user.homedir }}/.bashrc"
+
     - tags: [sylpheed]
       block:
         - name: Install sylpheed

@@ -1,5 +1,5 @@
 [core]
-	editor = vim
+	editor = nvim
 	excludesfile = {{ git_global_ignore_file }}
 
 [user]
