@@ -3,5 +3,4 @@ dependencies:
   - programming/pyenv
   - programming/environment
   - programming/python
-  - programming/vim
   - programming/lua
