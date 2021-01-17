@@ -1,6 +1,4 @@
 ---
 dependencies:
-  - media/editing
   - media/screencasts
-  - media/player
   - media/xournal

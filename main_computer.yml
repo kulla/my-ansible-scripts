@@ -47,6 +47,28 @@
                 exclude:
                   - "keepassx/*.kdb.lock"
 
+    - tags: [media]
+      block:
+        - name: Install media player and codecs
+          package:
+            state: present
+            name:
+              - mplayer
+              - ubuntu-restricted-addons
+              - libavcodec-extra
+
+        - name: Install tools fo editing media files
+          package:
+            state: present
+            name:
+              - audacity
+              - inkscape
+              - gimp
+              - scrot
+              - imagemagick
+              - ffmpeg
+              - graphviz
+
     - tags: [neovim]
       block:
         - name: Set default editor to neovim
