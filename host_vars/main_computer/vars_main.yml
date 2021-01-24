@@ -14,8 +14,6 @@ neovim_plugins:
   - name: neoclide/coc.nvim
     options:
       branch: release
-  - ianks/vim-tsx
-  - leafgarland/typescript-vim
 
 taskwarrior_user_id: "{{ user.name }}"
 taskwarrior_cronjob_sync: true
