@@ -42,13 +42,11 @@ inoremap <buffer> <silent> <Down> <C-o>gj
 inoremap <buffer> <silent> <Home> <C-o>g<Home>
 inoremap <buffer> <silent> <End>  <C-o>g<End>
 
-au BufRead,BufNewFile *.tsx set filetype=typescript.tsx
-au BufRead,BufNewFile *.ts set filetype=typescript
-au BufRead,BufNewFile *.twig set filetype=twig
+autocmd Filetype typescript setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype json setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype markdown setlocal expandtab tabstop=2 shiftwidth=2
 
-autocmd Filetype typescript,yaml,twig,markdown,javascript,json,php setlocal expandtab
-autocmd Filetype typescript,yaml,twig,markdown,javascript,json setlocal tabstop=2 shiftwidth=2
-autocmd Filetype php setlocal tabstop=4 shiftwidth=4
-
-autocmd Filetype php setlocal colorcolumn=100
-autocmd Filetype markdown,latex setlocal colorcolumn=
+autocmd Filetype markdown setlocal colorcolumn=
+autocmd Filetype latex setlocal colorcolumn=
