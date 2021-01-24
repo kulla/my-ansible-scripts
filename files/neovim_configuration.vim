@@ -9,9 +9,8 @@ set nobackup
 set nowritebackup
 
 set colorcolumn=81
-if (has("termguicolors"))
-  set termguicolors
-endif
+colorscheme gruvbox
+let g:airline_theme = 'gruvbox'
 
 let g:coc_global_extensions = ['coc-eslint', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier']
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
@@ -24,11 +23,6 @@ nmap <leader>t <Plug>(coc-type-definition)
 nmap <leader>c <Plug>(coc-fix-current)
 nmap <leader>b <Plug>(coc-definition)
 set updatetime=300
-
-colorscheme minimalist
-let g:airline_theme='minimalist'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
 
 set autoindent
 set tabstop=4 shiftwidth=4
