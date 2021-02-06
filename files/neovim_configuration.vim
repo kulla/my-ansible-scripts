@@ -13,14 +13,20 @@ colorscheme gruvbox
 let g:airline_theme = 'gruvbox'
 
 let g:coc_global_extensions = ['coc-eslint', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier']
+
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+nmap <silent> da :<C-u>CocList diagnostics<cr>
+nmap <silent> dp <Plug>(coc-diagnostic-prev)
+nmap <silent> dn <Plug>(coc-diagnostic-next)
+nmap <silent> di <Plug>(coc-diagnostic-info)
+nmap <silent> f <Plug>(coc-fix-current)
+
 vmap <leader>f  <Plug>(coc-format)
 nmap <leader>f  <Plug>(coc-format)
 nmap <leader>r <Plug>(coc-rename)
-nmap <leader>d <Plug>(coc-diagnostic-info)
 nmap <leader>i <Plug>(coc-implementation)
 nmap <leader>t <Plug>(coc-type-definition)
-nmap <leader>c <Plug>(coc-fix-current)
 nmap <leader>b <Plug>(coc-definition)
 set updatetime=300
 
