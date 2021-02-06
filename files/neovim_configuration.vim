@@ -20,14 +20,17 @@ nmap <silent> da :<C-u>CocList diagnostics<cr>
 nmap <silent> dp <Plug>(coc-diagnostic-prev)
 nmap <silent> dn <Plug>(coc-diagnostic-next)
 nmap <silent> di <Plug>(coc-diagnostic-info)
-nmap <silent> f <Plug>(coc-fix-current)
+nmap <silent> df <Plug>(coc-fix-current)
 
-vmap <leader>f  <Plug>(coc-format)
-nmap <leader>f  <Plug>(coc-format)
+vmap <leader>f <Plug>(coc-format)
+nmap <leader>f <Plug>(coc-format)
 nmap <leader>r <Plug>(coc-rename)
-nmap <leader>i <Plug>(coc-implementation)
-nmap <leader>t <Plug>(coc-type-definition)
-nmap <leader>b <Plug>(coc-definition)
+
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gt <Plug>(coc-type-definition)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
+
 set updatetime=300
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
