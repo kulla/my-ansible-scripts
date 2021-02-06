@@ -80,6 +80,14 @@
             marker_end: Set default editor END
             path: "{{ user.homedir }}/.bashrc"
 
+        - name: Install coc settings file
+          copy:
+            src: coc-settings.json
+            dest: "{{ neovim_config_dir }}"
+            owner: "{{ user.name }}"
+            group: "{{ user.group }}"
+            mode: 0644
+
     - tags: [sylpheed]
       block:
         - name: Install sylpheed
