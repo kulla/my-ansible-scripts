@@ -64,3 +64,4 @@ autocmd Filetype markdown setlocal expandtab tabstop=2 shiftwidth=2
 
 autocmd Filetype markdown setlocal colorcolumn=
 autocmd Filetype latex setlocal colorcolumn=
+autocmd Filetype vim setlocal colorcolumn=
