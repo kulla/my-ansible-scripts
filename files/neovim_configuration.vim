@@ -24,6 +24,18 @@ nmap <leader>c <Plug>(coc-fix-current)
 nmap <leader>b <Plug>(coc-definition)
 set updatetime=300
 
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
 set autoindent
 set tabstop=4 shiftwidth=4
 set list listchars=tab:>.,trail:%
