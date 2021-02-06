@@ -16,6 +16,8 @@ let g:coc_global_extensions = ['coc-eslint', 'coc-tsserver', 'coc-css', 'coc-htm
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 nmap <silent> da :<C-u>CocList diagnostics<cr>
 nmap <silent> dp <Plug>(coc-diagnostic-prev)
 nmap <silent> dn <Plug>(coc-diagnostic-next)
