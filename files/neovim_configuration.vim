@@ -12,7 +12,7 @@ set colorcolumn=81
 colorscheme gruvbox
 let g:airline_theme = 'gruvbox'
 
-let g:coc_global_extensions = ['coc-eslint', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier']
+let g:coc_global_extensions = ['coc-eslint', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier', 'coc-graphql']
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
@@ -83,3 +83,6 @@ autocmd Filetype markdown setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype markdown setlocal colorcolumn=
 autocmd Filetype latex setlocal colorcolumn=
 autocmd Filetype vim setlocal colorcolumn=
+
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear

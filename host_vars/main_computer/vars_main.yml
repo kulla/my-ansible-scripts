@@ -14,6 +14,13 @@ neovim_plugins:
   - name: neoclide/coc.nvim
     options:
       branch: release
+  - pangloss/vim-javascript
+  - leafgarland/typescript-vim
+  - peitalin/vim-jsx-typescript
+  - name: styled-components/vim-styled-components
+    options:
+      branch: main
+  - jparise/vim-graphql
 
 taskwarrior_user_id: "{{ user.name }}"
 taskwarrior_cronjob_sync: true
