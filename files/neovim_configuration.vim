@@ -72,9 +72,11 @@ inoremap <buffer> <silent> <Down> <C-o>gj
 inoremap <buffer> <silent> <Home> <C-o>g<Home>
 inoremap <buffer> <silent> <End>  <C-o>g<End>
 
+autocmd Filetype typescriptreact setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype typescript setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype javascriptreact setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype json setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype markdown setlocal expandtab tabstop=2 shiftwidth=2
 
