@@ -22,6 +22,9 @@ let g:coc_global_extensions = [
   'coc-prettier'
 ]
 
+" Go to previous tab instead of next tab when a tab is closed
+autocmd TabClosed * :tabp
+
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
