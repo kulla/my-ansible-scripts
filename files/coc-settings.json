@@ -1,4 +1,10 @@
 {
   "coc.preferences.jumpCommand": "tabe",
-  "coc.preferences.formatOnSaveFiletypes": ["typescript", "javascript", "json", "markdown", "toml"]
+  "coc.preferences.formatOnSaveFiletypes": [
+    "typescript",
+    "javascript",
+    "json",
+    "markdown",
+    "toml"
+  ]
 }
