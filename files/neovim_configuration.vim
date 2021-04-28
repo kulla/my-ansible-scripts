@@ -12,7 +12,15 @@ set colorcolumn=81
 colorscheme gruvbox
 let g:airline_theme = 'gruvbox'
 
-let g:coc_global_extensions = ['coc-eslint', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier', 'coc-graphql']
+let g:coc_global_extensions = [
+  'coc-eslint',
+  'coc-tsserver',
+  'coc-css',
+  'coc-html',
+  'coc-json',
+  'coc-yank',
+  'coc-prettier'
+]
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
