@@ -2,7 +2,9 @@
   "coc.preferences.jumpCommand": "tabe",
   "coc.preferences.formatOnSaveFiletypes": [
     "typescript",
+    "typescriptreact",
     "javascript",
+    "javascriptreact",
     "json",
     "markdown",
     "toml"
