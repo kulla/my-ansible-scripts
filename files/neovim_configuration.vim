@@ -31,10 +31,10 @@ vmap <leader>f <Plug>(coc-format)
 nmap <leader>f <Plug>(coc-format)
 nmap <leader>r <Plug>(coc-rename)
 
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gt <Plug>(coc-type-definition)
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> ci <Plug>(coc-implementation)
+nmap <silent> ct <Plug>(coc-type-definition)
+nmap <silent> cd <Plug>(coc-definition)
+nmap <silent> cr <Plug>(coc-references)
 
 set updatetime=300
 
