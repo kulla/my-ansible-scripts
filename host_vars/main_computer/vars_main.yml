@@ -21,6 +21,7 @@ neovim_plugins:
     options:
       branch: main
   - jparise/vim-graphql
+  - tpope/vim-fugitive 
 
 taskwarrior_user_id: "{{ user.name }}"
 taskwarrior_cronjob_sync: true
