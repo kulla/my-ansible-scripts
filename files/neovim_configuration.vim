@@ -12,7 +12,7 @@ set colorcolumn=81
 colorscheme gruvbox
 let g:airline_theme = 'gruvbox'
 
-let g:coc_global_extensions = [ 'coc-eslint', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier' ]
+let g:coc_global_extensions = [ 'coc-eslint', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier', 'coc-git' ]
 
 " Go to previous tab instead of next tab when a tab is closed
 autocmd TabClosed * :tabp
