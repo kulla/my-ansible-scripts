@@ -141,6 +141,12 @@
               - biber
               - pstoedit
 
+    - tags: [work, serlo, poedit]
+      block:
+        - name: Install poedit
+          snap:
+            name: poedit
+
     - tags: [work, cloudflare]
       block:
         - name: Install cloudflared
