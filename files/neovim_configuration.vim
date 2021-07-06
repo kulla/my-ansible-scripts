@@ -36,6 +36,8 @@ nmap <silent> ct <Plug>(coc-type-definition)
 nmap <silent> cd <Plug>(coc-definition)
 nmap <silent> cr <Plug>(coc-references)
 
+nmap <silent> gu :<C-u>CocCommand git.chunkUndo<cr>
+
 set updatetime=300
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
