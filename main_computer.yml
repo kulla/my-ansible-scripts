@@ -147,6 +147,25 @@
           snap:
             name: poedit
 
+    - tags: [work, neovim, terraform]
+      block:
+        - name: Add apt-key for hashicorp
+          apt_key:
+            url: "https://apt.releases.hashicorp.com/gpg"
+            state: present
+
+        - name: Add hashicorp repository
+          apt_repository:
+            repo: deb [arch=amd64] https://apt.releases.hashicorp.com {{ ansible_lsb.codename }} main
+            state: present
+            update_cache: true
+            filename: hashicorp
+
+        - name: Install terraform-ls
+          package:
+            name: terraform-ls
+            state: present
+
     - tags: [work, cloudflare]
       block:
         - name: Install cloudflared
