@@ -78,6 +78,7 @@ inoremap <buffer> <silent> <Home> <C-o>g<Home>
 inoremap <buffer> <silent> <End>  <C-o>g<End>
 
 autocmd Filetype bash setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype sh setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype typescriptreact setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype typescript setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype tf setlocal expandtab tabstop=2 shiftwidth=2
