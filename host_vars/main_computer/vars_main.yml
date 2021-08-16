@@ -14,6 +14,9 @@ neovim_plugins:
   - name: neoclide/coc.nvim
     options:
       branch: release
+  - name: marlonfan/coc-phpls
+    options:
+      do: yarn install --frozen-lockfile
   - pangloss/vim-javascript
   - leafgarland/typescript-vim
   - peitalin/vim-jsx-typescript
@@ -21,7 +24,7 @@ neovim_plugins:
     options:
       branch: main
   - jparise/vim-graphql
-  - tpope/vim-fugitive 
+  - tpope/vim-fugitive
 
 taskwarrior_user_id: "{{ user.name }}"
 taskwarrior_cronjob_sync: true
