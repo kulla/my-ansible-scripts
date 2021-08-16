@@ -14,7 +14,25 @@ neovim_plugins:
   - name: neoclide/coc.nvim
     options:
       branch: release
+  - name: neoclide/coc-eslint
+    options:
+      do: yarn install --frozen-lockfile
+  - name: neoclide/coc-git
+    options:
+      do: yarn install --frozen-lockfile
+  - name: neoclide/coc-json
+    options:
+      do: yarn install --frozen-lockfile
+  - name: neoclide/coc-prettier
+    options:
+      do: yarn install --frozen-lockfile
+  - name: neoclide/coc-tsserver
+    options:
+      do: yarn install --frozen-lockfile
   - name: marlonfan/coc-phpls
+    options:
+      do: yarn install --frozen-lockfile
+  - name: neoclide/coc-yank
     options:
       do: yarn install --frozen-lockfile
   - pangloss/vim-javascript
