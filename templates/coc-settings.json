@@ -12,6 +12,7 @@
     "terraform",
     "toml"
   ],
+  "intelephense.licenceKey": "{{ intelephense_license_key }}",
   "languageserver": {
     "terraform": {
       "command": "terraform-ls",
