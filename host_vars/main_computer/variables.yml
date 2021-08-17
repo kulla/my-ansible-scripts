@@ -35,6 +35,9 @@ neovim_plugins:
   - name: neoclide/coc-yank
     options:
       do: yarn install --frozen-lockfile
+  - name:  fannheyward/coc-rust-analyzer
+    options:
+      do: yarn install --frozen-lockfile
   - pangloss/vim-javascript
   - leafgarland/typescript-vim
   - peitalin/vim-jsx-typescript
