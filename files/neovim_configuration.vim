@@ -76,20 +76,18 @@ inoremap <buffer> <silent> <Home> <C-o>g<Home>
 inoremap <buffer> <silent> <End>  <C-o>g<End>
 
 autocmd Filetype bash setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype javascriptreact setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype json setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype latex setlocal colorcolumn=
+autocmd Filetype markdown setlocal expandtab tabstop=2 shiftwidth=2 colorcolumn=
 autocmd Filetype sh setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype typescriptreact setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype typescript setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype tf setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype terraform setlocal expandtab tabstop=2 shiftwidth=2
-autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2
-autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2
-autocmd Filetype javascriptreact setlocal expandtab tabstop=2 shiftwidth=2
-autocmd Filetype json setlocal expandtab tabstop=2 shiftwidth=2
-autocmd Filetype markdown setlocal expandtab tabstop=2 shiftwidth=2
-
-autocmd Filetype markdown setlocal colorcolumn=
-autocmd Filetype latex setlocal colorcolumn=
 autocmd Filetype vim setlocal colorcolumn=
+autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2
 
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
