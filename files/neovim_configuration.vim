@@ -13,7 +13,7 @@ colorscheme gruvbox
 let g:airline_theme = 'gruvbox'
 
 " Go to previous tab instead of next tab when a tab is closed
-autocmd TabClosed * :tabp
+autocmd TabClosed * if expand('<afile>') <= tabpagenr("$") | tabp | endif
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
