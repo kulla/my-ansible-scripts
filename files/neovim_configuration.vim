@@ -35,7 +35,7 @@ nmap <silent> cd <Plug>(coc-definition)
 nmap <silent> cr <Plug>(coc-references)
 
 nmap <silent> gu :<C-u>CocCommand git.chunkUndo<cr>
-nmap <silent> ga :<C-u>CocCommand git.chunkStage<cr>
+nmap <silent> gs :<C-u>CocCommand git.chunkStage<cr>
 nmap <silent> gd :<C-u>CocCommand git.diffCached<cr>
 nmap <silent> gb :<C-u>CocCommand git.browserOpen<cr>
 nmap <silent> gr :<C-u>CocCommand git.refresh<cr>
