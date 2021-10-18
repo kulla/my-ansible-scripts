@@ -26,3 +26,10 @@
         state: present
         name:
           - google-cloud-sdk
+
+    - name: Install Cloud SQL Auth proxy
+      get_url:
+        url: https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64
+        dest: /usr/local/bin/cloud_sql_proxy
+        mode: 0555
+        owner: root
