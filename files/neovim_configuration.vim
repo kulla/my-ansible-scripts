@@ -79,6 +79,8 @@ inoremap <buffer> <silent> <Down> <C-o>gj
 inoremap <buffer> <silent> <Home> <C-o>g<Home>
 inoremap <buffer> <silent> <End>  <C-o>g<End>
 
+autocmd BufEnter *.mdx setlocal filetype=markdown.mdx
+
 autocmd Filetype bash setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype javascriptreact setlocal expandtab tabstop=2 shiftwidth=2
