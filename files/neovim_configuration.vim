@@ -90,6 +90,7 @@ autocmd Filetype javascriptreact setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype json setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype latex setlocal colorcolumn=
 autocmd Filetype markdown setlocal expandtab tabstop=2 shiftwidth=2 colorcolumn=
+autocmd Filetype markdown.mdx setlocal expandtab tabstop=2 shiftwidth=2 colorcolumn=
 autocmd Filetype rst setlocal expandtab tabstop=2 shiftwidth=2 colorcolumn=
 autocmd Filetype rust setlocal colorcolumn=101
 autocmd Filetype sh setlocal expandtab tabstop=2 shiftwidth=2
