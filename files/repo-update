@@ -1,0 +1,40 @@
+#!/bin/bash
+
+set -e
+BOLD=$(tput bold)
+NORMAL=$(tput sgr0)
+RED=$(tput setaf 1)
+
+function error() {
+  log "${RED}ERROR: $@"
+  exit 1
+}
+
+function log() {
+  echo "${BOLD}$@${NORMAL}"
+}
+
+function merged_branches {
+  git branch --list --format='%(refname:short)' --merged $DEFAULT_BRANCH \
+    | grep -v $DEFAULT_BRANCH
+}
+
+DEFAULT_BRANCH=$(basename $(git rev-parse --abbrev-ref origin/HEAD))
+COUNT_BRANCH_AHEAD=$(git rev-list --count \
+                         origin/$DEFAULT_BRANCH..$DEFAULT_BRANCH)
+
+if [ $COUNT_BRANCH_AHEAD -gt 0 ]; then
+	error "main is after origin/main"
+fi
+
+git checkout $DEFAULT_BRANCH
+
+if [ -n "$(git diff HEAD)" ]; then
+  error "There are uncommitted changes in your workspace"
+fi
+
+git pull --prune
+
+if [ -n "$(merged_branches)" ]; then
+  git branch -d $(merged_branches)
+fi
