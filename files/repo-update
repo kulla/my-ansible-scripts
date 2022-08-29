@@ -21,7 +21,7 @@ function merged_branches {
 
 function default_branch {
   # Thanks to https://davidwalsh.name/get-default-branch-name
-  git remote show REMOTE_REPO_NAME | grep 'HEAD branch' | cut -d' ' -f5
+  git remote show origin | grep 'HEAD branch' | cut -d' ' -f5
 }
 
 DEFAULT_BRANCH=$(default_branch)
