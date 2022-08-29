@@ -88,6 +88,13 @@
             group: "{{ user.group }}"
             mode: 0644
 
+    - tags: [ferdium]
+      block:
+        - name: Install ferdium
+          snap:
+            name: ferdium
+            state: present
+
     - tags: [sylpheed]
       block:
         - name: Install sylpheed
