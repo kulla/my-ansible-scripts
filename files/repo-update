@@ -19,7 +19,12 @@ function merged_branches {
     | grep -v $DEFAULT_BRANCH
 }
 
-DEFAULT_BRANCH=$(basename $(git rev-parse --abbrev-ref origin/HEAD))
+function default_branch {
+  # Thanks to https://davidwalsh.name/get-default-branch-name
+  git remote show REMOTE_REPO_NAME | grep 'HEAD branch' | cut -d' ' -f5
+}
+
+DEFAULT_BRANCH=$(default_branch)
 COUNT_BRANCH_AHEAD=$(git rev-list --count \
                          origin/$DEFAULT_BRANCH..$DEFAULT_BRANCH)
 
