@@ -88,6 +88,14 @@
             group: "{{ user.group }}"
             mode: 0644
 
+        - name: Alias for nvim
+          blockinfile:
+            block: |
+              alias nvim='nvim -p'
+            marker_begin: Alias for nvim BEGIN
+            marker_end: Alias for nvim END
+            path: "{{ user.homedir }}/.bashrc"
+
     - tags: [ferdium]
       block:
         - name: Install ferdium
