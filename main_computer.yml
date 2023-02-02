@@ -161,7 +161,7 @@
           snap:
             name: poedit
 
-    - tags: [work, neovim, terraform]
+    - tags: [work, terraform]
       block:
         - name: Add apt-key for hashicorp
           apt_key:
