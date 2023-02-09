@@ -94,6 +94,7 @@ autocmd Filetype markdown.mdx setlocal expandtab tabstop=2 shiftwidth=2 colorcol
 autocmd Filetype rst setlocal expandtab tabstop=2 shiftwidth=2 colorcolumn=
 autocmd Filetype rust setlocal colorcolumn=101
 autocmd Filetype sh setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype taskedit setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype typescriptreact setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype typescript setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype tf setlocal expandtab tabstop=2 shiftwidth=2
