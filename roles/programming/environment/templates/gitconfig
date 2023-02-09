@@ -2,6 +2,9 @@
 	editor = nvim
 	excludesfile = {{ git_global_ignore_file }}
 
+[init]
+	defaultBranch = main
+
 [user]
 	name = {{ user.realname }}
 	email = {{ git.email }}
