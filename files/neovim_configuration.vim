@@ -85,6 +85,7 @@ let g:coc_filetype_map = { 'markdown.mdx': 'mdx' }
 autocmd BufEnter *.mdx setlocal filetype=markdown.mdx
 
 autocmd Filetype bash setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype dockerfile setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype javascriptreact setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype json setlocal expandtab tabstop=2 shiftwidth=2
