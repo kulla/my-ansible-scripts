@@ -139,7 +139,6 @@
               - texlive-publishers
               - texlive-bibtex-extra
               - biber
-              - pstoedit
 
         - name: Install script "repo-update"
           copy:
