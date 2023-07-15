@@ -31,3 +31,22 @@
         path: "{{ git_global_ignore_file }}"
         block: .tool-versions
         marker: "# {mark} configuration for asdf virtual manager"
+
+    - name: Install dev-tools for python
+      package:
+        name:
+          - build-essential
+          - libssl-dev
+          - zlib1g-dev
+          - libbz2-dev
+          - libreadline-dev
+          - libsqlite3-dev
+          - curl
+          - libncursesw5-dev
+          - xz-utils
+          - tk-dev
+          - libxml2-dev
+          - libxmlsec1-dev
+          - libffi-dev
+          - liblzma-dev
+        state: present
