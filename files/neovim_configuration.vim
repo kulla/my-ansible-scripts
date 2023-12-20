@@ -4,7 +4,7 @@ syntax on
 set number
 set signcolumn=yes
 set hlsearch ignorecase smartcase
-" Needed for plugin coc
+" Needed for plugin coc (switching of buffers without saving is possible)
 set hidden
 set nobackup
 set nowritebackup
