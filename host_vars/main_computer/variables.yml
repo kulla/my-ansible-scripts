@@ -37,6 +37,9 @@ neovim_plugins:
       do: yarn install --frozen-lockfile
   - tpope/vim-fugitive
   - bogado/file-line
+  - name: nvim-treesitter/nvim-treesitter
+    options:
+      do: :TSUpdate
 
 taskwarrior_user_id: "{{ user.name }}"
 taskwarrior_cronjob_sync: true
