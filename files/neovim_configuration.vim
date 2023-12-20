@@ -78,14 +78,8 @@ set wrap linebreak
 set display+=lastline
 
 " Remap keys so that vim navigates smoothly in wrapped files
-noremap  <buffer> <silent> <Up>   gk
-noremap  <buffer> <silent> <Down> gj
-noremap  <buffer> <silent> <Home> g<Home>
-noremap  <buffer> <silent> <End>  g<End>
-inoremap <buffer> <silent> <Up>   <C-o>gk
-inoremap <buffer> <silent> <Down> <C-o>gj
-inoremap <buffer> <silent> <Home> <C-o>g<Home>
-inoremap <buffer> <silent> <End>  <C-o>g<End>
+nnoremap <Down> gj
+nnoremap <Up> gk
 
 " See https://github.com/neoclide/coc-prettier/issues/127
 let g:coc_filetype_map = { 'markdown.mdx': 'mdx' }
