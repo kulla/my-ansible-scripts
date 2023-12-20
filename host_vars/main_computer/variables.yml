@@ -29,9 +29,6 @@ neovim_plugins:
   - name: neoclide/coc-tsserver
     options:
       do: yarn install --frozen-lockfile
-  - name: marlonfan/coc-phpls
-    options:
-      do: yarn install --frozen-lockfile
   - name: neoclide/coc-yank
     options:
       do: yarn install --frozen-lockfile
