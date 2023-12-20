@@ -1,7 +1,7 @@
 {
   "coc.preferences.jumpCommand": "tabe",
   "coc.preferences.formatOnSave": true,
-  "intelephense.licenceKey": "{{ intelephense_license_key }}",
+  "tsserver.useLocalTsdk": true,
   "languageserver": {
     "terraform": {
       "command": "terraform-ls",
