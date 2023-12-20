@@ -9,7 +9,6 @@ git:
 neovim_user_id: "{{ user.name }}"
 neovim_configuration: "{{ lookup('file', 'neovim_configuration.vim') }}"
 neovim_plugins:
-  - liuchengxu/eleline.vim
   - name: neoclide/coc.nvim
     options:
       branch: release
@@ -42,6 +41,7 @@ neovim_plugins:
   - https://gitlab.com/HiPhish/rainbow-delimiters.nvim.git
   - nvim-treesitter/nvim-treesitter-context
   - navarasu/onedark.nvim
+  - itchyny/lightline.vim
 
 taskwarrior_user_id: "{{ user.name }}"
 taskwarrior_cronjob_sync: true
