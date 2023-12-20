@@ -12,7 +12,6 @@
     - docker
     - libvirt
     - gcloud
-    - phpstorm
   tasks:
     - tags: [awesome]
       block:
@@ -42,10 +41,10 @@
         - name: Backup keepassxc's databases
           import_role: name=utils/dobackup
           vars:
-                paths:
-                  - "{{ user.homedir }}/keepassx/"
-                exclude:
-                  - "keepassx/*.kdb.lock"
+            paths:
+              - "{{ user.homedir }}/keepassx/"
+            exclude:
+              - "keepassx/*.kdb.lock"
 
     - tags: [media]
       block:
@@ -104,9 +103,9 @@
         - name: Backup sylpheed files
           import_role: name=utils/dobackup
           vars:
-                paths:
-                  - "{{ user.homedir }}/.sylpheed-2.0"
-                  - "{{ user.homedir }}/Mail"
+            paths:
+              - "{{ user.homedir }}/.sylpheed-2.0"
+              - "{{ user.homedir }}/Mail"
 
     - tags: [taskwarrior]
       block:
@@ -172,12 +171,12 @@
             deb: https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.deb
             state: present
 
-    - tags: [ youtube-dl ]
+    - tags: [youtube-dl]
       block:
         - name: Install youtube-dl
           get_url: url=http://yt-dl.org/latest/youtube-dl
-                   dest=/user/local/bin/youtube-dl
-                   mode=0755
+            dest=/user/local/bin/youtube-dl
+            mode=0755
 
         - name: Weekly update of youtube-dl
           cron:
