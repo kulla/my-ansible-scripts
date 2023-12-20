@@ -32,7 +32,7 @@ neovim_plugins:
   - name: neoclide/coc-yank
     options:
       do: yarn install --frozen-lockfile
-  - name:  fannheyward/coc-rust-analyzer
+  - name: fannheyward/coc-rust-analyzer
     options:
       do: yarn install --frozen-lockfile
   - tpope/vim-fugitive
