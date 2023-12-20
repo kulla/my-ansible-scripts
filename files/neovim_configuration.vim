@@ -4,7 +4,8 @@ syntax on
 set number
 set signcolumn=yes
 set hlsearch ignorecase smartcase
-set hidden " Needed for plugin coc
+" Needed for plugin coc
+set hidden
 set nobackup
 set nowritebackup
 
@@ -42,6 +43,7 @@ nmap <silent> gr :<C-u>CocCommand git.refresh<cr>
 
 set updatetime=300
 
+" Show documentation on key K
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
@@ -63,9 +65,12 @@ vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(
 
 set autoindent
 set tabstop=4 shiftwidth=4
+
+" Make trainling spaces and tabs visible
 set list listchars=tab:>.,trail:%
 
 set wrap linebreak
+
 " Show long lines also partially (https://vi.stackexchange.com/q/102)
 set display+=lastline
 
