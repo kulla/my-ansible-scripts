@@ -40,6 +40,8 @@ neovim_plugins:
   - name: nvim-treesitter/nvim-treesitter
     options:
       do: :TSUpdate
+  - https://gitlab.com/HiPhish/rainbow-delimiters.nvim.git
+  - nvim-treesitter/nvim-treesitter-context
 
 taskwarrior_user_id: "{{ user.name }}"
 taskwarrior_cronjob_sync: true
