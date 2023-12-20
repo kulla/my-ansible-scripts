@@ -11,10 +11,13 @@ set hlsearch ignorecase smartcase
 set hidden
 set nobackup
 set nowritebackup
-
 set colorcolumn=81
+
 colorscheme gruvbox
-let g:airline_theme = 'gruvbox'
+
+" Add a callback to plugin fugtive to update eleline (see
+" https://github.com/liuchengxu/eleline.vim)
+autocmd User FugitiveChanged if exists("b:eleline_branch") | unlet b:eleline_branch | endif
 
 " Go to previous tab instead of next tab when a tab is closed
 autocmd TabClosed * if expand('<afile>') <= tabpagenr("$") | tabp | endif
