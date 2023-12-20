@@ -1,19 +1,6 @@
 {
   "coc.preferences.jumpCommand": "tabe",
   "coc.preferences.formatOnSave": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "typescript",
-    "typescriptreact",
-    "javascript",
-    "javascriptreact",
-    "json",
-    "markdown",
-    "mdx",
-    "php",
-    "rust",
-    "terraform",
-    "toml"
-  ],
   "intelephense.licenceKey": "{{ intelephense_license_key }}",
   "languageserver": {
     "terraform": {
