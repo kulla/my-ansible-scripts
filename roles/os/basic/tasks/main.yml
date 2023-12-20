@@ -28,14 +28,7 @@
         special_time: monthly
 
     - include: add_language_support.yml lang={{ item }}
-      with_items: [ de, it, en ]
-
-    - name: Deinstall Adobe Flash
-      package:
-        name:
-          - adobe-flashplugin
-          - flashplugin-installer
-        state: absent
+      with_items: [de, it, en]
 
     - name: Deinstall Qlipper
       package: name=qlipper state=absent
