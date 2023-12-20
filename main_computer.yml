@@ -81,7 +81,7 @@
             path: "{{ user.homedir }}/.bashrc"
 
         - name: Install coc settings file
-          template:
+          copy:
             src: coc-settings.json
             dest: "{{ neovim_config_dir }}"
             owner: "{{ user.name }}"
