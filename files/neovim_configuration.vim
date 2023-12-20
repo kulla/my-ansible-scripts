@@ -13,6 +13,9 @@ set nobackup
 set nowritebackup
 set colorcolumn=81
 
+" Use only current directory in :tabf
+set path=.
+
 let g:onedark_config = { 'style': 'warmer' }
 colorscheme onedark
 
