@@ -1,5 +1,4 @@
 {
-  "coc.preferences.jumpCommand": "tabe",
   "coc.preferences.formatOnSave": true,
   "tsserver.useLocalTsdk": true,
   "languageserver": {
