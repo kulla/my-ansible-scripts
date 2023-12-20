@@ -105,7 +105,7 @@ autocmd Filetype typescriptreact setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype typescript setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype tf setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype terraform setlocal expandtab tabstop=2 shiftwidth=2
-autocmd Filetype vim setlocal colorcolumn=
+autocmd Filetype vim setlocal expandtab tabstop=2 shiftwidth=2 colorcolumn=
 autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2
 
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
