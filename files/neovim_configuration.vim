@@ -13,7 +13,8 @@ set nobackup
 set nowritebackup
 set colorcolumn=81
 
-colorscheme gruvbox
+let g:onedark_config = { 'style': 'warmer' }
+colorscheme onedark
 
 " Add a callback to plugin fugtive to update eleline (see
 " https://github.com/liuchengxu/eleline.vim)
