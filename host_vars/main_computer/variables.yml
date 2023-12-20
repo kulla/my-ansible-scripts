@@ -38,13 +38,6 @@ neovim_plugins:
   - name:  fannheyward/coc-rust-analyzer
     options:
       do: yarn install --frozen-lockfile
-  - pangloss/vim-javascript
-  - leafgarland/typescript-vim
-  - peitalin/vim-jsx-typescript
-  - name: styled-components/vim-styled-components
-    options:
-      branch: main
-  - jparise/vim-graphql
   - tpope/vim-fugitive
 
 taskwarrior_user_id: "{{ user.name }}"
