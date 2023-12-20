@@ -1,6 +1,9 @@
 filetype indent plugin on
 syntax on
 
+" Disable vi-compatibily mode
+set nocompatible
+
 set number
 set signcolumn=yes
 set hlsearch ignorecase smartcase
