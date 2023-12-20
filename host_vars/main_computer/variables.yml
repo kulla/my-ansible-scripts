@@ -39,6 +39,7 @@ neovim_plugins:
     options:
       do: yarn install --frozen-lockfile
   - tpope/vim-fugitive
+  - bogado/file-line
 
 taskwarrior_user_id: "{{ user.name }}"
 taskwarrior_cronjob_sync: true
