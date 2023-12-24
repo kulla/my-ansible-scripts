@@ -7,10 +7,10 @@ color.due=magenta
 uda.rank.type=numeric
 uda.rank.label=Priority
 
-report.backlog.columns=id,rank,due.remaining,description.desc,project,due
-report.backlog.labels=ID,Rank,Due,Description,Project,Due
-report.backlog.sort=rank-,due+,project+
-report.backlog.filter=status:pending and limit:page and project.not:current
+report.epics.columns=id,rank,due.remaining,description.desc,project,due
+report.epics.labels=ID,Rank,Due,Description,Project,Due
+report.epics.sort=rank-,due+,project+
+report.epics.filter=status:pending and project:epics
 
 report.next.columns=id,rank,due.remaining,description.desc,project,due
 report.next.labels=ID,Rank,Due,Description,Project,Due
