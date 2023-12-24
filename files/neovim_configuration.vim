@@ -189,6 +189,10 @@ set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 set nofoldenable 
 
+lua << EOF
+require("chatgpt").setup()
+EOF
+
 " Configure lightline
 function! CocCurrentFunction()
     return get(b:, 'coc_current_function', '')

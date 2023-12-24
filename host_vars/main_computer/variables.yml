@@ -42,6 +42,12 @@ neovim_plugins:
   - nvim-treesitter/nvim-treesitter-context
   - navarasu/onedark.nvim
   - itchyny/lightline.vim
+  # Depencies of jackMort/ChatGPT.nvim
+  - MunifTanjim/nui.nvim
+  - nvim-lua/plenary.nvim
+  - nvim-telescope/telescope.nvim
+
+  - jackMort/ChatGPT.nvim
 
 taskwarrior_user_id: "{{ user.name }}"
 taskwarrior_cronjob_sync: true
