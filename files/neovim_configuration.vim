@@ -190,7 +190,11 @@ set foldexpr=nvim_treesitter#foldexpr()
 set nofoldenable 
 
 lua << EOF
-require("chatgpt").setup()
+require("chatgpt").setup({
+  openai_params = {
+    max_tokens=2000
+  }
+})
 EOF
 
 " Configure lightline
