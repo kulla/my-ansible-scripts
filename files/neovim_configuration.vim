@@ -192,7 +192,8 @@ set nofoldenable
 lua << EOF
 require("chatgpt").setup({
   openai_params = {
-    max_tokens=2000
+    model = "gpt-4",
+    max_tokens = 2500
   }
 })
 EOF
