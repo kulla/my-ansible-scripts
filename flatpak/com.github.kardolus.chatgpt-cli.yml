@@ -5,6 +5,7 @@ sdk: org.freedesktop.Sdk
 command: chatgpt-cli
 finish-args:
   - --share=network
+  - --filesystem=~/.chatgpt-cli:rw
 modules:
   - name: chatgpt-cli
     buildsystem: simple
