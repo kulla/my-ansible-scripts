@@ -193,3 +193,16 @@
               export OPENAI_API_KEY="{{ openai_api_key }}"
             mode: 0555
             owner: "{{ user.name }}"
+
+        - name: Install chatpgt-cli
+          command: >
+            flatpak-builder --user --install --force-clean
+            --state-dir=/tmp/.flatpak-builder-state-dir
+            /tmp/.flatpak-builder-build-dir
+            flatpak/com.github.kardolus.chatgpt-cli.yml
+
+        - name: Add alias for chatgpt-cli
+          copy:
+            dest: "{{ shell_conf_dir }}/bash/chatgpt-cli.sh"
+            content: |
+              alias chatgpt="flatpak run com.github.kardolus.chatgpt-cli"

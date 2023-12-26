@@ -1,0 +1,16 @@
+app-id: com.github.kardolus.chatgpt-cli
+runtime: org.freedesktop.Platform
+runtime-version: "23.08"
+sdk: org.freedesktop.Sdk
+command: chatgpt-cli
+finish-args:
+  - --share=network
+modules:
+  - name: chatgpt-cli
+    buildsystem: simple
+    build-commands:
+      - install -D chatgpt-linux-amd64 /app/bin/chatgpt-cli
+    sources:
+      - type: file
+        url: https://github.com/kardolus/chatgpt-cli/releases/download/v1.4.0/chatgpt-linux-amd64
+        sha256: c1e1f236bf63f29a64b137bc1b1815b8d5028b4d305da5701cf7c4f16acca1cb
