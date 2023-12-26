@@ -196,7 +196,7 @@
 
         - name: Install chatpgt-cli
           command: >
-            flatpak-builder --user --install --force-clean
+            flatpak-builder --install --force-clean
             --state-dir=/tmp/.flatpak-builder-state-dir
             /tmp/.flatpak-builder-build-dir
             flatpak/com.github.kardolus.chatgpt-cli.yml
