@@ -43,7 +43,7 @@ neovim_plugins:
   - navarasu/onedark.nvim
   - itchyny/lightline.vim
   - robitx/gp.nvim
-  - vim-rzip
+  - lbrayner/vim-rzip
 
 taskwarrior_user_id: "{{ user.name }}"
 taskwarrior_cronjob_sync: true
