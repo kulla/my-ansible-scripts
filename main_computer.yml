@@ -1,6 +1,6 @@
 - hosts: main_computer
   roles:
-    - media
+    - screencasts
     - os
     - programming
     - kulla.neovim
