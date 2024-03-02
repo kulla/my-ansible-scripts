@@ -240,12 +240,18 @@
             - Documents
 
         - name: Configure working directories
-          copy:
+          template:
             src: user-dirs.dirs
             dest: "{{ user.homedir }}/.config/user-dirs.dirs"
             owner: "{{ user.name }}"
             group: "{{ user.group }}"
             mode: 0600
+
+        - name: Create tmpdir on startup and empty it
+          cron:
+            name: Empty tmpdir of current user
+            special_time: reboot
+            job: mkdir -p "{{ user.tmpdir }}"; rm -rf "{{ user.tmpdir}}"/*
 
     - tags: [youtube-dl]
       block:

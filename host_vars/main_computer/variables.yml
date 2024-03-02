@@ -3,6 +3,7 @@ user:
   group: kulla
   realname: Stephan Kulla
   homedir: /home/kulla
+  tmpdir: /home/kulla/tmp
 git:
   email: git.mail@kulla.me
   gitignore:
