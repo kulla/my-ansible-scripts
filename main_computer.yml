@@ -177,11 +177,35 @@
               - texlive-bibtex-extra
               - biber
 
+        - name: Install basic programming tools
+          package:
+            state: present
+            name:
+              - make
+              - git
+              - gource
+
         - name: Install script "repo-update"
           copy:
             src: repo-update
             dest: /usr/local/bin
             mode: 0555
+
+        - name: Configure git
+          template:
+            src: gitconfig
+            dest: "{{ user.homedir }}/.gitconfig"
+            mode: 0o600
+            owner: "{{ user.name }}"
+            group: "{{ user.group }}"
+
+        - name: Create global gitignore file
+          file:
+            path: "{{ git.gitignore.path }}"
+            state: touch
+            mode: 0o400
+            owner: "{{ user.name }}"
+            group: "{{ user.group }}"
 
     - tags: [work, terraform]
       block:

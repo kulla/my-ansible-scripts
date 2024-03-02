@@ -5,6 +5,8 @@ user:
   homedir: /home/kulla
 git:
   email: git.mail@kulla.me
+  gitignore:
+    path: "{{ user.homedir }}/.gitignore_global"
 
 neovim_user_id: "{{ user.name }}"
 neovim_configuration: "{{ lookup('file', 'neovim_configuration.vim') }}"
