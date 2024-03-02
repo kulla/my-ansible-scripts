@@ -2,6 +2,7 @@
   "coc.preferences.jumpCommand": "tabe",
   "coc.preferences.formatOnSave": true,
   "tsserver.useLocalTsdk": true,
+  "python.formatting.provider": "black",
   "languageserver": {
     "terraform": {
       "command": "terraform-ls",

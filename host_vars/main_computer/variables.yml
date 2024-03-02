@@ -33,6 +33,9 @@ neovim_plugins:
   - name: fannheyward/coc-rust-analyzer
     options:
       do: yarn install --frozen-lockfile
+  - name: fannheyward/coc-pyright
+    options:
+      do: yarn install --frozen-lockfile
   - tpope/vim-fugitive
   - bogado/file-line
   - name: nvim-treesitter/nvim-treesitter
