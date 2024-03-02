@@ -3,5 +3,4 @@ dependencies:
   - os/basic
   - os/shell
   - os/updates
-  - os/working-directories
   - os/archive-command
