@@ -56,7 +56,7 @@
               - ubuntu-restricted-addons
               - libavcodec-extra
 
-        - name: Install tools fo editing media files
+        - name: Install tools for editing or creating media files
           package:
             state: present
             name:
