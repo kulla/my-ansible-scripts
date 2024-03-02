@@ -226,13 +226,6 @@
             name: terraform-ls
             state: present
 
-    - tags: [work, cloudflare]
-      block:
-        - name: Install cloudflared
-          apt:
-            deb: https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.deb
-            state: present
-
     - tags: [youtube-dl]
       block:
         - name: Install youtube-dl
