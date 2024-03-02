@@ -67,6 +67,7 @@
               - imagemagick
               - ffmpeg
               - graphviz
+              - xournalpp
 
     - tags: [neovim]
       block:
