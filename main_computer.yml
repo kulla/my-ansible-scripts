@@ -190,6 +190,12 @@
             dest: /usr/local/bin
             mode: 0555
 
+        - name: Install script "git new-branch"
+          copy:
+            src: git-new-branch
+            dest: /usr/local/bin
+            mode: 0555
+
         - name: Configure git
           template:
             src: gitconfig
