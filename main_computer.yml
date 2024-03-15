@@ -184,9 +184,9 @@
               - git
               - gource
 
-        - name: Install script "repo-update"
+        - name: Install script "git update-main"
           copy:
-            src: repo-update
+            src: git-update-main
             dest: /usr/local/bin
             mode: 0555
 
