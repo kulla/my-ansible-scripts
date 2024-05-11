@@ -41,8 +41,6 @@ neovim_plugins:
   - name: nvim-treesitter/nvim-treesitter
     options:
       do: :TSUpdate
-  - https://gitlab.com/HiPhish/rainbow-delimiters.nvim.git
-  - nvim-treesitter/nvim-treesitter-context
   - navarasu/onedark.nvim
   - itchyny/lightline.vim
   - robitx/gp.nvim
