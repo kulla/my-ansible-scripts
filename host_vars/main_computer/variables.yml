@@ -36,16 +36,13 @@ neovim_plugins:
   - name: fannheyward/coc-pyright
     options:
       do: yarn install --frozen-lockfile
+  - tpope/vim-fugitive
+  - bogado/file-line
   - name: nvim-treesitter/nvim-treesitter
     options:
       do: :TSUpdate
-  # Git support inside nvim
-  - tpope/vim-fugitive
-  # Open files with file line at the end after coloumn
-  - bogado/file-line
   - navarasu/onedark.nvim
   - itchyny/lightline.vim
-  # ChatGPT plugin
   - robitx/gp.nvim
   - lbrayner/vim-rzip
 
