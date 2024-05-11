@@ -30,9 +30,6 @@ neovim_plugins:
   - name: neoclide/coc-tsserver
     options:
       do: yarn install --frozen-lockfile
-  - name: neoclide/coc-yank
-    options:
-      do: yarn install --frozen-lockfile
   - name: fannheyward/coc-rust-analyzer
     options:
       do: yarn install --frozen-lockfile
