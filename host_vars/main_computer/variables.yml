@@ -36,11 +36,11 @@ neovim_plugins:
   - name: fannheyward/coc-pyright
     options:
       do: yarn install --frozen-lockfile
-  - tpope/vim-fugitive
-  - bogado/file-line
   - name: nvim-treesitter/nvim-treesitter
     options:
       do: :TSUpdate
+  - tpope/vim-fugitive
+  - bogado/file-line
   - navarasu/onedark.nvim
   - itchyny/lightline.vim
   - robitx/gp.nvim
