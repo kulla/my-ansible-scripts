@@ -1,6 +1,13 @@
 {
   "coc.preferences.jumpCommand": "tabe",
   "coc.preferences.formatOnSave": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "tsserver.useLocalTsdk": true,
   "python.formatting.provider": "black",
   "languageserver": {
