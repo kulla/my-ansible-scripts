@@ -26,6 +26,7 @@ autocmd User FugitiveChanged if exists("b:eleline_branch") | unlet b:eleline_bra
 " Go to previous tab instead of next tab when a tab is closed
 autocmd TabClosed * if expand('<afile>') <= tabpagenr("$") | tabp | endif
 
+command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"

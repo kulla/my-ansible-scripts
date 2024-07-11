@@ -43,23 +43,6 @@
         groups: [docker]
         append: yes
 
-    - name: Install Docker Compose
-      get_url:
-        url: "https://github.com/docker/compose/releases/download/v2.12.2/\
-              docker-compose-{{ ansible_system }}-{{ ansible_architecture }}"
-        dest: /usr/local/bin/docker-compose
-        mode: 0o555
-        owner: root
-        group: root
-
-    - name: Install docker-machine-driver-kvm2
-      get_url:
-        url: "https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-kvm2"
-        dest: /usr/local/bin/docker-machine-driver-kvm2
-        mode: 0o555
-        owner: root
-        group: root
-
     - name: Configure docker daemon
       copy:
         dest: /etc/docker/daemon.json
