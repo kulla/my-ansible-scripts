@@ -36,6 +36,9 @@ neovim_plugins:
   - name: fannheyward/coc-pyright
     options:
       do: yarn install --frozen-lockfile
+  - name: yaegassy/coc-tailwindcss3
+    options:
+      do: yarn install --frozen-lockfile
   - name: nvim-treesitter/nvim-treesitter
     options:
       do: :TSUpdate
