@@ -2,7 +2,6 @@ due=1
 
 default.command=list
 
-color.tag.erinnerung=cyan on gray2
 color.project.birthday=white on rgb012
 color.due=magenta
 
