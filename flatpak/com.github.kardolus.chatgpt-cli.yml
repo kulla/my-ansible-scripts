@@ -13,5 +13,5 @@ modules:
       - install -D chatgpt-linux-amd64 /app/bin/chatgpt-cli
     sources:
       - type: file
-        url: https://github.com/kardolus/chatgpt-cli/releases/download/v1.4.0/chatgpt-linux-amd64
-        sha256: c1e1f236bf63f29a64b137bc1b1815b8d5028b4d305da5701cf7c4f16acca1cb
+        url: https://github.com/kardolus/chatgpt-cli/releases/download/v1.7.9/chatgpt-linux-amd64
+        sha256: 5d4cbc4d1df8cfcfe228cf55736380ca8da24a2a9645c647be2d9ebd567ecf58
