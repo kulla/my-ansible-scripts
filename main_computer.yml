@@ -129,7 +129,7 @@
             dest: "{{ user.homedir }}/.chatgpt-cli/config.yaml"
             owner: "{{ user.name }}"
             content: |
-              model: gpt-4
+              model: gpt-4o
               max_tokens: 8192
 
     - tags: [sylpheed]
