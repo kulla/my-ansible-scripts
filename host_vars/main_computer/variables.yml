@@ -46,6 +46,7 @@ neovim_plugins:
   - tpope/vim-fugitive
   # Open files with file line at the end after coloumn
   - bogado/file-line
+
   - navarasu/onedark.nvim
   - itchyny/lightline.vim
 
