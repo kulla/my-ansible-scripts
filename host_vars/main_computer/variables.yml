@@ -48,8 +48,7 @@ neovim_plugins:
   - bogado/file-line
   - navarasu/onedark.nvim
   - itchyny/lightline.vim
-  # ChatGPT plugin
-  - robitx/gp.nvim
+
   - github/copilot.vim
 
 taskwarrior_user_id: "{{ user.name }}"
