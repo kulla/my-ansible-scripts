@@ -52,6 +52,10 @@ neovim_plugins:
 
   - github/copilot.vim
 
+  # ChatGPT / AI plugin
+  - olimorris/codecompanion.nvim
+  - nvim-lua/plenary.nvim
+
 taskwarrior_user_id: "{{ user.name }}"
 taskwarrior_cronjob_sync: true
 taskwarrior_ca_certificate: taskwarrior_server.cert.pem
