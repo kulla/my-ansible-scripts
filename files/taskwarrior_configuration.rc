@@ -2,8 +2,9 @@ due=1
 
 default.command=list
 
-color.project.birthday=white on rgb012
-color.due=magenta
+color.tag.habit=bright green
+color.project.birthday=bright blue
+color.due=bright red
 
 uda.rank.type=numeric
 uda.rank.label=Priority
