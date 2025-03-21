@@ -55,6 +55,8 @@ neovim_plugins:
   # ChatGPT / AI plugin
   - olimorris/codecompanion.nvim
   - nvim-lua/plenary.nvim
+  - nvim-telescope/telescope.nvim
+  - hrsh7th/nvim-cmp
 
 taskwarrior_user_id: "{{ user.name }}"
 taskwarrior_cronjob_sync: true
