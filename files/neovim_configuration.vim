@@ -117,7 +117,36 @@ autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 lua << EOF
-  require("codecompanion").setup()
+  require("codecompanion").setup({
+    strategies = {
+      chat = {
+        slash_commands = {
+          ["file"] = {
+            callback = "strategies.chat.slash_commands.file",
+            description = "Select a file using Telescope",
+            opts = {
+              -- Other options include 'default', 'mini_pick', 'fzf_lua', snacks
+              provider = "telescope",
+              contains_code = true,
+            },
+          },
+        },
+      },
+    },
+  })
+
+  local cmp_status, cmp = pcall(require, "cmp")
+  if cmp_status then
+    cmp.setup({
+      mapping = cmp.mapping.preset.insert({
+        ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-f>"] = cmp.mapping.scroll_docs(4),
+        ["<C-Space>"] = cmp.mapping.complete(),
+        ["<C-e>"] = cmp.mapping.abort(),
+        ["<CR>"] = cmp.mapping.confirm({ select = true }),
+      }),
+    })
+  end
 EOF
 
 lua << EOF
