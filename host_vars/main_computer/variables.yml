@@ -36,6 +36,9 @@ neovim_plugins:
   - name: fannheyward/coc-pyright
     options:
       do: yarn install --frozen-lockfile
+  - name: fannheyward/coc-biome
+    options:
+      do: yarn install --frozen-lockfile
   - name: yaegassy/coc-tailwindcss3
     options:
       do: yarn install --frozen-lockfile
