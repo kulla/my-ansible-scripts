@@ -92,6 +92,8 @@ nnoremap <Up> gk
 " See https://github.com/neoclide/coc-prettier/issues/127
 let g:coc_filetype_map = { 'markdown.mdx': 'mdx' }
 
+autocmd BufEnter /home/kulla/workspace/kulla/notes/2* Copilot disable
+
 autocmd BufEnter *.mdx setlocal filetype=markdown.mdx
 
 autocmd Filetype bash setlocal expandtab tabstop=2 shiftwidth=2
