@@ -57,7 +57,9 @@ neovim_plugins:
 
   # ChatGPT / AI plugin
   - olimorris/codecompanion.nvim
-  - nvim-lua/plenary.nvim
+  - name: nvim-lua/plenary.nvim
+    options:
+      branch: master
   - nvim-telescope/telescope.nvim
   - hrsh7th/nvim-cmp
 
