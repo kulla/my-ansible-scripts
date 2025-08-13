@@ -17,7 +17,7 @@ report.epics.filter=status:pending and project:epics
 
 report.next.columns=id,rank,due.remaining,description.desc,project,due
 report.next.labels=ID,Rank,Due,Description,Project,Due
-report.next.sort=rank-,project+,due+
+report.next.sort=rank-,urgency-,due+
 report.next.filter=status:pending and (+next or due.before:now+1days)
 
 report.list.columns=id,rank,due.remaining,description.desc,project,due
