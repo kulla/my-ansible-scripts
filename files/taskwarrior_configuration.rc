@@ -2,9 +2,11 @@ due=1
 
 default.command=next
 
+color.due=bright magenta
+color.tag.next=bright magenta
+
 color.tag.habit=bright green
 color.project.birthday=bright blue
-color.due=bright red
 
 uda.rank.type=numeric
 uda.rank.label=Priority
