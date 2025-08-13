@@ -13,15 +13,15 @@ uda.rank.label=Priority
 
 report.epics.columns=id,rank,due.remaining,description.desc,project,due
 report.epics.labels=ID,Rank,Due,Description,Project,Due
-report.epics.sort=rank-,due+,project+
+report.epics.sort=rank-,project+,due+,
 report.epics.filter=status:pending and project:epics
 
 report.next.columns=id,rank,due.remaining,description.desc,project,due
 report.next.labels=ID,Rank,Due,Description,Project,Due
-report.next.sort=rank-,due+,project+
+report.next.sort=rank-,project+,due+
 report.next.filter=status:pending and (+next or due.before:now+1days)
 
 report.list.columns=id,rank,due.remaining,description.desc,project,due
 report.list.labels=ID,Rank,Due,Description,Project,Due
 report.list.filter=status:pending and (due.none: or due.before:now+2days)
-report.list.sort=rank-,due+,project+
+report.list.sort=rank-,project+,due+
