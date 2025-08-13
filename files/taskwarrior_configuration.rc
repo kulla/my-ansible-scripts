@@ -4,7 +4,7 @@ default.command=next
 
 color.due=bright magenta
 color.tag.next=bright magenta
-
+color.tag.reminder=bright green
 color.project.birthday=bright blue
 
 uda.rank.type=numeric
