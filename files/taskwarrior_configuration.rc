@@ -1,6 +1,6 @@
 due=1
 
-default.command=list
+default.command=next
 
 color.tag.habit=bright green
 color.project.birthday=bright blue
