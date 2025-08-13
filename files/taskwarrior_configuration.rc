@@ -24,3 +24,8 @@ report.list.columns=id,rank,due.remaining,description.desc,project,due
 report.list.labels=ID,Rank,Due,Description,Project,Due
 report.list.filter=status:pending
 report.list.sort=rank-,project+,due+
+
+report.backlog.columns=id,rank,due.remaining,description.desc,project,due
+report.backlog.labels=ID,Rank,Due,Description,Project,Due
+report.backlog.filter=status:pending and (due.before:now+1days or project.not:birthday)
+report.backlog.sort=rank-,due+,project+
