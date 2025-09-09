@@ -93,6 +93,7 @@ nnoremap <Up> gk
 let g:coc_filetype_map = { 'markdown.mdx': 'mdx' }
 
 autocmd BufEnter /home/kulla/workspace/kulla/notes/2* Copilot disable
+autocmd BufEnter /home/kulla/workspace/kulla/journal/entries/2* Copilot disable
 
 autocmd BufEnter *.mdx setlocal filetype=markdown.mdx
 
