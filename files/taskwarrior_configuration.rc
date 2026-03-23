@@ -29,3 +29,8 @@ report.backlog.columns=id,rank,due.remaining,description.desc,project,due
 report.backlog.labels=ID,Rank,Due,Description,Project,Due
 report.backlog.filter=status:pending and (due.before:now+1days or project.not:birthday) and -WAITING
 report.backlog.sort=rank-,due+,project+
+
+report.archived.columns=end,uuid,description.desc,project,due
+report.archived.labels=End,UUID,Description,Project,Due
+report.archived.filter=status:deleted and +archived
+report.archived.sort=end-,rank-,project+
