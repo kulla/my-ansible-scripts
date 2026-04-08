@@ -196,10 +196,18 @@
             dest: /usr/local/bin
             mode: 0555
 
+        - name: Create config directory for git
+          file:
+            path: "{{ git.config.dir }}"
+            state: directory
+            mode: 0700
+            owner: "{{ user.name }}"
+            group: "{{ user.group }}"
+
         - name: Configure git
           template:
             src: gitconfig
-            dest: "{{ user.homedir }}/.gitconfig"
+            dest: "{{ user.homedir }}/.config/git/config"
             mode: 0o600
             owner: "{{ user.name }}"
             group: "{{ user.group }}"
