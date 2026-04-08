@@ -284,6 +284,6 @@
               XKBOPTIONS="caps:none,compose:rctrl-ralt"
           register: keyboard_file
 
-        - name: Apply change in keyboard configuration
+        - name: Apply update in keyboard configuration
           command: dpkg-reconfigure -f noninteractive keyboard-configuration
           when: keyboard_file.changed
