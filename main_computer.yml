@@ -276,6 +276,7 @@
 
     - tags: [keyboard]
       block:
+        # Note: A reboot is need to activate a change in the configuration
         - name: Configure keyboard
           ansible.builtin.blockinfile:
             path: /etc/default/keyboard
@@ -283,8 +284,3 @@
             block: |
               # Use capslock as compose key
               XKBOPTIONS="compose:caps"
-          register: keyboard_file
-
-        - name: Apply update in keyboard configuration
-          command: dpkg-reconfigure -f noninteractive keyboard-configuration
-          when: keyboard_file.changed
