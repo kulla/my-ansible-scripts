@@ -179,11 +179,10 @@
 
     - tags: [git, programming]
       block:
-        - name: Install basic programming tools
+        - name: Install git
           package:
+            name: git
             state: present
-            name:
-              - git
 
         - name: Install script "git update-main"
           copy:
