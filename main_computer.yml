@@ -182,7 +182,6 @@
             name:
               - make
               - git
-              - gource
 
         - name: Install script "git update-main"
           copy:
