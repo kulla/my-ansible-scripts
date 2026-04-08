@@ -272,3 +272,18 @@
             name: update youtube-dl
             job: youtube-dl --update
             special_time: weekly
+
+
+    - tags: [keyboard]
+      block:
+        - name: Configure keyboard
+          ansible.builtin.blockinfile:
+            path: /etc/default/keyboard
+            insertafter: EOF
+            block: |
+              XKBOPTIONS="caps:none,compose:rctrl-ralt"
+          register: keyboard_file
+
+        - name: Apply change in keyboard configuration
+          command: dpkg-reconfigure -f noninteractive keyboard-configuration
+          when: keyboard_file.changed

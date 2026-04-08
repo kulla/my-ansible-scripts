@@ -45,14 +45,3 @@
       copy:
         src: release-upgrades
         dest: /etc/update-manager/release-upgrades
-
-    - name: Disable the Caps Lock key
-      replace:
-        dest: /etc/default/keyboard
-        regexp: XKBOPTIONS=""
-        replace: XKBOPTIONS="ctrl:nocaps"
-      register: keyboard_file
-
-    - name: Apply change in keyboard configuration
-      command: dpkg-reconfigure -f noninteractive keyboard-configuration
-      when: keyboard_file.changed
