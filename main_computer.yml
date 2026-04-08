@@ -281,7 +281,8 @@
             path: /etc/default/keyboard
             insertafter: EOF
             block: |
-              XKBOPTIONS="caps:none,compose:rctrl-ralt"
+              # Use capslock as compose key
+              XKBOPTIONS="compose:caps"
           register: keyboard_file
 
         - name: Apply update in keyboard configuration
