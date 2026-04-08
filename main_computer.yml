@@ -212,14 +212,6 @@
             owner: "{{ user.name }}"
             group: "{{ user.group }}"
 
-        - name: Create global gitignore file
-          file:
-            path: "{{ git.config.gitignore_path }}"
-            state: touch
-            mode: 0o400
-            owner: "{{ user.name }}"
-            group: "{{ user.group }}"
-
     - tags: [work, terraform]
       block:
         - name: Add apt-key for hashicorp
