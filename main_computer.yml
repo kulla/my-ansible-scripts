@@ -207,14 +207,14 @@
         - name: Configure git
           template:
             src: gitconfig
-            dest: "{{ user.homedir }}/.config/git/config"
+            dest: "{{ git.config.path }}"
             mode: 0o600
             owner: "{{ user.name }}"
             group: "{{ user.group }}"
 
         - name: Create global gitignore file
           file:
-            path: "{{ git.gitignore.path }}"
+            path: "{{ git.config.gitignore_path }}"
             state: touch
             mode: 0o400
             owner: "{{ user.name }}"
