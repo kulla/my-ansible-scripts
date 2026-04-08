@@ -1,6 +1,5 @@
 [core]
 	editor = nvim
-	excludesfile = {{ git.config.gitignore_path }}
 
 [init]
 	defaultBranch = main

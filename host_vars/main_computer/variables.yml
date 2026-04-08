@@ -8,7 +8,6 @@ git:
   config:
     dir: "{{ user.homedir }}/.config/git"
     path: "{{ git.config.dir }}/config"
-    gitignore_path: "{{ git.config.dir }}/gitignore_global"
   email: git.mail@kulla.me
 
 neovim_user_id: "{{ user.name }}"
