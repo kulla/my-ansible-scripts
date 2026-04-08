@@ -5,9 +5,12 @@ user:
   homedir: /home/kulla
   tmpdir: /home/kulla/tmp
 git:
+  config:
+    dir: "{{ user.homedir }}/.config/git"
+    path: "{{ git.config.dir }}/config"
   email: git.mail@kulla.me
   gitignore:
-    path: "{{ user.homedir }}/.gitignore_global"
+    path: "{{ user.homedir }}/.config/git/gitignore_global"
 
 neovim_user_id: "{{ user.name }}"
 neovim_configuration: "{{ lookup('file', 'neovim_configuration.vim') }}"
