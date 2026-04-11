@@ -12,9 +12,9 @@
   lineinfile: line={{ item }} dest={{ backup_include_conf }}
   with_items: "{{ include | default([]) }}"
 
-- name: Recover backuped files/directories when necessary
-  command: backup recover "{{ item }}"
-  environment:
-    OWNER: "{{ owner | default(user.name)  }}"
-    GROUP: "{{ group | default(user.group) }}"
-  with_items: "{{ paths }}"
+#- name: Recover backuped files/directories when necessary
+#  command: backup recover "{{ item }}"
+#  environment:
+#    OWNER: "{{ owner | default(user.name)  }}"
+#   GROUP: "{{ group | default(user.group) }}"
+#  with_items: "{{ paths }}"
