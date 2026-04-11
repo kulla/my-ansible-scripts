@@ -1,22 +1,24 @@
-- tags: [asdf]
+- tags: [asdf, programming]
   block:
-    - name: Create directory for asdf
-      file:
-        path: "{{ asdf_install_dir }}"
-        state: directory
-        recurse: yes
-        owner: "{{ user.name }}"
-        group: "{{ user.group }}"
-        mode: 0o700
+    - name: Create temporary file for downloading asdf
+      ansible.builtin.tempfile:
+        state: file
+        suffix: .tar.gz
+      register: asdf_download
 
-    - name: Install asdf version manager
-      git:
-        repo: https://github.com/asdf-vm/asdf.git
-        version: "{{ asdf_version }}"
-        dest: "{{ asdf_install_dir }}"
-        force: yes
-        update: yes
-        clone: yes
+    - name: Download asdf relase tarball
+      ansible.builtin.get_url:
+        url: https://github.com/asdf-vm/asdf/releases/download/v0.18.1/asdf-v0.18.1-linux-amd64.tar.gz
+        dest: "{{ asdf_download.path }}"
+        checksum: md5:6c68f29f7cf16bf4a0cd2d50f464ccf0
+
+    - name: Extract asdf executable
+      ansible.builtin.unarchive:
+        remote_src: yes
+        src: "{{ asdf_download.path }}"
+        dest: /usr/local/bin/asdf
+        include: [asdf]
+        mode: 0o555
 
     - name: Configure asdf
       template:
