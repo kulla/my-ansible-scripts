@@ -1,1 +1,1 @@
-export ASDF_DATA_DIR='{{ user.home }}/.local/share/asdf'
+export ASDF_DATA_DIR='{{ user.homedir }}/.local/share/asdf'
