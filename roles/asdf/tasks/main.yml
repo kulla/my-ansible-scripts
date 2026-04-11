@@ -16,7 +16,7 @@
       ansible.builtin.unarchive:
         remote_src: yes
         src: "{{ asdf_download.path }}"
-        dest: /usr/local/bin/asdf
+        dest: /usr/local/bin
         include: [asdf]
         mode: 0o555
 
