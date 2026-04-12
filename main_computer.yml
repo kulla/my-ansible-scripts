@@ -12,6 +12,13 @@
     - libvirt
     - gcloud
   tasks:
+    - tags: [signal]
+      block:
+        - name: Install Signal Desktop
+          community.general.snap:
+            name: signal-desktop
+            state: present
+
     - tags: [awesome]
       block:
         - name: Install awesome
