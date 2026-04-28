@@ -168,12 +168,6 @@
             name: thunderbird
             state: present
 
-        - name: Backup taskwarrior's data location
-          import_role: name=utils/dobackup
-          vars:
-            paths:
-              - "{{ user.homedir }}/.thunderbird"
-
     - tags: [work]
       block:
         - name: Install work tools
