@@ -31,7 +31,9 @@
     - tags: [firefox]
       block:
         - name: Install firefox
-          package: name=firefox state=present
+          community.general.snap:
+            name: firefox
+            state: present
 
         - name: Backup firefox's data location
           import_role: name=utils/dobackup
