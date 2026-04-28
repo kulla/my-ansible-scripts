@@ -162,7 +162,9 @@
     - tags: [thunderbird]
       block:
         - name: Install thunderbird
-          package: name=thunderbird state=present
+          community.general.snap:
+            name: thunderbird
+            state: present
 
         - name: Backup taskwarrior's data location
           import_role: name=utils/dobackup
