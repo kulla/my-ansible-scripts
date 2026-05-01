@@ -7,5 +7,3 @@ dependencies:
       - "{{ user.homedir }}/.gnupg"
       - "/etc/NetworkManager"
       - "/etc/cups"
-  - { role: bash-alias, alias: o, cmd: xdg-open }
-  - { role: bash-alias, alias: h, cmd: history }

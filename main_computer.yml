@@ -25,6 +25,18 @@
               - awesome-extra
             state: present
 
+    - tags: [bash-aliases]
+      block:
+        - name: Install bash aliases
+          copy:
+            dest: "{{ shell_conf_dir }}/bash/aliases.sh"
+            owner: "{{ user.name }}"
+            group: "{{ user.group }}"
+            mode: 0644
+            content: |
+              alias o='xdg-open'
+              alias h='history'
+
     - tags: [firefox]
       block:
         - name: Install firefox
