@@ -114,33 +114,6 @@
             mode: 0555
             owner: "{{ user.name }}"
 
-        - name: Install chatpgt-cli
-          command: >
-            flatpak-builder --install --force-clean
-            --state-dir=/tmp/.flatpak-builder-state-dir
-            /tmp/.flatpak-builder-build-dir
-            flatpak/com.github.kardolus.chatgpt-cli.yml
-
-        - name: Add alias for chatgpt-cli
-          copy:
-            dest: "{{ shell_conf_dir }}/bash/chatgpt-cli.sh"
-            content: |
-              alias chatgpt="flatpak run com.github.kardolus.chatgpt-cli"
-
-        - name: Create configuration directory for chatgpt-cli
-          file:
-            path: "{{ user.homedir }}/.chatgpt-cli"
-            owner: "{{ user.name }}"
-            state: directory
-
-        - name: Configure chatgpt-cli
-          copy:
-            dest: "{{ user.homedir }}/.chatgpt-cli/config.yaml"
-            owner: "{{ user.name }}"
-            content: |
-              model: gpt-4o
-              max_tokens: 8192
-
     - tags: [sylpheed]
       block:
         - name: Install sylpheed
@@ -276,7 +249,6 @@
             name: update youtube-dl
             job: youtube-dl --update
             special_time: weekly
-
 
     - tags: [keyboard]
       block:
