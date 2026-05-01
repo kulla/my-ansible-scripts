@@ -204,19 +204,6 @@
             special_time: reboot
             job: mkdir -p "{{ user.tmpdir }}"; rm -rf "{{ user.tmpdir}}"/*
 
-    - tags: [youtube-dl]
-      block:
-        - name: Install youtube-dl
-          get_url: url=http://yt-dl.org/latest/youtube-dl
-            dest=/user/local/bin/youtube-dl
-            mode=0755
-
-        - name: Weekly update of youtube-dl
-          cron:
-            name: update youtube-dl
-            job: youtube-dl --update
-            special_time: weekly
-
     - tags: [keyboard]
       block:
         # Note: A reboot is need to activate a change in the configuration
