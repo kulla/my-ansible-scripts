@@ -1,8 +1,0 @@
----
-- tags: [ updates ]
-  block:
-    - name: Install script for updating system
-      copy:
-        src: update-system
-        dest: /etc/cron.daily/
-        mode: 0755

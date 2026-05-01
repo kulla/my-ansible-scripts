@@ -1,8 +1,0 @@
----
-- tags: [archive]
-  block:
-    - name: Install archive script
-      copy:
-        src: archive
-        dest: /usr/local/bin
-        mode: 0755
