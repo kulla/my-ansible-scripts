@@ -8,7 +8,6 @@
           - htop
           - curl
           - wget
-          - apt-file
           - inotify-tools
           - nmap
           - ssh
@@ -20,12 +19,6 @@
           - rename
           - ecryptfs-utils
         state: present
-
-    - name: Monthly update of cache for apt-file
-      cron:
-        name: update apt-file
-        job: apt-file update
-        special_time: monthly
 
     #- include_tasks: add_language_support.yml lang={{ item }}
     #  with_items: [de, it, en]
