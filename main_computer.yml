@@ -9,6 +9,14 @@
     - asdf
     - docker
   tasks:
+    - tags: [archive]
+      block:
+        - name: Install archive script
+          copy:
+            dest: /usr/local/bin
+            mode: 0755
+            src: archive
+
     - tags: [signal]
       block:
         - name: Install Signal Desktop
