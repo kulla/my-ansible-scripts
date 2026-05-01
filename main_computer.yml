@@ -141,20 +141,6 @@
             name: thunderbird
             state: present
 
-    - tags: [work]
-      block:
-        - name: Install work tools
-          package:
-            state: present
-            name:
-              - gnuplot
-              - make
-              - texlive-latex-recommended
-              - texlive-lang-german
-              - texlive-publishers
-              - texlive-bibtex-extra
-              - biber
-
     - tags: [git, programming]
       block:
         - name: Install git
