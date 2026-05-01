@@ -1,6 +1,5 @@
 - hosts: main_computer
   roles:
-    - screencasts
     - os
     - kulla.neovim
     - kulla.taskwarrior
