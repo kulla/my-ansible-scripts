@@ -2,4 +2,3 @@
 dependencies:
   - os/basic
   - os/shell
-  - os/updates

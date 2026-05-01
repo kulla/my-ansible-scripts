@@ -1,5 +1,0 @@
-#/bin/sh
-
-if shall_do_update ; then
-	apt update && apt -y upgrade && apt -y full-upgrade && apt -y autoremove
-fi
