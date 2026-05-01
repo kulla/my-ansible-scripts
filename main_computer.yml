@@ -9,7 +9,6 @@
     - asdf
     - docker
     - libvirt
-    - gcloud
   tasks:
     - tags: [signal]
       block:
