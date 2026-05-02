@@ -121,16 +121,6 @@
             marker_end: Alias for nvim END
             path: "{{ user.homedir }}/.bashrc"
 
-    - tags: [openai]
-      block:
-        - name: Add OPENAI_KEY as env variable
-          copy:
-            dest: "{{ shell_conf_dir }}/profile/openai-key.sh"
-            content: |
-              export OPENAI_API_KEY="{{ openai_api_key }}"
-            mode: 0555
-            owner: "{{ user.name }}"
-
     - tags: [taskwarrior]
       block:
         - name: Backup taskwarrior's data location
