@@ -136,7 +136,7 @@
             name: thunderbird
             state: present
 
-    - tags: [git, programming]
+    - tags: [git]
       block:
         - name: Install git
           package:
