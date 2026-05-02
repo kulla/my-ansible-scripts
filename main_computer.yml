@@ -33,7 +33,7 @@
               - awesome-extra
             state: present
 
-    - tags: [bash-aliases]
+    - tags: [bash-alias]
       block:
         - name: Install bash aliases
           copy:
