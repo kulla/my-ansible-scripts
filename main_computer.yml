@@ -197,7 +197,10 @@
           cron:
             name: Empty tmpdir of current user
             special_time: reboot
-            job: mkdir -p "{{ user.tmpdir }}"; rm -rf "{{ user.tmpdir}}"/*
+            job: >
+              mkdir -p "{{ user.tmpdir }}" &&
+              chown "{{ user.name }}:{{ user.group }}" "{{ user.tmpdir }}" &&
+              rm -rf "{{ user.tmpdir}}"/*
 
     - tags: [keyboard]
       block:
