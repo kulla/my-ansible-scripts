@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "name": "my-opencode",
+    "version": "1.0.0"
+  },
+  "extends": "opencode",
+  "filesystem": {
+    "read_file": ["$HOME/.tool-versions"],
+    "read": ["$HOME/.local/share/asdf"]
+  },
+  "network": {
+    "block": false,
+    "allow_domain": [
+      "models.dev",
+      "registry.npmjs.org",
+      "api.openai.com",
+      "github.com",
+      "api.githubcopilot.com"
+    ]
+  },
+  "workdir": {
+    "access": "read"
+  }
+}
