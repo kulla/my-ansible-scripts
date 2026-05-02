@@ -1,4 +1,9 @@
 - hosts: main_computer
+  vars:
+    arch_map:
+      x86_64: amd64
+      aarch64: arm64
+    deb_arch: "{{ arch_map.get(ansible_facts['architecture'], ansible_facts['architecture']) }}"
   roles:
     - os
     - kulla.neovim
@@ -93,6 +98,31 @@
               - ffmpeg
               - graphviz
               - xournalpp
+
+    - tags: [nono]
+      block:
+        - name: Get latest nono version from GitHub
+          ansible.builtin.shell: >
+            curl -sI https://github.com/always-further/nono/releases/latest
+            | grep -i location
+            | grep -oP 'v\K[0-9.]+'
+          register: nono_version
+          changed_when: false
+
+        - name: Set download URL
+          ansible.builtin.set_fact:
+            nono_deb_url: "https://github.com/always-further/nono/releases/download/v{{ nono_version.stdout }}/nono-cli_{{ nono_version.stdout }}_{{ deb_arch }}.deb"
+            nono_deb_file: "/tmp/nono-cli_{{ nono_version.stdout }}_{{ deb_arch }}.deb"
+
+        - name: Download nono CLI .deb package
+          ansible.builtin.get_url:
+            url: "{{ nono_deb_url }}"
+            dest: "{{ nono_deb_file }}"
+            mode: '0644'
+
+        - name: Install nono CLI package
+          ansible.builtin.apt:
+            deb: "{{ nono_deb_file }}"
 
     - tags: [neovim]
       block:
