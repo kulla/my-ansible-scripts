@@ -1,7 +1,0 @@
----
-- name: Get language packages for lang {{ lang }}
-  shell: check-language-support -l {{ lang }} | tr " " "\n"
-  register: check_language_support
-
-- name: Install packages for language {{ lang }}
-  package: name={{ check_language_support.stdout_lines }} state=present
