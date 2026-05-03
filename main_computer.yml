@@ -111,18 +111,36 @@
 
         - name: Set download URL
           ansible.builtin.set_fact:
-            nono_deb_url: "https://github.com/always-further/nono/releases/download/v{{ nono_version.stdout }}/nono-cli_{{ nono_version.stdout }}_{{ deb_arch }}.deb"
-            nono_deb_file: "/tmp/nono-cli_{{ nono_version.stdout }}_{{ deb_arch }}.deb"
+            nono:
+              deb_url: "https://github.com/always-further/nono/releases/download/v{{ nono_version.stdout }}/nono-cli_{{ nono_version.stdout }}_{{ deb_arch }}.deb"
+              deb_file: "/tmp/nono-cli_{{ nono_version.stdout }}_{{ deb_arch }}.deb"
+              profiles_dir: "{{ user.homedir }}/.config/nono/profiles"
 
         - name: Download nono CLI .deb package
           ansible.builtin.get_url:
-            url: "{{ nono_deb_url }}"
-            dest: "{{ nono_deb_file }}"
+            url: "{{ nono.deb_url }}"
+            dest: "{{ nono.deb_file }}"
             mode: '0644'
 
         - name: Install nono CLI package
           ansible.builtin.apt:
-            deb: "{{ nono_deb_file }}"
+            deb: "{{ nono.deb_file }}"
+
+        - name: Create profiles directory for nono
+          file:
+            path: "{{ nono.profiles_dir }}"
+            state: directory
+            mode: 0700
+            owner: "{{ user.name }}"
+            group: "{{ user.group }}"
+
+        - name: Install nono profiles
+          copy:
+            src: nono-opencode.json
+            dest: "{{ nono.profiles_dir }}/my-opencode.json"
+            owner: "{{ user.name }}"
+            group: "{{ user.group }}"
+            mode: 0644
 
     - tags: [neovim]
       block:
