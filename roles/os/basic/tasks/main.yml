@@ -10,14 +10,10 @@
           - curl
           - wget
           - inotify-tools
-          - nmap
           - ssh
           - gnupg
           - encfs
           - gparted
-          - apache2-utils
-          - mbr
-          - rename
           - ecryptfs-utils
         state: present
 
