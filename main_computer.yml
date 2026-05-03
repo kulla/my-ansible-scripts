@@ -16,15 +16,6 @@
   tasks:
     - tags: [basic]
       block:
-        - name: Backup SSH and GPG data
-          import_role: name=utils/dobackup
-          vars:
-            paths:
-              - "{{ user.homedir }}/.ssh"
-              - "{{ user.homedir }}/.gnupg"
-              - "/etc/NetworkManager"
-              - "/etc/cups"
-
         - name: Install basic command line tools
           package:
             name:
