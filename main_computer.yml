@@ -126,13 +126,18 @@
           ansible.builtin.apt:
             deb: "{{ nono.deb_file }}"
 
-        - name: Create profiles directory for nono
+        - name: Create configuration directories for nono and co
           file:
-            path: "{{ nono.profiles_dir }}"
+            path: "{{ item }}"
             state: directory
             mode: 0700
             owner: "{{ user.name }}"
             group: "{{ user.group }}"
+          with_items:
+            - "{{ nono.profiles_dir }}"
+            - "{{ user.homedir }}/.local/share/opencode"
+            - "{{ user.homedir }}/.local/state/opencode"
+            - "{{ user.homedir }}/.config/opencode"
 
         - name: Install nono profiles
           copy:
