@@ -1,8 +1,0 @@
----
-dependencies:
-  - role: utils/dobackup
-    paths:
-      - "{{ user.homedir }}/.ssh"
-      - "{{ user.homedir }}/.gnupg"
-      - "/etc/NetworkManager"
-      - "/etc/cups"
