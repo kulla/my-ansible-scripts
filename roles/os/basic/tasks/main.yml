@@ -4,6 +4,7 @@
     - name: Install basic command line tools
       package:
         name:
+          - ripgrep
           - tree
           - htop
           - curl
