@@ -30,6 +30,7 @@
               - encfs
               - gparted
               - ecryptfs-utils
+              - gnome-keyring
             state: present
 
         - name: Get language packages
