@@ -78,6 +78,7 @@
             name:
               - awesome
               - awesome-extra
+              - fdpowermon
             state: present
 
     - tags: [bash-alias]
