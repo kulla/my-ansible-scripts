@@ -93,11 +93,13 @@
               alias o='xdg-open'
               alias h='history'
 
-    - tags: [firefox]
+    - tags: [browser]
       block:
-        - name: Install firefox
+        - name: Install browsers
           community.general.snap:
-            name: firefox
+            name:
+              - firefox
+              - chromium
             state: present
 
         - name: Backup firefox's data location
