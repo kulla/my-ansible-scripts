@@ -48,9 +48,3 @@
         name: "{{ user.name }}"
         groups: [docker]
         append: yes
-
-    - name: Configure docker daemon
-      copy:
-        dest: /etc/docker/daemon.json
-        src: daemon.json
-        mode: 0ov600
