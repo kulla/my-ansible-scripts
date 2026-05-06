@@ -1,4 +1,4 @@
-- tags: [asdf, programming]
+- tags: [asdf]
   block:
     - name: Create temporary file for downloading asdf
       ansible.builtin.tempfile:
