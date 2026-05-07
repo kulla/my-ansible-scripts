@@ -31,6 +31,7 @@
               - gparted
               - ecryptfs-utils
               - gnome-keyring
+              - whois
             state: present
 
         - name: Get language packages
