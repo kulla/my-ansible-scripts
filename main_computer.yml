@@ -145,6 +145,15 @@
               - graphviz
               - xournalpp
 
+        - name: Install helper program snapshot
+          copy:
+            dest: /usr/local/bin/snapshot
+            mode: "0555"
+            content: |
+              #!/bin/sh
+
+              scrot --select --file "{{ user.tmpdir }}/%Y-%m-%d-screenshot$wx$h.png"
+
     - tags: [nono]
       block:
         - name: Get latest nono version from GitHub
