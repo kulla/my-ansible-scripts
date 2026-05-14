@@ -37,6 +37,9 @@ neovim_plugins:
   - name: fannheyward/coc-biome
     options:
       do: yarn install --frozen-lockfile
+  - name: yaegassy/coc-astro
+    options:
+      do: yarn install --frozen-lockfile
   - name: nvim-treesitter/nvim-treesitter
     options:
       do: :TSUpdate
